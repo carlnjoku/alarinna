@@ -27,8 +27,14 @@
 
 
 
+
+
+
+
 <!-- BEGIN CONTAINER -->
                     <div class="page-container">
+
+                    
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
                             <!-- BEGIN CONTENT BODY -->
@@ -150,7 +156,7 @@
                                                                             <a href="#tab_1_2" data-toggle="tab">Add Photos</a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="#tab_1_3" data-toggle="tab">My Details</a>
+                                                                            <a href="#tab_1_3" data-toggle="tab">My Desires</a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="#tab_1_4" data-toggle="tab">Change Password</a>
@@ -178,7 +184,7 @@
                                                                                     }
 
                                                                                     ?>
-
+                                                                                    <h4>Bio Data</h4>
                                                                                     <form action="#" id="form_update_member_details" class="form-horizontal">
                                                                                         <div class="form-body">
                                                                                             <input type="hidden" name="memberID" id="memberID" value="<?php echo $memberID; ?>" />
@@ -249,6 +255,127 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </form>
+
+                                                                                    <hr>
+
+                                                                                    <h4>About Me</h4>
+                                                                                   
+
+                                                                                      <div class="row">
+                                                                                      <form action="#" id="form_update_member_details" class="form-horizontal">
+                                                                                        <div class="col-md-6">
+                                        
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Height</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="height" id="height" class="form-control height">
+                                                                                                       
+                                                                                                                                                           
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Hair Colour</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="hair" id="hair" class="form-control hair">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Eye Colour</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="eyes" id="eyes" class="form-control eyes">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Religon</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="religion" id="religion" class="form-control religion">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Income</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="income" id="income" class="form-control income">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                            
+                                                                                        </div>
+
+                                                                                        <div class="col-md-6">
+
+                                                                                            
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Profession</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="profession" id="profession" class="form-control profession">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Body Type</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="bodytype" id="bodytype" class="form-control bodytype">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Smoking</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="smoke" id="smoke" class="form-control smoke">
+                                                                                                    <option value=""></option>
+                                                                                                    <option value="yes">Yes</option>
+                                                                                                    <option value="no">No</option>
+                                                                                            
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Ethnicity</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Marital Status</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="marital_status" id="marital_status" class="form-control marital_status">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                           
+                                                                                        </div>
+                                                                                    
+                                                                                    </form>
+                                                                                </div>
+
+                                                                               
+
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -260,6 +387,7 @@
                                                                             <div class="m-heading-1 border-green m-bordered">
                                                                                 <h3>Add Photos</h3>
                                                                                 <p> <b>Tips:</b> A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
+
                                                                                 
                                                                             </div>
 
@@ -315,9 +443,138 @@
                                                                         <!-- END CHANGE AVATAR TAB -->
                                                                         <!-- CHANGE MEMBER DETAILS TAB -->
                                                                         <div class="tab-pane" id="tab_1_3">
-                                                                            <form action="#" id="form-reset_password">
-                                                                                dkfjndfj
-                                                                            </form>
+                                                                            <div class="row">
+                                                                                <form action="#" id="form_update_member_details" class="form-horizontal">
+                                                                                        <div class="col-md-6">
+                                        
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Height</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="height" id="height" class="form-control height">
+                                                                                                       
+                                                                                                                                                           
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Hair Colour</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="hair" id="hair" class="form-control hair">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Eye Colour</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="eyes" id="eyes" class="form-control eyes">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Religon</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="religion" id="religion" class="form-control religion">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Interest</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="lookingfor" id="lookingfor" class="form-control lookingfor">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Income</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="income" id="income" class="form-control income">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                            
+                                                                                        </div>
+
+                                                                                        <div class="col-md-6">
+
+                                                                                            
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Profession</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="profession" id="profession" class="form-control profession">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Body Type</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="bodytype" id="bodytype" class="form-control bodytype">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Smoking</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="smoke" id="smoke" class="form-control smoke">
+                                                                                            
+                                                                                                    <option value="yes">Yes</option>
+                                                                                                    <option value="no">No</option>
+                                                                                            
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Ethnicity</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Marital Status</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="marital_status" id="marital_status" class="form-control marital_status">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Children</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="children" id="children" class="form-control children">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                           
+                                                                                        </div>
+                                                                                    
+                                                                                    </form>
+                                                                            </div>
                                                                         </div>
                                                                         <!-- END MEMBER DETAILS TAB -->
                                                                         <!-- CHANGE PASSWORD TAB -->
@@ -334,7 +591,7 @@
                                                                                     <label class="control-label">Re-type New Password</label>
                                                                                     <input type="password" name="password_r" class="form-control" /> </div>
                                                                                 <div class="margin-top-10">
-                                                                                <button class="btn green" type="submit" >Change Password</button>
+                                                                                <button class="btn red" type="submit" >Change Password</button>
                                                                                     <a href="javascript:;" class="btn blue"> Change Password </a>
                                                                                     <a href="javascript:;" class="btn default"> Cancel </a>
                                                                                 </div>
@@ -652,6 +909,99 @@ $(document).ready(function() {
 
 
 
+
+<script>
+    var hair = '<?php echo base_url();?>hair.json';
+    $.getJSON(hair, function(data){
+            $.each(data, function(index,item) {
+            $("select.hair").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var height = '<?php echo base_url();?>height.json';
+    $.getJSON(height, function(data){
+            $.each(data, function(index,item) {
+            $("select.height").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var eyes = '<?php echo base_url();?>eyes.json';
+    $.getJSON(eyes, function(data){
+            $.each(data, function(index,item) {
+            $("select.eyes").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var income = '<?php echo base_url();?>income.json';
+    $.getJSON(income, function(data){
+            $.each(data, function(index,item) {
+            $("select.income").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var profession = '<?php echo base_url();?>profession.json';
+    $.getJSON(profession, function(data){
+            $.each(data, function(index,item) {
+            $("select.profession").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var religion = '<?php echo base_url();?>religion.json';
+    $.getJSON(religion, function(data){
+            $.each(data, function(index,item) {
+            $("select.religion").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var ethnicity = '<?php echo base_url();?>ethnicity.json';
+    $.getJSON(ethnicity, function(data){
+            $.each(data, function(index,item) {
+            $("select.ethnicity").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var bodytype = '<?php echo base_url();?>bodytype.json';
+    $.getJSON(bodytype, function(data){
+            $.each(data, function(index,item) {
+            $("select.bodytype").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var smoke = '<?php echo base_url();?>smoke.json';
+    $.getJSON(smoke, function(data){
+            $.each(data, function(index,item) {
+            $("select.smoke").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var marital_status = '<?php echo base_url();?>marital_status.json';
+    $.getJSON(marital_status, function(data){
+            $.each(data, function(index,item) {
+            $("select.marital_status").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var children = '<?php echo base_url();?>children.json';
+    $.getJSON(children, function(data){
+            $.each(data, function(index,item) {
+            $("select.children").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var lookingfor = '<?php echo base_url();?>lookingfor.json';
+    $.getJSON(lookingfor, function(data){
+            $.each(data, function(index,item) {
+            $("select.lookingfor").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+</script>
 
                            
 

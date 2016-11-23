@@ -94,6 +94,10 @@ class Setup extends CI_Controller {
 		$response_hair = curl_exec($handle_hair);
 		$result_hair = json_decode($response_hair, true);
 
+        $fp = fopen('hair.json', 'w');
+        fwrite($fp, json_encode($result_hair));
+        fclose($fp);
+
          // Get Height
         $handle_height = curl_init();
 		curl_setopt_array(
@@ -177,22 +181,6 @@ class Setup extends CI_Controller {
 	
 		$response_looking_for = curl_exec($handle_looking_for);
 		$result_looking_for = json_decode($response_looking_for, true);
-
-       /*  
-       // Get Smoking
-        $handle_height = curl_init();
-		curl_setopt_array(
-		$handle_height,
-            array(
-                CURLOPT_URL => "http://localhost/neo4j-alarinna/web/height",
-                CURLOPT_POST => false,
-                CURLOPT_RETURNTRANSFER => true
-            )
-		);
-	
-		$response_height = curl_exec($handle_height);
-		$result_height = json_decode($response_height, true);
-        */
 
         // Get Ethnicity
         $handle_ethnicity = curl_init();
