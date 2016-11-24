@@ -146,7 +146,7 @@
                                                                 <div class="portlet-title tabbable-line">
                                                                     <div class="caption caption-md">
                                                                         <i class="icon-globe theme-font hide"></i>
-                                                                        <span class="caption-subject font-blue-madison bold uppercase">Profile Account</span>
+                                                                        <span class="caption-subject font-blue-madison bold uppercase">Account Profile</span>
                                                                     </div>
                                                                     <ul class="nav nav-tabs">
                                                                         <li class="active">
@@ -259,17 +259,33 @@
                                                                                     <hr>
 
                                                                                     <h4>About Me</h4>
-                                                                                   
 
+                                                                                   
+                                                                                    <?php foreach($result_aboutme as $key=>$row){
+                                                                                        $height = $row['height'];
+                                                                                        $hair = $row['hair'];
+                                                                                        $eyes = $row['eyes'];
+                                                                                        $religion = $row['religion'];
+                                                                                        $income = $row['income'];
+                                                                                        $profession = $row['profession'];
+                                                                                        $ethnicity = $row['ethnicity'];
+                                                                                        $smoke = $row['smoke'];
+                                                                                        $marital_status = $row['marital_status'];
+                                                                                        $bodytype = $row['bodytype'];
+
+                                                                                    }
+
+                                                                                    ?>
                                                                                       <div class="row">
-                                                                                      <form action="#" id="form_update_member_details" class="form-horizontal">
+                                                                                      
+                                                                                      <form action="#" id="form_edit_aboutme" class="form-horizontal">
                                                                                         <div class="col-md-6">
-                                        
+                                                                                            <input type="hidden" name="memberID" id="memberID" value="<?php echo $memberID ;?>" />
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label col-md-4">Height</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="height" id="height" class="form-control height">
-                                                                                                       
+                                                                                                    <option><?php echo $height; ?></option>
                                                                                                                                                            
                                                                                                     </select>
                                                                                                 </div>
@@ -278,7 +294,7 @@
                                                                                                 <label class="control-label col-md-4">Hair Colour</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="hair" id="hair" class="form-control hair">
-                                                                                                        
+                                                                                                    <option><?php echo $hair; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -287,7 +303,7 @@
                                                                                                 <label class="control-label col-md-4">Eye Colour</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="eyes" id="eyes" class="form-control eyes">
-                                                                                                        
+                                                                                                    <option><?php echo $eyes; ?></option>  
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -296,7 +312,7 @@
                                                                                                 <label class="control-label col-md-4">Religon</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="religion" id="religion" class="form-control religion">
-                                                                                                        
+                                                                                                       <option><?php echo $religion; ?></option>  
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -306,7 +322,7 @@
                                                                                                 <label class="control-label col-md-4">Income</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="income" id="income" class="form-control income">
-                                                                                                        
+                                                                                                        <option><?php echo $income; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -321,7 +337,7 @@
                                                                                                 <label class="control-label col-md-4">Profession</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="profession" id="profession" class="form-control profession">
-                                                                                                        
+                                                                                                        <option><?php echo $profession; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -331,7 +347,7 @@
                                                                                                 <label class="control-label col-md-4">Body Type</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="bodytype" id="bodytype" class="form-control bodytype">
-                                                                                                        
+                                                                                                        <option><?php echo $bodytype; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -341,7 +357,7 @@
                                                                                                 <label class="control-label col-md-4">Smoking</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="smoke" id="smoke" class="form-control smoke">
-                                                                                                    <option value=""></option>
+                                                                                                    <option><?php echo $smoke; ?></option> 
                                                                                                     <option value="yes">Yes</option>
                                                                                                     <option value="no">No</option>
                                                                                             
@@ -353,7 +369,7 @@
                                                                                                 <label class="control-label col-md-4">Ethnicity</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
-                                                                                                        
+                                                                                                        <option><?php echo $ethnicity; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
@@ -363,11 +379,20 @@
                                                                                                 <label class="control-label col-md-4">Marital Status</label>
                                                                                                 <div class="col-md-6">
                                                                                                     <select name="marital_status" id="marital_status" class="form-control marital_status">
-                                                                                                        
+                                                                                                        <option><?php echo $marital_status; ?></option> 
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
+
+                                                                                            <div class="form-actions">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-offset-3 col-md-9">
+                                                                                                    <button type="submit" class="btn blue">Submit</button>
+                                                                                                    <button type="button" class="btn grey-salsa btn-outline">Cancel</button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
                                                                                            
                                                                                         </div>
                                                                                     
@@ -406,9 +431,9 @@
                                                                                         </div>
                                                                                     
                                                                                     <?php
-                                                                                        $last_id = 0;
-                                                                                        foreach ($result_photos as $key=> $rphotos) {
-                                                                                            $photo = $rphotos['photo']; // keep the last id for the paging
+                                                                                        
+                                                                                        foreach ($result_photos as $key=> $row) {
+                                                                                            $photo = $row['photo']; // keep the last id for the paging
                                                                                             ?>
                                                                                             
                                                                                             <div class="col-md-4" style="margin-bottom:20px">
@@ -444,9 +469,10 @@
                                                                         <!-- CHANGE MEMBER DETAILS TAB -->
                                                                         <div class="tab-pane" id="tab_1_3">
                                                                             <div class="row">
-                                                                                <form action="#" id="form_update_member_details" class="form-horizontal">
+                                                                            <h3>My Desires</h3>
+                                                                                <form action="#" id="form_edit_desire" class="form-horizontal">
                                                                                         <div class="col-md-6">
-                                        
+                                                                                        <input type="hidden" name="memberID" id="memberID" value="43" />
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label col-md-4">Height</label>
                                                                                                 <div class="col-md-6">
@@ -570,7 +596,17 @@
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
+
+                                                                                            
                                                                                            
+                                                                                        </div>
+                                                                                        <div class="form-actions">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-offset-3 col-md-9">
+                                                                                                    <button type="submit" class="btn blue">Submit</button>
+                                                                                                    <button type="button" class="btn grey-salsa btn-outline">Cancel</button>
+                                                                                                </div>
+                                                                                            </div>
                                                                                         </div>
                                                                                     
                                                                                     </form>
@@ -591,9 +627,8 @@
                                                                                     <label class="control-label">Re-type New Password</label>
                                                                                     <input type="password" name="password_r" class="form-control" /> </div>
                                                                                 <div class="margin-top-10">
-                                                                                <button class="btn red" type="submit" >Change Password</button>
-                                                                                    <a href="javascript:;" class="btn blue"> Change Password </a>
-                                                                                    <a href="javascript:;" class="btn default"> Cancel </a>
+                                                                                <button class="btn blue" type="submit" >Change Password</button>
+                                                                                    
                                                                                 </div>
                                                                             </form>
                                                                         </div>
@@ -832,36 +867,14 @@
 
 
          
-<!--
- <script>
-    $(document).ready(function(){
-        var memberID = '<?php echo $memberID; ?>'
-            $.ajax({
-                type: "GET",
-                url: "http://localhost/neo4j-alarinna/web/getphotos/"+ memberID,
-                success: function (response1) {
-                    data = $.parseJSON(response1);
-                    console.log(data);q
 
-                    //alert(data);
-                    for (var key in data) {
-
-                        $('#result').append('<div class="col-md-4" style="margin-bottom:20px"><a href=""><img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/' + data[key].photo + ' "/></a></div>').fadeIn('4000');
-
-                    }
-                    
-                }
-            })  
-   }) ;  
-</script>  
-
--->
 
  
 <script>
 $(document).ready(function() {
 
-   $('#photo1').slim({
+   
+    $('#photo1').slim({
             ratio: '1:1',
             saveInitialImage:true,
             service: 'http://localhost/alarinna/plugins/slim-image-upload-and-ratio-cropping-plugin/server/async.php',
@@ -895,16 +908,119 @@ $(document).ready(function() {
             label: "<i class='fa fa-plus fa-4x' style='color:#cccccc'></i>",
             push: true,
             buttonConfirmLabel: 'Apply'
-           
-
+ 
            
     });
+
+    
+    // Submit forms without validation
+    $("#form_edit_aboutme").submit(function(e) {
+        var frmData1 = $('#form_edit_aboutme').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+                                        
+                    var data1 = JSON.stringify(frmData1);
+
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/edit_aboutme',
+                        data: data1,
+                        
+                        beforeSend: function()
+                        {
+                            alert(data1);
+                            $.blockUI({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fff' },
+                                message:'<img src="../assets/loading-spinner-pink.gif"/>',
+                            });
+                            setTimeout($.unblockUI, 2000); 
+
+                            
+                            
+                        
+                        },
+                        success: function (responseData) {
+                            
+                            var responseData = $.parseJSON(responseData); //parse JSON
+                            var member_id = responseData.memberID;
+                            var msg = responseData.msg;
+                            //var status = responseData.status;
+                            
+                            alert(member_id);
+                            toastr.success(msg)
+    
+                        },
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personal detail update failed')
+                        }
+                    });
+                    
+                 
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    
+    });
+
+
+    // Submit forms without validation
+    $("#form_edit_desire").submit(function(e) {
+        var frmData1 = $('#form_edit_desire').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+                                        
+                    var data1 = JSON.stringify(frmData1);
+
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/edit_desire',
+                        data: data1,
+                        
+                        beforeSend: function()
+                        {
+                            alert(data1);
+                            $.blockUI({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fff' },
+                                message:'<img src="../assets/loading-spinner-pink.gif"/>',
+                            });
+                            setTimeout($.unblockUI, 2000); 
+
+                            
+                            
+                        
+                        },
+                        success: function (responseData) {
+                            
+                            var responseData = $.parseJSON(responseData); //parse JSON
+                            var member_id = responseData.memberID;
+                            var msg = responseData.msg;
+                            //var status = responseData.status;
+                            
+                            alert(member_id);
+                            toastr.success(msg)
+    
+                        },
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personal detail update failed')
+                        }
+                    });
+                    
+                 
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    
+    });
+    
 
 
          
 });
 </script>   
-
 
 
 
@@ -971,14 +1087,6 @@ $(document).ready(function() {
     });
 
 
-    var smoke = '<?php echo base_url();?>smoke.json';
-    $.getJSON(smoke, function(data){
-            $.each(data, function(index,item) {
-            $("select.smoke").append("<option value=" + item.name + ">" + item.name + "</option>"); 
-        });
-    });
-
-
     var marital_status = '<?php echo base_url();?>marital_status.json';
     $.getJSON(marital_status, function(data){
             $.each(data, function(index,item) {
@@ -1001,7 +1109,11 @@ $(document).ready(function() {
     });
 
 
+   
+
 </script>
+
+
 
                            
 

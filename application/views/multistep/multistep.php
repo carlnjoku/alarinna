@@ -210,116 +210,97 @@
                                                                                         <div class="col-md-6">
 
                                                                                             <h3 class="block"><b>What do you desire</b></h3>
+
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Height</label>
+                                                                                                <label class="control-label col-md-4">Height</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="height_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_height as $key=>$height){
-                                                                                                            echo '<option value="'.$height['name'].'">'.$height['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="height_d" id="height_d" class="form-control height_d">
+                                                                                                       
                                                                                                                                                            
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Hair Colour</label>
+                                                                                                <label class="control-label col-md-4">Hair Colour</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="hair_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_hair as $key=>$hair){
-                                                                                                            echo '<option value="'.$hair['name'].'">'.$hair['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="hair_d" id="hair_d" class="form-control hair_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Eye Colour</label>
+                                                                                                <label class="control-label col-md-4">Eye Colour</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="eyes_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_hair as $key=>$eye){
-                                                                                                            echo '<option value="'.$eye['name'].'">'.$eye['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="eyes_d" id="eyes_d" class="form-control eyes_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Religon</label>
+                                                                                                <label class="control-label col-md-4">Religon</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="religion_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_religion as $key=>$religion){
-                                                                                                            echo '<option value="'.$religion['name'].'">'.$religion['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
-                                                                                                                                                                                          
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Interested in</label>
-                                                                                                <div class="col-md-6">
-                                                                                                    <select name="looking_for_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_looking_for as $key=>$lookingfor){
-                                                                                                            echo '<option value="'.$lookingfor['name'].'">'.$lookingfor['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="religion_d" id="religion_d" class="form-control religion_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
-                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Children</label>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Interest</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="children_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_children as $key=>$children){
-                                                                                                            echo '<option value="'.$children['name'].'">'.$children['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="looking_for_d" id="looking_for_d" class="form-control looking_for_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label col-md-4">Income</label>
+                                                                                                <div class="col-md-6">
+                                                                                                    <select name="income_d" id="income_d" class="form-control income_d">
+                                                                                                        
+                                                                                                                                                                                          
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            
                                                                                          
                                                                                         </div>
 
                                                                                         <div class="col-md-6">
 
                                                                                             <h3 class="block">&nbsp;&nbsp;&nbsp;</h3>
+
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Profession</label>
+                                                                                                <label class="control-label col-md-4">Profession</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="profession_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_profession as $key=>$profession){
-                                                                                                            echo '<option value="'.$profession['name'].'">'.$profession['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="profession_d" id="profession_d" class="form-control profession_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Body Type</label>
+                                                                                                <label class="control-label col-md-4">Body Type</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="bodytype_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_bodytype as $key=>$bodytype){
-                                                                                                            echo '<option value="'.$bodytype['name'].'">'.$bodytype['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="bodytype_d" id="bodytype_d" class="form-control bodytype_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Smoking</label>
+                                                                                                <label class="control-label col-md-4">Smoking</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="smoke_d" id="" class="form-control">
-                                                                                                    <option value="">Smoker ? </option>
+                                                                                                    <select name="smoke_d" id="smoke_d" class="form-control smoke_d">
+                                                                                            
                                                                                                     <option value="yes">Yes</option>
                                                                                                     <option value="no">No</option>
                                                                                             
@@ -328,43 +309,36 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Ethnicity</label>
+                                                                                                <label class="control-label col-md-4">Ethnicity</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="ethnicity_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_ethnicity as $key=>$ethnicity){
-                                                                                                            echo '<option value="'.$ethnicity['name'].'">'.$ethnicity['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="ethnicity_d" id="ethnicity_d" class="form-control ethnicity_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Marital Status</label>
+                                                                                                <label class="control-label col-md-4">Marital Status</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="marital_status_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_marital_status as $key=>$marital_status){
-                                                                                                            echo '<option value="'.$marital_status['name'].'">'.$marital_status['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="marital_status_d" id="marital_status_d" class="form-control marital_status_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Income</label>
+                                                                                                <label class="control-label col-md-4">Children</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="income_d" id="" class="form-control">
-                                                                                                        <?php foreach($result_income as $key=>$income){
-                                                                                                            echo '<option value="'.$income['name'].'">'.$income['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="children_d" id="children_d" class="form-control children_d">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
+
+                                                                                            
 
                                                                                             
                                                                                         </div>
@@ -374,109 +348,88 @@
                                                                                  <div class="row">
                                                                                         <div class="col-md-6">
 
+                                                                                        
+
                                                                                             <h3 class="block"><b>About me</b></h3>
+
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Height</label>
+                                                                                                <label class="control-label col-md-4">Height</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="height" id="" class="form-control">
-                                                                                                        <?php foreach($result_height as $key=>$height){
-                                                                                                            echo '<option value="'.$height['name'].'">'.$height['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="height" id="height" class="form-control height">
+                                                                                                       
                                                                                                                                                            
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Hair Colour</label>
+                                                                                                <label class="control-label col-md-4">Hair Colour</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="hair" id="" class="form-control">
-                                                                                                        <?php foreach($result_hair as $key=>$hair){
-                                                                                                            echo '<option value="'.$hair['name'].'">'.$hair['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="hair" id="hair" class="form-control hair">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Eye Colour</label>
+                                                                                                <label class="control-label col-md-4">Eye Colour</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="eyes" id="" class="form-control">
-                                                                                                        <?php foreach($result_hair as $key=>$eye){
-                                                                                                            echo '<option value="'.$eye['name'].'">'.$eye['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="eyes" id="eyes" class="form-control eyes">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Religon</label>
+                                                                                                <label class="control-label col-md-4">Religon</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="religion" id="" class="form-control">
-                                                                                                        <?php foreach($result_religion as $key=>$religion){
-                                                                                                            echo '<option value="'.$religion['name'].'">'.$religion['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="religion" id="religion" class="form-control religion">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Income</label>
+                                                                                                <label class="control-label col-md-4">Income</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="income" id="" class="form-control">
-                                                                                                        <?php foreach($result_income as $key=>$income){
-                                                                                                            echo '<option value="'.$income['name'].'">'.$income['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="income" id="income" class="form-control income">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
-
-                                                                                           
-
-
-                                                                                           
+                                                                   
                                                                                             
                                                                                         </div>
 
                                                                                         <div class="col-md-6">
 
                                                                                             <h3 class="block">&nbsp;&nbsp;&nbsp;</h3>
+
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Profession</label>
+                                                                                                <label class="control-label col-md-4">Profession</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="profession" id="" class="form-control">
-                                                                                                        <?php foreach($result_profession as $key=>$profession){
-                                                                                                            echo '<option value="'.$profession['name'].'">'.$profession['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="profession" id="profession" class="form-control profession">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Body Type</label>
+                                                                                                <label class="control-label col-md-4">Body Type</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="bodytype" id="" class="form-control">
-                                                                                                        <?php foreach($result_bodytype as $key=>$bodytype){
-                                                                                                            echo '<option value="'.$bodytype['name'].'">'.$bodytype['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="bodytype" id="bodytype" class="form-control bodytype">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Smoking</label>
+                                                                                                <label class="control-label col-md-4">Smoking</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="smoke" id="" class="form-control">
+                                                                                                    <select name="smoke" id="smoke" class="form-control smoke">
                                                                                                     <option value=""></option>
                                                                                                     <option value="yes">Yes</option>
                                                                                                     <option value="no">No</option>
@@ -486,30 +439,26 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Ethnicity</label>
+                                                                                                <label class="control-label col-md-4">Ethnicity</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="ethnicity" id="" class="form-control">
-                                                                                                        <?php foreach($result_ethnicity as $key=>$ethnicity){
-                                                                                                            echo '<option value="'.$ethnicity['name'].'">'.$ethnicity['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
 
                                                                                             <div class="form-group">
-                                                                                                <label class="control-label col-md-3">Marital Status</label>
+                                                                                                <label class="control-label col-md-4">Marital Status</label>
                                                                                                 <div class="col-md-6">
-                                                                                                    <select name="marital_status" id="" class="form-control">
-                                                                                                        <?php foreach($result_marital_status as $key=>$marital_status){
-                                                                                                            echo '<option value="'.$marital_status['name'].'">'.$marital_status['name'].'</option>';
-                                                                                                        } 
-                                                                                                        ?>
+                                                                                                    <select name="marital_status" id="marital_status" class="form-control marital_status">
+                                                                                                        
                                                                                                                                                                                           
                                                                                                     </select>
                                                                                                 </div>
                                                                                             </div>
+
+                                                                                            
 
                                                                                             
                                                                                         </div>
@@ -609,6 +558,7 @@
                                                                                 <div class="row">
                                                                                
                                                                                         <div class="col-md-6">
+                                                                                        
                                                                             
                                                                                            
                                                                                             <div class="form-group">
@@ -855,5 +805,163 @@ $(document).ready(function() {
          
 });
 </script>
+
+<script>
+    var hair = '<?php echo base_url();?>hair.json';
+    $.getJSON(hair, function(data){
+            $.each(data, function(index,item) {
+            $("select.hair").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var hair = '<?php echo base_url();?>hair.json';
+    $.getJSON(hair, function(data){
+            $.each(data, function(index,item) {
+            $("select.hair_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var height = '<?php echo base_url();?>height.json';
+    $.getJSON(height, function(data){
+            $.each(data, function(index,item) {
+            $("select.height").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var height = '<?php echo base_url();?>height.json';
+    $.getJSON(height, function(data){
+            $.each(data, function(index,item) {
+            $("select.height_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var eyes = '<?php echo base_url();?>eyes.json';
+    $.getJSON(eyes, function(data){
+            $.each(data, function(index,item) {
+            $("select.eyes").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var eyes = '<?php echo base_url();?>eyes.json';
+    $.getJSON(eyes, function(data){
+            $.each(data, function(index,item) {
+            $("select.eyes_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var income = '<?php echo base_url();?>income.json';
+    $.getJSON(income, function(data){
+            $.each(data, function(index,item) {
+            $("select.income").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var income = '<?php echo base_url();?>income.json';
+    $.getJSON(income, function(data){
+            $.each(data, function(index,item) {
+            $("select.income_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var profession = '<?php echo base_url();?>profession.json';
+    $.getJSON(profession, function(data){
+            $.each(data, function(index,item) {
+            $("select.profession").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var profession = '<?php echo base_url();?>profession.json';
+    $.getJSON(profession, function(data){
+            $.each(data, function(index,item) {
+            $("select.profession_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var religion = '<?php echo base_url();?>religion.json';
+    $.getJSON(religion, function(data){
+            $.each(data, function(index,item) {
+            $("select.religion").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var religion = '<?php echo base_url();?>religion.json';
+    $.getJSON(religion, function(data){
+            $.each(data, function(index,item) {
+            $("select.religion_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var ethnicity = '<?php echo base_url();?>ethnicity.json';
+    $.getJSON(ethnicity, function(data){
+            $.each(data, function(index,item) {
+            $("select.ethnicity").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var ethnicity = '<?php echo base_url();?>ethnicity.json';
+    $.getJSON(ethnicity, function(data){
+            $.each(data, function(index,item) {
+            $("select.ethnicity_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var bodytype = '<?php echo base_url();?>bodytype.json';
+    $.getJSON(bodytype, function(data){
+            $.each(data, function(index,item) {
+            $("select.bodytype").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var bodytype = '<?php echo base_url();?>bodytype.json';
+    $.getJSON(bodytype, function(data){
+            $.each(data, function(index,item) {
+            $("select.bodytype_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var smoke = '<?php echo base_url();?>smoke.json';
+    $.getJSON(smoke, function(data){
+            $.each(data, function(index,item) {
+            $("select.smoke").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+
+    var marital_status = '<?php echo base_url();?>marital_status.json';
+    $.getJSON(marital_status, function(data){
+            $.each(data, function(index,item) {
+            $("select.marital_status").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var marital_status = '<?php echo base_url();?>marital_status.json';
+    $.getJSON(marital_status, function(data){
+            $.each(data, function(index,item) {
+            $("select.marital_status_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var children = '<?php echo base_url();?>children.json';
+    $.getJSON(children, function(data){
+            $.each(data, function(index,item) {
+            $("select.children").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    var children = '<?php echo base_url();?>children.json';
+    $.getJSON(children, function(data){
+            $.each(data, function(index,item) {
+            $("select.children_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+
+    var lookingfor = '<?php echo base_url();?>lookingfor.json';
+    $.getJSON(lookingfor, function(data){
+            $.each(data, function(index,item) {
+            $("select.looking_for_d").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+        });
+    });
+    
+
+
+</script>
+
 
 </html>

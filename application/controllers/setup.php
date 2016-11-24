@@ -79,6 +79,7 @@ class Setup extends CI_Controller {
     
     public function profile()
 	{
+       /*
        //require_once(APPPATH."third_party/server/async.php");
         // Get hair
         $handle_hair = curl_init();
@@ -251,7 +252,9 @@ class Setup extends CI_Controller {
         $data['result_marital_status']= $result_marital_status;
         $data['result_children'] =$result_children;
         $data['result_income'] =$result_income;
-        $this->load->view('multistep/multistep', $data);
+        */
+
+        $this->load->view('multistep/multistep');
 	}
 
 

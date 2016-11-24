@@ -61,6 +61,36 @@ class Profile extends CI_Controller {
 	
 		$response_member = curl_exec($handle_member);
 		$result_member = json_decode($response_member, true);
+
+		// Get About me
+        $handle_aboutme = curl_init();
+		curl_setopt_array(
+		$handle_aboutme,
+			array(
+				CURLOPT_URL => "http://localhost/neo4j-alarinna/web/get_aboutme/$memberID",
+				CURLOPT_POST => false,
+				CURLOPT_RETURNTRANSFER => true
+			)
+			
+		);
+	
+		$response_aboutme = curl_exec($handle_aboutme);
+		$result_aboutme = json_decode($response_aboutme, true);
+
+		// Get Desire
+        $handle_desire = curl_init();
+		curl_setopt_array(
+		$handle_desire,
+			array(
+				CURLOPT_URL => "http://localhost/neo4j-alarinna/web/get_desire/$memberID",
+				CURLOPT_POST => false,
+				CURLOPT_RETURNTRANSFER => true
+			)
+			
+		);
+	
+		$response_desire = curl_exec($handle_desire);
+		$result_desire = json_decode($response_desire, true);
 	
 		
         
@@ -68,6 +98,8 @@ class Profile extends CI_Controller {
         $data['memberID'] = $memberID;
 		$data['result_photos'] = $result_photos;
 		$data['result_member'] = $result_member;
+		$data['result_desire'] = $result_desire;
+		$data['result_aboutme'] = $result_aboutme;
 		$data['page_title'] = 'Edit Profile';
 		$this->load->view('includes/template', $data);
 	}
