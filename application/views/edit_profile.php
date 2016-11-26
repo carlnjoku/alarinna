@@ -13,6 +13,9 @@
 
         <!-- END PAGE LEVEL PLUGINS -->
 
+
+        
+
 <style>
     .slim {
         border-radius: 0.5rem;
@@ -26,7 +29,21 @@
 </style>
 
 
+<?php foreach($result_member as $key=>$row){
+    $nickname = $row['nickname'];
+    $firstname = $row['firstname'];
+    $lastname = $row['lastname'];
+    $email = $row['email'];
+    $mobile = $row['mobile'];
+    $aboutme = $row['aboutme'];
+    $profile_photo =$row['profile_photo'];
+    $city =$row['city'];
+    $country =$row['country'];
 
+
+}
+
+?>
 
 
 
@@ -66,12 +83,12 @@
                                                     <div class="portlet light profile-sidebar-portlet ">
                                                         <!-- SIDEBAR USERPIC -->
                                                         <div class="profile-userpic">
-                                                            <img src="../assets/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""> </div>
+                                                            <img src="<?php echo base_url();?>/profile-images/<?php echo $profile_photo; ?>" class="img-responsive" alt=""> </div>
                                                         <!-- END SIDEBAR USERPIC -->
                                                         <!-- SIDEBAR USER TITLE -->
                                                         <div class="profile-usertitle">
-                                                            <div class="profile-usertitle-name"> Marcus Doe </div>
-                                                            <div class="profile-usertitle-job"> Developer </div>
+                                                            <div class="profile-usertitle-name"> <?php echo $nickname; ?> </div>
+                                                            <div class="profile-usertitle-job"> <?php echo $city .', '. $country; ?> </div>
                                                         </div>
                                                         <!-- END SIDEBAR USER TITLE -->
                                                         <!-- SIDEBAR BUTTONS -->
@@ -103,37 +120,19 @@
                                                     <!-- PORTLET MAIN -->
                                                     <div class="portlet light ">
                                                         <!-- STAT -->
-                                                        <div class="row list-separated profile-stat">
-                                                            <div class="col-md-4 col-sm-4 col-xs-6">
-                                                                <div class="uppercase profile-stat-title"> 37 </div>
-                                                                <div class="uppercase profile-stat-text"> Projects </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-sm-4 col-xs-6">
-                                                                <div class="uppercase profile-stat-title"> 51 </div>
-                                                                <div class="uppercase profile-stat-text"> Tasks </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-sm-4 col-xs-6">
-                                                                <div class="uppercase profile-stat-title"> 61 </div>
-                                                                <div class="uppercase profile-stat-text"> Uploads </div>
-                                                            </div>
+
+
+
+                                                         <div class="row">
+                                                            
+                                                            <div class="col-md-12" style="text-align:center">
+                                                                <h4 style="text-align:center; weight:bold">Your Profile Meter</h4>
+                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  disabled value="<?php echo '45 %' ?>"> </div>
+                                                            
                                                         </div>
-                                                        <!-- END STAT -->
-                                                        <div>
-                                                            <h4 class="profile-desc-title">About Marcus Doe</h4>
-                                                            <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
-                                                            <div class="margin-top-20 profile-desc-link">
-                                                                <i class="fa fa-globe"></i>
-                                                                <a href="http://www.keenthemes.com">www.keenthemes.com</a>
-                                                            </div>
-                                                            <div class="margin-top-20 profile-desc-link">
-                                                                <i class="fa fa-twitter"></i>
-                                                                <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
-                                                            </div>
-                                                            <div class="margin-top-20 profile-desc-link">
-                                                                <i class="fa fa-facebook"></i>
-                                                                <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
-                                                            </div>
-                                                        </div>
+
+
+                                                        
                                                     </div>
                                                     <!-- END PORTLET MAIN -->
                                                 </div>
@@ -174,16 +173,7 @@
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                             <div class="row">
                                                                                 <div class="col-md-12">
-                                                                                    <?php foreach($result_member as $key=>$row){
-                                                                                        $firstname = $row['firstname'];
-                                                                                        $lastname = $row['lastname'];
-                                                                                        $email = $row['email'];
-                                                                                        $mobile = $row['mobile'];
-                                                                                        $aboutme = $row['aboutme'];
-
-                                                                                    }
-
-                                                                                    ?>
+                                                                                    
                                                                                     <h4>Bio Data</h4>
                                                                                     <form action="#" id="form_update_member_details" class="form-horizontal">
                                                                                         <div class="form-body">
@@ -409,11 +399,11 @@
                                                                         <div class="tab-pane" id="tab_1_2">
 
                                                                         
-                                                                            <div class="m-heading-1 border-green m-bordered">
-                                                                                <h3>Add Photos</h3>
-                                                                                <p> <b>Tips:</b> A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
+                                                                            
 
-                                                                                
+                                                                            <div class="note note-info">
+                                                                                <h3>Photo Upload Tip</h3>
+                                                                                <p>A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
                                                                             </div>
 
                                                                                 <div class="row">
@@ -635,60 +625,46 @@
                                                                         <!-- END CHANGE PASSWORD TAB -->
                                                                         <!-- PRIVACY SETTINGS TAB -->
                                                                         <div class="tab-pane" id="tab_1_5">
+
+                                                                      
                                                                         
-                                                                            <form action="#">
+                                                                            <form action="#" id="edit_privacy">
                                                                                 <table class="table table-light table-hover">
                                                                                     <tr>
                                                                                         <td> Hide my age from the public .. </td>
                                                                                         <td>
-                                                                                            <div class="mt-radio-inline">
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios1" value="option1" /> Yes
-                                                                                                    <span></span>
-                                                                                                </label>
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios1" value="option2" checked/> No
-                                                                                                    <span></span>
-                                                                                                </label>
+                                                                                            <div class="mt-radio-inline" id="public">
+                                                                                                <input type="checkbox" checked class="make-switch" id="public_view" name="public_view" data-size="mini">
                                                                                             </div>
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <td> Hide my profile from members i have not liked. </td>
                                                                                         <td>
-                                                                                            <div class="mt-radio-inline">
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios11" value="option1" /> Yes
-                                                                                                    <input type="checkbox" checked class="make-switch" id="test" data-size="mini">
-                                                                                                    <span></span>
-                                                                                                </label>
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios11" value="option2" checked/> No
-                                                                                                    <span></span>
-                                                                                                </label>
+                                                                                            
+                                                                                                <div class="mt-radio-inline" id="search">
+                                                                                                <input type="checkbox" checked class="make-switch" id="searchable" name="searchable" data-size="mini">
                                                                                             </div>
+                                                                                            
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td> Don't make my profile searchable by the search engines. </td>
                                                                                         <td>
-                                                                                            <div class="mt-radio-inline">
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios21" value="option1" /> Yes
-                                                                                                    <span></span>
-                                                                                                </label>
-                                                                                                <label class="mt-radio">
-                                                                                                    <input type="radio" name="optionsRadios21" value="option2" checked/> No
-                                                                                                    <span></span>
-                                                                                                </label>
-                                                                                            </div>
+                                                                                            <div id="switchList">
+                                                                                                <input class="switch bs-switch" type="checkbox" data="1" checked
+                                                                                                        data-on-text="Yes" data-off-text="No" />
+                                                                                                <input class="switch bs-switch" type="checkbox" data="2"
+                                                                                                        data-on-text="Pass" data-off-text="Fail"
+                                                                                                        data-on-color="success" data-off-color="danger" />
+                                                                                                </div>
                                                                                         </td>
                                                                                     </tr>
+                                                                                    
                                                                                     
                                                                                 </table>
                                                                                 <!--end profile-settings-->
                                                                                 <div class="margin-top-10">
-                                                                                    <a href="javascript:;" class="btn blue"> Save Changes </a>
+                                                                                    <button type="submit" class="btn green">Save Changes</button>
                                                                                     <a href="javascript:;" class="btn default"> Cancel </a>
                                                                                 </div>
                                                                             </form>
@@ -717,7 +693,7 @@
                                                                             <div class="row">
                                             <div class="col-md-12">
 
-                                            
+                                            <button id="ButtonId">Hello</button>
                                                 <div class="m-heading-1 border-green m-bordered">
                                                     <h3>Lightweight JavaScript Range Slider</h3>
                                                     <p> noUiSlider is a range slider without bloat. It offers a ton off features, and it is as small, lightweight and minimal as possible, which is great for mobile use on the many supported devices, including
@@ -729,6 +705,44 @@
                                                 <!-- BEGIN PORTLET-->
                                                 <div class="portlet light form-fit ">
                                                     <div class="portlet-title">
+
+                                                    ----------
+
+                                                   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="slider">
+  <div id="custom-handle" class="ui-slider-handle"></div>
+</div>
+
+                                                    ----------
                                                         <div class="caption">
                                                             <i class="icon-settings font-red"></i>
                                                             <span class="caption-subject font-red sbold uppercase">Ion Range Sliders</span>
@@ -853,6 +867,7 @@
                     <script src="<?php echo base_url(); ?>assets/global/plugins/nouislider/nouislider.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL PLUGINS -->
                     
+                    
                     <!-- BEGIN PAGE LEVEL SCRIPTS -->
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/components-nouisliders.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL SCRIPTS -->
@@ -865,7 +880,7 @@
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/ui-blockui.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL SCRIPTS -->
 
-
+                    
          
 
 
@@ -1015,12 +1030,42 @@ $(document).ready(function() {
                     e.preventDefault(); // avoid to execute the actual submit of the form.
                     
     });
-    
 
 
          
 });
 </script>   
+
+
+<script>    
+$(document).on('click', '#pulbic', function(event) {
+    val = $('#public_view').bootstrapSwitch('state');
+    console.log('current state : ' + val);
+    
+});
+
+
+$(document).on('click', '#search', function(event) {
+    val = $('#searchable').bootstrapSwitch('state');
+    console.log('current state : ' + val);
+    
+});
+
+
+$('input[name="public_view"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  console.log(this); // DOM element
+  console.log(event); // jQuery event
+  console.log(state); // true | false
+});
+
+</script>
+
+
+<script>   
+$('#ButtonId').on('click',function(){
+    $(this).toggleClass('ButtonClicked');
+});
+</script>
 
 
 
@@ -1131,9 +1176,6 @@ $(document).ready(function() {
 <script src="<?php echo base_url()?>assets/pages/scripts/form-validation.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->          
 
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo base_url()?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->  
 
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
@@ -1144,3 +1186,42 @@ $(document).ready(function() {
 <script src="<?php echo base_url()?>assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
             
+
+
+
+ <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+        <!-- END THEME LAYOUT SCRIPTS -->
+
+
+         <!-- BEGIN CORE PLUGINS -->
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+
+         <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->

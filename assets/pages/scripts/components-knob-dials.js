@@ -14,7 +14,13 @@ var ComponentsKnobDials = function () {
                 'dynamicDraw': true,
                 'thickness': 0.2,
                 'tickColorizeValues': true,
-                'skin': 'tron'
+                'skin': 'tron',
+                'format' : function (value) {
+                        return value + '%';
+                    },
+                'cursor':false,
+                'stopper': true,
+                'readOnly': true
             });  
         }
 
