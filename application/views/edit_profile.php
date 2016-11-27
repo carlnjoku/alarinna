@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.css">
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="<?php echo base_url()?>assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url()?>src/css/nouislider.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url()?>src/css/jquery-ui.css" rel="stylesheet" type="text/css" />
        <!-- END PAGE LEVEL PLUGINS -->  
 
         <!-- END PAGE LEVEL PLUGINS -->
@@ -677,49 +677,84 @@
                                                                 </div>
                                                                 <div class="portlet-body">
                                                                     <div class="portlet-body form">
-                                                                            --------
+                                                                          
                                                                             <div class="row">
                                             <div class="col-md-12">
-                                                <div class="m-heading-1 border-green m-bordered">
-                                                    <h3>Lightweight JavaScript Range Slider</h3>
-                                                    
-                                            
-                                                </div>
                                                 <!-- BEGIN PORTLET-->
                                                 <div class="portlet light form-fit ">
-                                                    <div class="portlet-title">
-
                                                     
-                                                        <div class="caption">
-                                                            <i class="icon-settings font-red"></i>
-                                                            <span class="caption-subject font-red sbold uppercase">Ion Range Sliders</span>
-                                                        </div>
-                                                        <div class="actions">
-                                                            <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                                                <label class="btn btn-transparent red btn-outline btn-circle btn-sm active">
-                                                                    <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                                                                <label class="btn btn-transparent red btn-outline btn-circle btn-sm">
-                                                                    <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                     <div class="portlet-body form">
-                                                    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-                                                    
+                                                   
                                                         <form role="form" class="form-horizontal form-bordered">
-                                                        
-                                                        
-                                                            <div class="form-body">
-                                                                <div class="form-group">
-                                                                    <label class="col-md-4 control-label">Loving</label>
-                                                                    
-                                                                    <div class="col-md-2">
-                                                                        <input type="text" disabled id="price" style="border:0; color:#b9cd6d; font-weight:bold;">%
-                                                                    </div>
-                                                                </div>
-                                                                <div id="slider-2"></div>
-                                                                
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Loving</div>
+                                                                <div class="col-md-7"> <div id="slider-2"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="loving" style="border:0; width:20px">%</div>
                                                             </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Caring</div>
+                                                                <div class="col-md-7"> <div id="slider-3"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="caring" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Confident</div>
+                                                                <div class="col-md-7"> <div id="slider-4"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="confident" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Flirty</div>
+                                                                <div class="col-md-7"> <div id="slider-5"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="flirty" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Faithful</div>
+                                                                <div class="col-md-7"> <div id="slider-6"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="faithful" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Adventrous</div>
+                                                                <div class="col-md-7"> <div id="slider-7"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="adventrous" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Patient</div>
+                                                                <div class="col-md-7"> <div id="slider-8"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="patient" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Healthy Life</div>
+                                                                <div class="col-md-7"> <div id="slider-9"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="health" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-2" style="margin-bottom:10px">Extrovert</div>
+                                                                <div class="col-md-7"> <div id="slider-10"></div> </div>
+                                                                <div class="col-md-2"><input type="text" value="0" disabled id="extrovert" style="border:0; width:20px">%</div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        
+                                                            
                                                             <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-9">
@@ -740,7 +775,7 @@
                                                 <!-- END PORTLET-->
                                             </div>
                                         </div>
-                                                                            ---------
+                                                                         
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -772,8 +807,7 @@
 
                      <!-- BEGIN PAGE LEVEL PLUGINS -->
                     <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-                    <script src="<?php echo base_url(); ?>src/js/nouislider.js" type="text/javascript"></script>
-       
+                    
                     
                     <!-- END PAGE LEVEL PLUGINS -->
                     
@@ -1219,12 +1253,118 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
  <script>
     $(function() {
         $( "#slider-2" ).slider({
-        value: 5,
-        animate:"slow",
-            slide: function( event, ui ) {
-            $( "#price" ).val( ui.value );
-        },	
-        orientation: "horizontal"
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#loving" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-3" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#caring" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-4" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#confident" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-5" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#flirty" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-6" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#faithful" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-7" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#adventrous" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-8" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#patient" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+    $(function() {
+        $( "#slider-9" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#health" ).val( ui.value );
+            },	
+            orientation: "horizontal"
+        });
+        
+    });
+
+
+    $(function() {
+        $( "#slider-10" ).slider({
+            
+            value: 5,
+            animate:"slow",
+                slide: function( event, ui ) {
+                $( "#extrovert" ).val( ui.value );
+            },	
+            orientation: "horizontal"
         });
         
     });
@@ -1232,8 +1372,6 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
                                                        
-
-
                            
 
 <script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.jquery.js"></script>   
