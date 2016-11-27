@@ -1,4 +1,4 @@
-        <!-- BEGIN PAGE LEVEL STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
         <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
 
@@ -9,8 +9,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.css">
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="<?php echo base_url()?>assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url()?>src/css/nouislider.min.css" rel="stylesheet" type="text/css" />
-       <!-- END PAGE LEVEL PLUGINS -->  
+        <!-- END PAGE LEVEL PLUGINS -->  
 
         <!-- END PAGE LEVEL PLUGINS -->
 
@@ -40,7 +39,6 @@
     $profile_photo =$row['profile_photo'];
     $city =$row['city'];
     $country =$row['country'];
-    $profile_meter =$row['profile_meter'];
 
 
 }
@@ -129,7 +127,7 @@
                                                             
                                                             <div class="col-md-12" style="text-align:center">
                                                                 <h4 style="text-align:center; weight:bold">Your Profile Meter</h4>
-                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  disabled value="<?php echo $profile_meter; ?>"> </div>
+                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  disabled value="<?php echo '45 %' ?>"> </div>
                                                             
                                                         </div>
 
@@ -464,7 +462,7 @@
                                                                             <h3>My Desires</h3>
                                                                                 <form action="#" id="form_edit_desire" class="form-horizontal">
                                                                                         <div class="col-md-6">
-                                                                                        <input type="hidden" name="memberID" id="memberID" value="<?php echo $memberID; ?>" />
+                                                                                        <input type="hidden" name="memberID" id="memberID" value="43" />
                                                                                             <div class="form-group">
                                                                                                 <label class="control-label col-md-4">Height</label>
                                                                                                 <div class="col-md-6">
@@ -633,7 +631,7 @@
                                                                             <form action="#" id="edit_privacy">
                                                                                 <table class="table table-light table-hover">
                                                                                     <tr>
-                                                                                        <td> Hide my profile from the public .. </td>
+                                                                                        <td> Hide my age from the public .. </td>
                                                                                         <td>
                                                                                             <div class="mt-radio-inline" id="public">
                                                                                                 <input type="checkbox" checked class="make-switch" id="public_view" name="public_view" data-size="mini">
@@ -641,7 +639,7 @@
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
-                                                                                        <td> Hide my profile from search engines. </td>
+                                                                                        <td> Hide my profile from members i have not liked. </td>
                                                                                         <td>
                                                                                             
                                                                                                 <div class="mt-radio-inline" id="search">
@@ -650,11 +648,25 @@
                                                                                             
                                                                                         </td>
                                                                                     </tr>
-                                                                                    
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <div id="switchList">
+                                                                                                <input class="switch bs-switch" type="checkbox" data="1" checked
+                                                                                                        data-on-text="Yes" data-off-text="No" />
+                                                                                                <input class="switch bs-switch" type="checkbox" data="2"
+                                                                                                        data-on-text="Pass" data-off-text="Fail"
+                                                                                                        data-on-color="success" data-off-color="danger" />
+                                                                                                </div>
+                                                                                        </td>
+                                                                                    </tr>
                                                                                     
                                                                                     
                                                                                 </table>
-                                                                               
+                                                                                <!--end profile-settings-->
+                                                                                <div class="margin-top-10">
+                                                                                    <button type="submit" class="btn green">Save Changes</button>
+                                                                                    <a href="javascript:;" class="btn default"> Cancel </a>
+                                                                                </div>
                                                                             </form>
                                                                         </div>
                                                                         <!-- END PRIVACY SETTINGS TAB -->
@@ -680,10 +692,15 @@
                                                                             --------
                                                                             <div class="row">
                                             <div class="col-md-12">
+
+                                            <button id="ButtonId">Hello</button>
                                                 <div class="m-heading-1 border-green m-bordered">
                                                     <h3>Lightweight JavaScript Range Slider</h3>
-                                                    
-                                            
+                                                    <p> noUiSlider is a range slider without bloat. It offers a ton off features, and it is as small, lightweight and minimal as possible, which is great for mobile use on the many supported devices, including
+                                                        iPhone, iPad, Android devices & Windows (Phone) 8 desktops, tablets and all-in-ones. It works on desktops too, of course. </p>
+                                                    <p> For more info please check out
+                                                        <a class="btn red-pink btn-outline" href="http://refreshless.com/nouislider/" target="_blank">the official documentation</a>
+                                                    </p>
                                                 </div>
                                                 <!-- BEGIN PORTLET-->
                                                 <div class="portlet light form-fit ">
@@ -704,21 +721,70 @@
                                                         </div>
                                                     </div>
                                                     <div class="portlet-body form">
-                                                    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-                                                    
                                                         <form role="form" class="form-horizontal form-bordered">
-                                                        
                                                         
                                                             <div class="form-body">
                                                                 <div class="form-group">
-                                                                    <label class="col-md-4 control-label">Loving</label>
-                                                                    
-                                                                    <div class="col-md-2">
-                                                                        <input type="text" disabled id="price" style="border:0; color:#b9cd6d; font-weight:bold;">%
+                                                                    <label class="col-md-3 control-label">Basic</label>
+                                                                    <div class="col-md-8">
+                                                                        <div id="demo2" class="noUi-success"></div>
                                                                     </div>
                                                                 </div>
-                                                                <div id="slider-2"></div>
-                                                                
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Custom Connect</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo3" class="noui-connect"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">HTML5 Input Elements</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo4" class="noUi-success"></div>
+                                                                        <div class="well margin-top-30">
+                                                                            <select id="demo4_select" class="form-control input-small input-inline"> </select>
+                                                                            <input id="demo4_input" class="form-control input-small input-inline"> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Linear Slider</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo5" class="noUi-danger"></div>
+                                                                        <div class="well margin-top-30">
+                                                                            <strong>Value:</strong>
+                                                                            <span id="demo5_lower-value"></span>
+                                                                            <br>
+                                                                            <strong>Value:</strong>
+                                                                            <span id="demo5_upper-value"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">With Tooltips</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo8" class="noUi-danger"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="col-md-3 control-label">Soft Limits</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo7" class="noUi-primary margin-bottom-40"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group last">
+                                                                    <label class="col-md-3 control-label">Locking Sliders Together</label>
+                                                                    <div class="col-md-4">
+                                                                        <div id="demo6_slider1" class="noUi-danger"></div>
+                                                                        <strong>Value:</strong>
+                                                                        <span id="demo6_slider1-span"></span>
+                                                                        <div id="demo6_slider2" class="noUi-success"></div>
+                                                                        <strong>Value:</strong>
+                                                                        <span id="demo6_slider2-span"></span>
+                                                                        <p>
+                                                                            <a href="javascript:;" class="btn red btn-outline sbold uppercase" id="demo6_lockbutton">Lock</a>
+                                                                        </p>
+                                                                        <span class="help-block"> Two cross-updating sliders can be created using a combination of the change and slide events. </span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="form-actions">
                                                                 <div class="row">
@@ -729,12 +795,6 @@
                                                                 </div>
                                                             </div>
                                                         </form>
-
-                                                       
-                                                        
-                                                        
-
-                                                        
                                                     </div>
                                                 </div>
                                                 <!-- END PORTLET-->
@@ -764,84 +824,35 @@
                         
                     </div>
                     <!-- END CONTAINER -->
-<style> 
-    .slider { margin: 80px; }
-</style>
-
-
 
                      <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-                    <script src="<?php echo base_url(); ?>src/js/nouislider.js" type="text/javascript"></script>
-       
-                    
+                     <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+                    <script src="<?php echo base_url(); ?>assets/global/plugins/nouislider/wNumb.min.js" type="text/javascript"></script>
+                    <script src="<?php echo base_url(); ?>assets/global/plugins/nouislider/nouislider.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL PLUGINS -->
                     
                     
                     <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                    <!-- <script src="<?php echo base_url(); ?>assets/pages/scripts/components-nouisliders.js" type="text/javascript"></script> -->
+                    <script src="<?php echo base_url(); ?>assets/pages/scripts/components-nouisliders.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL SCRIPTS -->
 
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/profile.min.js" type="text/javascript"></script>
 
-                    <!-- <script src="<?php echo base_url(); ?>plugins/rangeslider/rangeslider.min.js" type="text/javascript"></script> -->
+                    <script src="<?php echo base_url(); ?>plugins/rangeslider/rangeslider.min.js" type="text/javascript"></script>
                
                      <!-- BEGIN PAGE LEVEL SCRIPTS -->
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/ui-blockui.min.js" type="text/javascript"></script>
                     <!-- END PAGE LEVEL SCRIPTS -->
 
-                    <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
-                    <!-- END PAGE LEVEL PLUGINS -->
-                    <!-- BEGIN THEME GLOBAL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
-                    <!-- END THEME GLOBAL SCRIPTS -->
-                    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
-                    <!-- END PAGE LEVEL SCRIPTS -->
-
                     
-                   
-                    
-<script>
-    $(document).ready(function() {
-    function data ( element, key ) {
-	return element.getAttribute('data-' + key);  
-   
-    }
+         
 
-    function createSlider ( slider ) {
-        
-            noUiSlider.create(slider, {
-                start: 10,
-                connect: [true, false],
-                step: Number(data(slider, 'step')) || 10,
-                range: {
-                    'min': 10,
-                    'max': 100
-                },
-                
-                connect: true,
-                format: {
-                    to: function (value) {
-                        return value + '';
-                    },
-                    from: function (value) {
-                        return value.replace('', '');
-                    }
-                }
-            });
-    }
-
-    Array.prototype.forEach.call(document.querySelectorAll('.slider'), createSlider);
-
-    });
-
-</script>                    
 
  
 <script>
 $(document).ready(function() {
+
+   
     $('#photo1').slim({
             ratio: '1:1',
             saveInitialImage:true,
@@ -991,139 +1002,34 @@ $(document).ready(function() {
 
 
 <script>    
-
-$('input[name="public_view"]').on('switchChange.bootstrapSwitch', function(event, state) {
-  //console.log(this); // DOM element
-  //console.log(event); // jQuery event
-  console.log(state); // true | false
-  // ajax call
-  if(state == true){
-      
-      var stat = 1;
-      var memberID =  '<?php echo $memberID; ?>';
-      var obj = {"stat":stat, "memberID":memberID};
-      $.ajax({
-                dataType: 'html',
-                type: 'post',
-                url: 'http://localhost/neo4j-alarinna/web/edit_privacy_public_view',
-                data: obj,
-                
-                success: function (responseData) {
-                    
-                    var responseData = $.parseJSON(responseData); //parse JSON
-                    var member_id = responseData.memberID;
-                    var msg = responseData.msg;
-                    //var status = responseData.status;
-                    
-                    //alert(member_id);
-                    toastr.success('our privacy successfully switched on')
-
-                },
-                error: function (responseData) {
-                    
-                    toastr.warning('Personal detail update failed')
-                }
-            });
-
-  }else if(state==false){
-      var stat = 0;
-      var memberID =  '<?php echo $memberID; ?>';
-      var obj = {"stat":stat, "memberID":memberID};
-      $.ajax({
-                dataType: 'html',
-                type: 'post',
-                url: 'http://localhost/neo4j-alarinna/web/edit_privacy_public_view',
-                data: obj,
-                
-                success: function (responseData) {
-                    
-                    var responseData = $.parseJSON(responseData); //parse JSON
-                    var member_id = responseData.memberID;
-                    var msg = responseData.msg;
-                    //var status = responseData.status;
-                    
-                    //alert(member_id);
-                    toastr.success('Your privacy successfully switched off')
-
-                },
-                error: function (responseData) {
-                    
-                    toastr.warning('Personal detail update failed')
-                }
-            });
-    }else{
-        alert('Allow views');
-    }
+$(document).on('click', '#pulbic', function(event) {
+    val = $('#public_view').bootstrapSwitch('state');
+    console.log('current state : ' + val);
+    
 });
 
-$('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event, state) {
-  //console.log(this); // DOM element
-  //console.log(event); // jQuery event
+
+$(document).on('click', '#search', function(event) {
+    val = $('#searchable').bootstrapSwitch('state');
+    console.log('current state : ' + val);
+    
+});
+
+
+$('input[name="public_view"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  console.log(this); // DOM element
+  console.log(event); // jQuery event
   console.log(state); // true | false
-
-  // ajax call
-  if(state == true){
-      
-      var stat = 1;
-      var memberID =  '<?php echo $memberID; ?>';
-      var obj = {"stat":stat, "memberID":memberID};
-      $.ajax({
-                dataType: 'html',
-                type: 'post',
-                url: 'http://localhost/neo4j-alarinna/web/edit_privacy_searchable',
-                data: obj,
-                
-                success: function (responseData) {
-                    
-                    var responseData = $.parseJSON(responseData); //parse JSON
-                    var member_id = responseData.memberID;
-                    var msg = responseData.msg;
-                    //var status = responseData.status;
-                    
-                    //alert(member_id);
-                    toastr.success('our privacy successfully switched on')
-
-                },
-                error: function (responseData) {
-                    
-                    toastr.warning('Personal detail update failed')
-                }
-            });
-
-  }else if(state==false){
-      var stat = 0;
-      var memberID =  '<?php echo $memberID; ?>';
-      var obj = {"stat":stat, "memberID":memberID};
-      $.ajax({
-                dataType: 'html',
-                type: 'post',
-                url: 'http://localhost/neo4j-alarinna/web/edit_privacy_searchable',
-                data: obj,
-                
-                success: function (responseData) {
-                    
-                    var responseData = $.parseJSON(responseData); //parse JSON
-                    var member_id = responseData.memberID;
-                    var msg = responseData.msg;
-                    //var status = responseData.status;
-                    
-                    //alert(member_id);
-                    toastr.success('Your privacy successfully switched off')
-
-                },
-                error: function (responseData) {
-                    
-                    toastr.warning('Personal detail update failed')
-                }
-            });
-    }else{
-        // Call any function
-    }
 });
 
 </script>
 
 
+<script>   
+$('#ButtonId').on('click',function(){
+    $(this).toggleClass('ButtonClicked');
+});
+</script>
 
 
 
@@ -1216,22 +1122,6 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
 
 </script>
 
- <script>
-    $(function() {
-        $( "#slider-2" ).slider({
-        value: 5,
-        animate:"slow",
-            slide: function( event, ui ) {
-            $( "#price" ).val( ui.value );
-        },	
-        orientation: "horizontal"
-        });
-        
-    });
-</script>
-<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-                                                       
 
 
                            
@@ -1263,13 +1153,39 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
 
 
 
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+        <!-- END THEME LAYOUT SCRIPTS -->
 
-    <!-- BEGIN CORE PLUGINS -->
 
-<script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END CORE PLUGINS -->
+         <!-- BEGIN CORE PLUGINS -->
+       
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
 
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo base_url(); ?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-
+         <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->

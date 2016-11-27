@@ -33,7 +33,7 @@ gulp.task('build-css', function () {
 });
 
 gulp.task('build-js', function() {
-        gulp.src(assetsDev + 'script/**/*.js')
+        gulp.src(assetsDev + 'js/**/*.js')
         .pipe(concat('main.min.js'))
         .pipe(jsuglify())
         .pipe(gulp.dest(assetsProd + 'js/'));
