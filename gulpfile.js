@@ -11,6 +11,8 @@ var assetsProd = 'src/';
 //var cssnano = require('cssnano');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
+var rename = require('gulp-rename');
+var uglifycss = require('gulp-uglifycss');
 
 /* JS & TS */
 var jsuglify = require('gulp-uglify');
@@ -21,11 +23,12 @@ var imagemin = require('gulp-imagemin');
 gulp.task('build-css', function () {
        gulp.src(assetsDev + 'css/**/*.css')
         //.pipe(sourcemaps.init())
-        //.pipe(postcss([precss, autoprefixer, cssnano]))
-        //.pipe(sourcemaps.write())
+       .pipe(minify())
+       .pipe(uglifycss({
+            "maxLineLen": 80,
+            "uglyComments": true
+        }))
         .pipe(concat('main.min.css'))
-        .pipe(minify())
-        //.pipe(ext_replace('.min.css'))
         .pipe(gulp.dest(assetsProd + 'css/'));
 });
 

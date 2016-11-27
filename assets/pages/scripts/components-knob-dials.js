@@ -20,7 +20,7 @@ var ComponentsKnobDials = function () {
                     },
                 'cursor':false,
                 'stopper': true,
-                'readOnly': false
+                'readOnly': true
             });  
         }
 
