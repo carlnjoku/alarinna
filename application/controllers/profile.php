@@ -96,6 +96,7 @@ class Profile extends CI_Controller {
         
         $data['main_content'] = 'edit_profile';
         $data['memberID'] = $memberID;
+		$data['title'] = 'Alarinna | Edit Title';
 		$data['result_photos'] = $result_photos;
 		$data['result_member'] = $result_member;
 		$data['result_desire'] = $result_desire;
