@@ -39,18 +39,24 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="<?php echo base_url(); ?>assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/layout.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
+
+        
+            
+
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
     <body class="page-container-bg-solid">
+   
         <div class="page-wrapper">
             <div class="page-wrapper-row">
                 <div class="page-wrapper-top">
                     <!-- BEGIN HEADER -->
+                    <header>
                     <div class="page-header">
                         <!-- BEGIN HEADER TOP -->
                         <div class="page-header-top">
@@ -58,7 +64,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
                                     <a href="index.html">
-                                        <img src="../assets/layouts/layout3/img/logo-default.jpg" alt="logo" class="logo-default">
+                                        <img src="../assets/layouts/layout3/img/logo-default1.jpg" alt="logo" class="logo-default img-responsive">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->
@@ -73,7 +79,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
                                         <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <i class="icon-bell"></i>
+                                                <i class="icon-heart"></i>
                                                 <span class="badge badge-default">7</span>
                                             </a>
                                             <ul class="dropdown-menu">
@@ -84,87 +90,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </li>
                                                 <li>
                                                     <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">just now</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-success">
-                                                                        <i class="fa fa-plus"></i>
-                                                                    </span> New user registered. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">3 mins</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </span> Server #12 overloaded. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">10 mins</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-warning">
-                                                                        <i class="fa fa-bell-o"></i>
-                                                                    </span> Server #2 not responding. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">14 hrs</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </span> Application error. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">2 days</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </span> Database overloaded 68%. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">3 days</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </span> A user IP blocked. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">4 days</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-warning">
-                                                                        <i class="fa fa-bell-o"></i>
-                                                                    </span> Storage Server #4 not responding dfdfdfd. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">5 days</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </span> System Error. </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="time">9 days</span>
-                                                                <span class="details">
-                                                                    <span class="label label-sm label-icon label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </span> Storage server failed. </span>
-                                                            </a>
-                                                        </li>
+                                                        
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -173,111 +99,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!-- BEGIN TODO DROPDOWN -->
                                         <li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <i class="icon-calendar"></i>
-                                                <span class="badge badge-default">3</span>
+                                                <i class="icon-question"></i>
+                                                <span class="badge badge-red">3</span>
                                             </a>
-                                            <ul class="dropdown-menu extended tasks">
-                                                <li class="external">
-                                                    <h3>You have
-                                                        <strong>12 pending</strong> tasks</h3>
-                                                    <a href="app_todo_2.html">view all</a>
-                                                </li>
-                                                <li>
-                                                    <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">New release v1.2 </span>
-                                                                    <span class="percent">30%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">40% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">Application deployment</span>
-                                                                    <span class="percent">65%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">65% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">Mobile app release</span>
-                                                                    <span class="percent">98%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">98% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">Database migration</span>
-                                                                    <span class="percent">10%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">10% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">Web server upgrade</span>
-                                                                    <span class="percent">58%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">58% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">Mobile development</span>
-                                                                    <span class="percent">85%</span>
-                                                                </span>
-                                                                <span class="progress">
-                                                                    <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">85% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <span class="task">
-                                                                    <span class="desc">New UI release</span>
-                                                                    <span class="percent">38%</span>
-                                                                </span>
-                                                                <span class="progress progress-striped">
-                                                                    <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
-                                                                        <span class="sr-only">38% Complete</span>
-                                                                    </span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                           
                                         </li>
                                         <!-- END TODO DROPDOWN -->
                                         <li class="droddown dropdown-separator">
@@ -286,13 +111,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!-- BEGIN INBOX DROPDOWN -->
                                         <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <span class="circle">3</span>
+                                                <span class="circle">4</span>
                                                 <span class="corner"></span>
                                             </a>
                                             <ul class="dropdown-menu">
                                                 <li class="external">
                                                     <h3>You have
-                                                        <strong>7 New</strong> Messages</h3>
+                                                        <strong>3 New</strong> Messages</h3>
                                                     <a href="app_inbox.html">view all</a>
                                                 </li>
                                                 <li>
@@ -375,12 +200,24 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <li>
                                                     <a href="app_inbox.html">
                                                         <i class="icon-envelope-open"></i> My Inbox
-                                                        <span class="badge badge-danger"> 3 </span>
+                                                        <span class="badge badge-danger"> 31 </span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="app_todo_2.html">
-                                                        <i class="icon-rocket"></i> My Tasks
+                                                    <a href="<?php echo base_url(); ?>page/requests">
+                                                        <i class="icon-rocket"></i> Requests
+                                                        <span class="badge badge-success"> 7 </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>page/visitors">
+                                                        <i class="icon-rocket"></i> Visitors
+                                                        <span class="badge badge-success"> 7 </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>page/fancies">
+                                                        <i class="icon-rocket"></i> Fancies
                                                         <span class="badge badge-success"> 7 </span>
                                                     </a>
                                                 </li>
@@ -453,14 +290,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>home/dashboard"> Match
+                                            <a href="<?php echo base_url();?>page/matches"> Match
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
 
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>home/dashboard"> Search
+                                            <a href="<?php echo base_url();?>page/search"> Search
                                                 <span class="arrow"></span>
                                             </a>
                                             
@@ -482,8 +319,37 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <!-- END HEADER MENU -->
                     </div>
+                    </header>
                     <!-- END HEADER -->
+                    <style>
+                        .headroom {
+                            will-change: transform;
+                            transition: transform 200ms linear;
+                        }
+                        .headroom--pinned {
+                            transform: translateY(0%);
+                        }
+                        .headroom--unpinned {
+                            transform: translateY(-100%);
+                        }
+                    </style>
+
+                    <script>
+                    // grab an element
+                        var myElement = document.querySelector("header");
+                        // construct an instance of Headroom, passing the element
+                        var headroom  = new Headroom(myElement);
+                        // initialise
+                        headroom.init(); 
+                    </script>
+
+                    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+                    <script src="<?php echo base_url(); ?>assets/js/headroom.js" type="text/javascript"></script>
+                    <!-- END THEME GLOBAL SCRIPTS -->
+
+
                 </div>
             </div>
-            <div class="page-wrapper-row full-height">
+     
+        <div class="page-wrapper-row full-height">
                 <div class="page-wrapper-middle">

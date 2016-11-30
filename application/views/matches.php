@@ -1,5 +1,4 @@
- <!-- BEGIN CONTAINER -->
-                    <div class="page-container">
+<div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
                             <!-- BEGIN CONTENT BODY -->
@@ -8,130 +7,227 @@
                                 <div class="container">
                                     <!-- BEGIN PAGE TITLE -->
                                     <div class="page-title">
-                                        <h1><?php echo $page_title; ?>
-                                            
-                                        </h1>
+                                        <h1> <?php echo $page_title; ?></h1>
                                     </div>
                                     <!-- END PAGE TITLE -->
-                                   
+                                    
                                 </div>
                             </div>
                             <!-- END PAGE HEAD-->
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
-                                 
+                                    
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
-                                        <div class="mt-content-body">
+                                        <!-- BEGIN : USER CARDS -->
                                         <div class="row">
-                                            
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">5</span>
-                                                            </h3>
-                                                            <small>LIKES</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-heart"></i>
+                                            <div class="col-md-12">
+                                                <div class="portlet light portlet-fit ">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                            <i class=" icon-layers font-green"></i>
+                                                            <span class="caption-subject font-green bold uppercase">Match Result</span>
                                                         </div>
                                                     </div>
-                                                   <!-- <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar10.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar11.jpg">
-                                                    -->
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">8</span>
-                                                            </h3>
-                                                            <small>CHATS</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-bubble"></i>
-                                                        </div>
-                                                    </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar6.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    -->
-                                                </div>
-                                            </div>
-                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">15</span>
-                                                            </h3>
-                                                            <small>MESSAGES</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-envelope"></i>
-                                                        </div>
-                                                    </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    -->
-                                                   
-                                                </div>
-                                            </div>
-                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">10</span>
-                                                            </h3>
-                                                            <small>REQUESTS</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-question"></i>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar2.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                    -->
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                        
-                                            <div class="row">
-                                                <div class="col-md-8 col-sm-8">
-                                                    <div class="portlet light ">
-                                                        <div class="portlet-title">
-                                                            <div class="caption caption-md">
-                                                                <i class="icon-bar-chart font-dark hide"></i>
-                                                                <span class="caption-subject font-blue uppercase bold">Recommended Matches</span>
-                                                                <span class="caption-helper hide">weekly stats...</span>
+                                                    <div class="portlet-body">
+                                                        <div class="mt-element-card mt-element-overlay">
+                                                            <div class="row">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1">
+                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Mark Anthony</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Managing Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
+                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
+                                                                            <div class="mt-overlay mt-top">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Denzel Wash</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Finance Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
+                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">David Goodman</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
+                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Lucy Ling</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">HR Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            
                                                         </div>
-                                                        <div class="portlet-body">
-                                                            
-                                                            <div class="portlet-body">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="portlet light portlet-fit ">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                            <i class=" icon-layers font-green"></i>
+                                                            <span class="caption-subject font-green bold uppercase">New Members</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="portlet-body">
                                                         <div class="mt-element-card mt-card-round mt-element-overlay">
                                                             <div class="row">
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
                                                                         <div class="mt-card-avatar mt-overlay-1">
                                                                             <img src="../assets/pages/img/avatars/team5.jpg" />
@@ -151,23 +247,23 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Jennifer</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Lagos, Nigeria (32)</p>
+                                                                            <h3 class="mt-card-name">Jennifer Lawrence</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
                                                                             <div class="mt-card-social">
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -175,7 +271,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
                                                                         <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
                                                                             <img src="../assets/pages/img/avatars/team6.jpg" />
@@ -201,17 +297,17 @@
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -219,8 +315,51 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
+                                                                            <img src="../assets/pages/img/avatars/team7.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Hugh Jackman</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Human Resource</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
                                                                         <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
                                                                             <img src="../assets/pages/img/avatars/team8.jpg" />
@@ -246,17 +385,17 @@
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -267,286 +406,164 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="actions">
-                                                        <div class="btn-group btn-group-devided pull-right" data-toggle="buttons">
-                                                            <label class="btn btn-transparent btn-no-border red btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">See More</label>  
-                                                        </div>
-                                                        <div style="clear:both"></div>
-                                                    </div>
-
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                                <div class="col-md-4 col-sm-4">
-                                                    <div class="portlet light" id="sticker">
-                                                        <div class="portlet-title">
-                                                            <div class="caption caption-md">
-                                                                <i class="icon-bar-chart font-dark hide"></i>
-                                                                <span class="caption-subject font-blue bold uppercase">Your Profile Meter</span>
-                                                                
-                                                            </div>
-                                                            
-                                                        </div>
-                                                        <div class="portlet-body">
-                                                            
-                                                            <div class="table-scrollable table-scrollable-borderless">
-                                                                <div class="col-md-12" style="text-align:center">
-                                                                
-                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  readonly value="<?php echo '15' ?>"> </div>
-                                                                <h4 style="text-align:center; weight:bold">Your Profile Meter</h4>
-                                                        </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--START TIMELINE  -->
-                                                <div class="row">
-                                                    <div class="col-md-8">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
                                                 <div class="portlet light portlet-fit ">
                                                     <div class="portlet-title">
                                                         <div class="caption">
-                                                            <i class="icon-microphone font-green"></i>
-                                                            <span class="caption-subject bold font-green uppercase"> Activities</span>
-                                                            
+                                                            <i class=" icon-layers font-green"></i>
+                                                            <span class="caption-subject font-green bold uppercase">Profile</span>
                                                         </div>
-                                                        
                                                     </div>
                                                     <div class="portlet-body">
-                                                        <div class="timeline">
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/583a82c3ce95d_team2.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Mako</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Profile Update at 7:45 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group">
-                                                                                <button class="btn btn-circle green btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Another action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
-                                                                                    </li>
-                                                                                </ul>
+                                                        <div class="mt-element-card mt-element-overlay">
+                                                            <div class="row">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-4">
+                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <h2>Mark Anthony</h2>
+                                                                                <div class="mt-info font-white">
+                                                                                    <div class="mt-card-content">
+                                                                                        <p class="mt-card-desc font-white">Managing Director</p>
+                                                                                        <div class="mt-card-social">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-facebook"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-twitter"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-dribbble"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg"> <a>Soyoyo</a> just updated her profile
-                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/teambg3.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">You have new request</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">at 5:10 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade">
-                                                                            <p>
-                                                                                Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot
-                                                                                winter purslane collard. </p>
-                                                                            
-                                                                            
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <div class="timeline-icon">
-                                                                        <i class="icon-heart font-red"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <span class="timeline-body-alerttitle font-red">You have new fancies</span>
-                                                                            <span class="timeline-body-time font-grey-cascade">at 11:00 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group">
-                                                                                <button class="btn btn-circle green btn-outline
-
-                               btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Another action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
-                                                                                    </li>
-                                                                                </ul>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-4">
+                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <h2>Denzel Wash</h2>
+                                                                                <div class="mt-info font-white">
+                                                                                    <div class="mt-card-content">
+                                                                                        <p class="mt-card-desc font-white">Finance Director</p>
+                                                                                        <div class="mt-card-social">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-facebook"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-twitter"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-dribbble"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                                        <span class="font-grey-cascade"> <a>Judo,</a> <a>Aketi,</a> <a>Sussy</a> and others just fancied you
-                                                                            
-                                                                        </span>
-                                                                         
-                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/logo_symbol.png"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Alarinna</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Replied at 7:45 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade"> 
-                                                                            <div class="blog-img-thumb">
-                                                                                <a href="javascript:;">
-                                                                                    <img class="img-responsive" src="../assets/pages/media/blog/event_bg.png" />
-                                                                                
-                                                                                </a>
-                                                                            </div>
-                                                                        
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic img-circle" src="../assets/pages/media/users/avatar80_2.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Vanessa Bond</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Posted new post at 5:10 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade">
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-right" src="../assets/pages/media/blog/4.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot
-                                                                                winter purslane collard. </p>
-                                                                            
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-left" src="../assets/pages/media/blog/6.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi radicchio shallot winter purslane collard greens
-                                                                                spring onion squash lentil. </p>
-                                                                           
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <div class="timeline-icon">
-                                                                        <i class="icon-docs font-red-intense"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <span class="timeline-body-alerttitle font-green-haze">Server Report</span>
-                                                                            <span class="timeline-body-time font-grey-cascade">Yesterday at 11:00 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group dropup">
-                                                                                <button class="btn btn-circle red btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Another action </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
-                                                                                    </li>
-                                                                                </ul>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-4">
+                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <h2>David Goodman</h2>
+                                                                                <div class="mt-info font-white">
+                                                                                    <div class="mt-card-content">
+                                                                                        <p class="mt-card-desc font-white">Creative Director</p>
+                                                                                        <div class="mt-card-social">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-facebook"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-twitter"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-dribbble"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade"> Lorem ipsum dolore sit amet
-                                                                            <a href="javascript:;">Ispect</a>
-                                                                        </span>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-4">
+                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <h2>Lucy Ling</h2>
+                                                                                <div class="mt-info font-white">
+                                                                                    <div class="mt-card-content">
+                                                                                        <p class="mt-card-desc font-white">HR Director</p>
+                                                                                        <div class="mt-card-social">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-facebook"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-twitter"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li>
+                                                                                                    <a class="mt-card-btn" href="javascript:;">
+                                                                                                        <i class="icon-social-dribbble"></i>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- END TIMELINE ITEM -->
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!---END TIMELINE-->
-
-                                                </div>
-                                            </div>
-                                            
-                                            
                                         </div>
+                                        <!-- END : USER CARDS -->
                                     </div>
                                     <!-- END PAGE CONTENT INNER -->
                                 </div>
@@ -1118,21 +1135,3 @@
                         <!-- END QUICK SIDEBAR -->
                     </div>
                     <!-- END CONTAINER -->
-             <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-                    
-            
-             <!-- BEGIN PAGE LEVEL PLUGINS -->
-            <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
-            <!-- END PAGE LEVEL PLUGINS -->
-            
-            <!-- BEGIN PAGE LEVEL SCRIPTS -->
-            <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
-            <!-- END PAGE LEVEL SCRIPTS -->
-
-            <script type="text/javascript" src="<?php echo base_url(); ?>sticky/jquery.sticky.js"></script>
-            <script>
-                $(window).load(function(){
-                $("#sticker").sticky({ topSpacing: 10, bottomSpacing:200 });
-                });
-            </script>

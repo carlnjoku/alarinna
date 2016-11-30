@@ -1,4 +1,5 @@
- <!-- BEGIN CONTAINER -->
+<link href="<?php echo base_url(); ?>assets/pages/css/search.min.css" rel="stylesheet" type="text/css" />
+<!-- BEGIN CONTAINER -->
                     <div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
@@ -8,9 +9,7 @@
                                 <div class="container">
                                     <!-- BEGIN PAGE TITLE -->
                                     <div class="page-title">
-                                        <h1><?php echo $page_title; ?>
-                                            
-                                        </h1>
+                                        <h1><?php echo $page_title; ?></h1>
                                     </div>
                                     <!-- END PAGE TITLE -->
                                    
@@ -20,121 +19,465 @@
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
-                                 
+                                <style>
+                                   .selectdiv {
+                                        position: relative;
+                                        /*Don't really need this just for demo styling*/
+                                        
+                                  
+                                        min-width: 200px;
+                                       
+                                        }
+
+                                        .selectdiv:after {
+                                            content: '\f078';
+                                            font: normal normal normal 17px/1 FontAwesome;
+                                            color: #0ebeff;
+                                            right: 11px;
+                                            top: 6px;
+                                            height: 34px;
+                                            padding: 15px 0px 0px 8px;
+                                            border-left: 1px solid #0ebeff;
+                                            position: absolute;
+                                            pointer-events: none;
+                                        }
+
+                                        /* IE11 hide native button (thanks Matt!) */
+                                        select::-ms-expand {
+                                        display: none;
+                                        }
+
+                                        .selectdiv select {
+                                        -webkit-appearance: none;
+                                        -moz-appearance: none;
+                                        appearance: none;
+                                        /* Add some styling */
+                                        
+                                        outline:none;
+                                        border:none;
+                                        display: block;
+                                        width: 100%;
+                                        max-width: 320px;
+                                        height: 35px;
+                                        float: right;
+                                        margin: 5px 0px;
+                                        padding: 0px 24px;
+                                        font-size: 16px;
+                                        line-height: 1.75;
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        background-image: none;
+                                        border: 1px solid #0ebeff;
+                                        -ms-word-break: normal;
+                                        word-break: normal;
+                                        }
+
+                                        .well{
+                                            background-color: #4299d4;
+                                            color:#F2F2F2;
+                                        }
+
+                                        .well a{
+                                            color:#F2F2F2;
+                                        }
+
+                                        
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #d92a92;
+   color: #555;
+   font-size: inherit;
+   margin: 10px;
+   overflow: hidden;
+   padding: 8px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 200px;
+}
+
+select#soflow-color {
+   color: #fff;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FF69B4, #FF69B4 40%, #FF69B4);
+   background-color: #FF69B4;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 15px;
+}
+                                </style>
+                                    
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
-                                        <div class="mt-content-body">
-                                        <div class="row">
-                                            
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">5</span>
-                                                            </h3>
-                                                            <small>LIKES</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-heart"></i>
-                                                        </div>
-                                                    </div>
-                                                   <!-- <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar10.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar11.jpg">
-                                                    -->
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">8</span>
-                                                            </h3>
-                                                            <small>CHATS</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-bubble"></i>
-                                                        </div>
-                                                    </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar6.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    -->
-                                                </div>
-                                            </div>
-                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">15</span>
-                                                            </h3>
-                                                            <small>MESSAGES</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-envelope"></i>
-                                                        </div>
-                                                    </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    -->
-                                                   
-                                                </div>
-                                            </div>
-                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
-                                                    <div class="display">
-                                                        <div class="number">
-                                                            <h3 class="font-red">
-                                                                <span data-counter="counterup" data-value="1349">10</span>
-                                                            </h3>
-                                                            <small>REQUESTS</small>
-                                                        </div>
-                                                        <div class="icon">
-                                                            <i class="icon-question"></i>
-                                                        </div>
-                                                    </div>
+                                        <div class="search-page search-content-3">
+                                        <!--START SEARCH BOX -->
+                                         <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="well well-lg"> 
+                                                
+                                                
 
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar2.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                    -->
-                                                </div>
-                                            </div>
-                                           
-                                        </div>
-                                        
-                                            <div class="row">
-                                                <div class="col-md-8 col-sm-8">
-                                                    <div class="portlet light ">
-                                                        <div class="portlet-title">
-                                                            <div class="caption caption-md">
-                                                                <i class="icon-bar-chart font-dark hide"></i>
-                                                                <span class="caption-subject font-blue uppercase bold">Recommended Matches</span>
-                                                                <span class="caption-helper hide">weekly stats...</span>
+                                                    <a href="#demo" class="pull-right" data-toggle="collapse">Advance Search</a>
+                                                    
+                                                    <form id="formsearch" action="#" class="form-inline">
+                                                         <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Find</label> 
+                                                        <select id="soflow-color" name="gender">
+                                                        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                                            <option>Woman &nbsp;&nbsp;</option>
+                                                            <option>Man &nbsp;&nbsp;</option>  
+                                                        </select>
+                                                        
+                                                        <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Ages between:</label> 
+                                                        <select id="soflow-color" name="age">
+                                                        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                        </select>
+
+                                                        <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Located in:</label> 
+                                                        <select id="soflow-color" name="location">
+                                                        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                                            <option>Lagos</option>
+                                                            <option>Abuja</option>
+                                                            <option>Ibadan</option>
+                                                            <option>Port Harcourt</option>
+                                                        </select>
+
+                                                    <p></p>        
+                                                     
+                                                <div id="demo" class="collapse">    
+                                                    <!-- START ADVANCE SEARCH -->    
+                                                    <div class="portlet-title tabbable-line">
+                                                    
+                                                        <ul class="nav nav-tabs" style="color:#F2F2F2">
+                                                            <li class="active">
+                                                                <a href="#portlet_tab3" data-toggle="tab"> Physical Appearance </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#portlet_tab2" data-toggle="tab"> Lifestyle </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#portlet_tab1" data-toggle="tab"> Religion & Ethnicity</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#portlet_tab1" data-toggle="tab"> Other</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                   
+                                                    <div class="portlet-body">
+                                                     <div class="well well-lg">
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane active" id="portlet_tab1">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Height</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Blue
+                                                                                    <input type="checkbox" value="1" name="blue" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label><b>Hair Color</b></label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Eye Type</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Blue
+                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Body Type</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Petit
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Slender
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Medium
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             
+                                                            <div class="tab-pane" id="portlet_tab2">
+                                                                <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Height</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label><b>Hair Color</b></label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Height</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Hair Color</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                    
+                                                                
+                                                            </div>
+                                                            <div class="tab-pane" id="portlet_tab3">
+                                                              <div class="row">
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Height</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label><b>Hair Color</b></label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Height</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Hair Color</label>
+                                                                            <div class="mt-checkbox-list">
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
+                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="portlet-body">
+                                                     </div>
+                                                    </div>
+                                            </div>
+                                                <!-- END ADVANCE SEARCH --> 
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="col-xs-2 pull-right">
+                                                            <button class="btn grey bold uppercase btn-block">Clear Search</button>
                                                             
-                                                            <div class="portlet-body">
-                                                        <div class="mt-element-card mt-card-round mt-element-overlay">
+                                                        </div>
+                                                        <div class="col-xs-2 pull-right">
+                                                            <button class="btn green bold uppercase btn-block">Search </button>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                        
+                                                </form>
+                                            </div>
+
+                                           
+                                        </div>
+                                        <!-- BEGIN SEARCH BOX -->
+                                    </div>
+
+                                            
+                                        
+                                            <div class="row">
+                                            
+                                                <div class="col-lg-12">
+                                                    <div class="portlet-body">
+                                                        <div class="mt-element-card mt-element-overlay">
                                                             <div class="row">
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
                                                                         <div class="mt-card-avatar mt-overlay-1">
-                                                                            <img src="../assets/pages/img/avatars/team5.jpg" />
+                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
                                                                             <div class="mt-overlay">
                                                                                 <ul class="mt-info">
                                                                                     <li>
@@ -151,23 +494,23 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Jennifer</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Lagos, Nigeria (32)</p>
+                                                                            <h3 class="mt-card-name">Mark Anthony</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Managing Director</p>
                                                                             <div class="mt-card-social">
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -175,10 +518,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
                                                                         <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                            <img src="../assets/pages/img/avatars/team6.jpg" />
+                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
                                                                             <div class="mt-overlay mt-top">
                                                                                 <ul class="mt-info">
                                                                                     <li>
@@ -195,23 +538,23 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Kate Beck</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Executive Manager</p>
+                                                                            <h3 class="mt-card-name">Denzel Wash</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Finance Director</p>
                                                                             <div class="mt-card-social">
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -219,11 +562,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                               
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                            <img src="../assets/pages/img/avatars/team8.jpg" />
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
+                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
                                                                             <div class="mt-overlay">
                                                                                 <ul class="mt-info">
                                                                                     <li>
@@ -240,23 +582,67 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Finance Manager</p>
+                                                                            <h3 class="mt-card-name">David Goodman</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
                                                                             <div class="mt-card-social">
                                                                                 <ul>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
+                                                                                            <i class="icon-social-facebook"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
+                                                                                            <i class="icon-social-twitter"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
                                                                                         <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
+                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Lucy Ling</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">HR Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
                                                                                         </a>
                                                                                     </li>
                                                                                 </ul>
@@ -266,286 +652,194 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="actions">
-                                                        <div class="btn-group btn-group-devided pull-right" data-toggle="buttons">
-                                                            <label class="btn btn-transparent btn-no-border red btn-outline btn-circle btn-sm active">
-                                                                <input type="radio" name="options" class="toggle" id="option1">See More</label>  
-                                                        </div>
-                                                        <div style="clear:both"></div>
-                                                    </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-4">
-                                                    <div class="portlet light" id="sticker">
-                                                        <div class="portlet-title">
-                                                            <div class="caption caption-md">
-                                                                <i class="icon-bar-chart font-dark hide"></i>
-                                                                <span class="caption-subject font-blue bold uppercase">Your Profile Meter</span>
-                                                                
-                                                            </div>
-                                                            
-                                                        </div>
-                                                        <div class="portlet-body">
-                                                            
-                                                            <div class="table-scrollable table-scrollable-borderless">
-                                                                <div class="col-md-12" style="text-align:center">
-                                                                
-                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  readonly value="<?php echo '15' ?>"> </div>
-                                                                <h4 style="text-align:center; weight:bold">Your Profile Meter</h4>
-                                                        </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--START TIMELINE  -->
-                                                <div class="row">
-                                                    <div class="col-md-8">
-                                                <div class="portlet light portlet-fit ">
-                                                    <div class="portlet-title">
-                                                        <div class="caption">
-                                                            <i class="icon-microphone font-green"></i>
-                                                            <span class="caption-subject bold font-green uppercase"> Activities</span>
-                                                            
-                                                        </div>
-                                                        
                                                     </div>
                                                     <div class="portlet-body">
-                                                        <div class="timeline">
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/583a82c3ce95d_team2.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Mako</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Profile Update at 7:45 PM</span>
+                                                        <div class="mt-element-card mt-element-overlay">
+                                                            <div class="row">
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1">
+                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group">
-                                                                                <button class="btn btn-circle green btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Mark Anthony</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Managing Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Another action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg"> <a>Soyoyo</a> just updated her profile
-                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/teambg3.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">You have new request</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">at 5:10 PM</span>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
+                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
+                                                                            <div class="mt-overlay mt-top">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade">
-                                                                            <p>
-                                                                                Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot
-                                                                                winter purslane collard. </p>
-                                                                            
-                                                                            
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <div class="timeline-icon">
-                                                                        <i class="icon-heart font-red"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <span class="timeline-body-alerttitle font-red">You have new fancies</span>
-                                                                            <span class="timeline-body-time font-grey-cascade">at 11:00 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group">
-                                                                                <button class="btn btn-circle green btn-outline
-
-                               btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Denzel Wash</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Finance Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Another action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                                        <span class="font-grey-cascade"> <a>Judo,</a> <a>Aketi,</a> <a>Sussy</a> and others just fancied you
-                                                                            
-                                                                        </span>
-                                                                         
-                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/logo_symbol.png"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Alarinna</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Replied at 7:45 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade"> 
-                                                                            <div class="blog-img-thumb">
-                                                                                <a href="javascript:;">
-                                                                                    <img class="img-responsive" src="../assets/pages/media/blog/event_bg.png" />
-                                                                                
-                                                                                </a>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
+                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
                                                                             </div>
-                                                                        
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic img-circle" src="../assets/pages/media/users/avatar80_2.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Vanessa Bond</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Posted new post at 5:10 PM</span>
                                                                         </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade">
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-right" src="../assets/pages/media/blog/4.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot
-                                                                                winter purslane collard. </p>
-                                                                            
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-left" src="../assets/pages/media/blog/6.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi radicchio shallot winter purslane collard greens
-                                                                                spring onion squash lentil. </p>
-                                                                           
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <div class="timeline-icon">
-                                                                        <i class="icon-docs font-red-intense"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <span class="timeline-body-alerttitle font-green-haze">Server Report</span>
-                                                                            <span class="timeline-body-time font-grey-cascade">Yesterday at 11:00 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions">
-                                                                            <div class="btn-group dropup">
-                                                                                <button class="btn btn-circle red btn-sm dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                                                    <i class="fa fa-angle-down"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">David Goodman</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Another action </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="javascript:;">Something else here </a>
-                                                                                    </li>
-                                                                                    <li class="divider"> </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">Separated link </a>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade"> Lorem ipsum dolore sit amet
-                                                                            <a href="javascript:;">Ispect</a>
-                                                                        </span>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                                    <div class="mt-card-item">
+                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
+                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
+                                                                            <div class="mt-overlay">
+                                                                                <ul class="mt-info">
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-magnifier"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a class="btn default btn-outline" href="javascript:;">
+                                                                                            <i class="icon-link"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mt-card-content">
+                                                                            <h3 class="mt-card-name">Lucy Ling</h3>
+                                                                            <p class="mt-card-desc font-grey-mint">HR Director</p>
+                                                                            <div class="mt-card-social">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-facebook"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-twitter"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="javascript:;">
+                                                                                            <i class="icon-social-dribbble"></i>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- END TIMELINE ITEM -->
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <!---END TIMELINE-->
 
+
+                                                    
                                                 </div>
                                             </div>
-                                            
-                                            
                                         </div>
                                     </div>
                                     <!-- END PAGE CONTENT INNER -->
@@ -1120,19 +1414,73 @@
                     <!-- END CONTAINER -->
              <!-- BEGIN PAGE LEVEL PLUGINS -->
                     <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-                    
-            
-             <!-- BEGIN PAGE LEVEL PLUGINS -->
-            <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
+            <!-- BEGIN PAGE LEVEL PLUGINS -->
+            <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>assets/global/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
             <!-- END PAGE LEVEL PLUGINS -->
             
             <!-- BEGIN PAGE LEVEL SCRIPTS -->
-            <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>assets/pages/scripts/search.min.js" type="text/javascript"></script>
             <!-- END PAGE LEVEL SCRIPTS -->
-
+            
             <script type="text/javascript" src="<?php echo base_url(); ?>sticky/jquery.sticky.js"></script>
             <script>
                 $(window).load(function(){
                 $("#sticker").sticky({ topSpacing: 10, bottomSpacing:200 });
                 });
             </script>
+
+        <script>
+
+            $(document).ready(function(){
+
+                $("#formsearch").submit(function(e) {
+                    var frmData1 = $('#formsearch').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+                                        
+                    var data1 = JSON.stringify(frmData1);
+
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/personality',
+                        data: data1,
+                        
+                        beforeSend: function()
+                        {
+                            alert(data1);
+                            $.blockUI({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fff' },
+                                message:'<img src="../assets/loading-spinner-pink.gif"/>',
+                            });
+                            setTimeout($.unblockUI, 2000); 
+
+                            
+                            
+                        
+                        },
+                        success: function (responseData) {
+                            
+                            var responseData = $.parseJSON(responseData); //parse JSON
+                            var member_id = responseData.memberID;
+                            var msg = responseData.msg;
+                            //var status = responseData.status;
+                            
+                            alert(member_id);
+                            toastr.success(msg)
+    
+                        },
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                 
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                });  
+            });
+        </script>

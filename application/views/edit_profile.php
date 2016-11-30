@@ -52,8 +52,6 @@
 
 <!-- BEGIN CONTAINER -->
                     <div class="page-container">
-
-                    
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
                             <!-- BEGIN CONTENT BODY -->
@@ -110,10 +108,6 @@
                                                                     <a href="page_user_profile_1_account.html">
                                                                         <i class="icon-settings"></i> Account Settings </a>
                                                                 </li>
-                                                                <li>
-                                                                    <a href="page_user_profile_1_help.html">
-                                                                        <i class="icon-info"></i> Help </a>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                         <!-- END MENU -->
@@ -129,7 +123,7 @@
                                                             
                                                             <div class="col-md-12" style="text-align:center">
                                                                 <h4 style="text-align:center; weight:bold">Your Profile Meter</h4>
-                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  disabled value="<?php echo $profile_meter; ?>"> </div>
+                                                                <input class="knob" data-angleoffset=-125 data-anglearc=250 data-fgcolor="#4C87B9"  readonly value="<?php echo $profile_meter; ?>"> </div>
                                                             
                                                         </div>
 
@@ -685,13 +679,13 @@
                                                     
                                                     <div class="portlet-body form">
                                                    
-                                                        <form role="form" class="form-horizontal form-bordered">
-
+                                                        <form role="form" id="form_edit_personality" class="form-horizontal form-bordered">
+                                                        <input type="hidden" name="memberID" value="<?php echo $memberID; ?>" name="memberID">
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Loving</div>
                                                                 <div class="col-md-7"> <div id="slider-2"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="loving" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="loving" value="0" id="loving" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
 
@@ -699,21 +693,21 @@
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Caring</div>
                                                                 <div class="col-md-7"> <div id="slider-3"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="caring" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="caring" value="0" id="caring" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Confident</div>
                                                                 <div class="col-md-7"> <div id="slider-4"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="confident" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="confident" value="0" id="confident" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Flirty</div>
                                                                 <div class="col-md-7"> <div id="slider-5"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="flirty" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="flirty" value="0" id="flirty" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         
@@ -721,35 +715,35 @@
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Faithful</div>
                                                                 <div class="col-md-7"> <div id="slider-6"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="faithful" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="faithful" value="0" id="faithful" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Adventrous</div>
                                                                 <div class="col-md-7"> <div id="slider-7"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="adventrous" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="adventrous" value="0" id="adventrous" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Patient</div>
                                                                 <div class="col-md-7"> <div id="slider-8"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="patient" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="patient" value="0" id="patient" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Healthy Life</div>
                                                                 <div class="col-md-7"> <div id="slider-9"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="health" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="healthy" value="0" id="healthy" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
                                                                 <div class="col-md-2" style="margin-bottom:10px">Extrovert</div>
                                                                 <div class="col-md-7"> <div id="slider-10"></div> </div>
-                                                                <div class="col-md-2"><input type="text" value="0" disabled id="extrovert" style="border:0; width:20px">%</div>
+                                                                <div class="col-md-2"><input type="text" name="extrovert" value="0" id="extrovert" readonly style="border:0; width:26px">%</div>
                                                             </div>
                                                         </div>
                                                         
@@ -758,7 +752,7 @@
                                                             <div class="form-actions">
                                                                 <div class="row">
                                                                     <div class="col-md-offset-3 col-md-9">
-                                                                        <button type="submit" class="btn green">Submit</button>
+                                                                        <button type="submit" class="btn blue">Submit</button>
                                                                         <button type="button" class="btn default">Cancel</button>
                                                                     </div>
                                                                 </div>
@@ -967,7 +961,7 @@ $(document).ready(function() {
     });
 
 
-    // Submit forms without validation
+    // Submit forms edit desire
     $("#form_edit_desire").submit(function(e) {
         var frmData1 = $('#form_edit_desire').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
                                         
@@ -1010,6 +1004,57 @@ $(document).ready(function() {
                         error: function (responseData) {
                             
                             toastr.warning('Personal detail update failed')
+                        }
+                    });
+                    
+                 
+                    e.preventDefault(); // avoid to execute the actual submit of the form.
+                    
+    });
+
+    // Submit forms without validation
+    $("#form_edit_personality").submit(function(e) {
+        var frmData1 = $('#form_edit_personality').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+                                        
+                    var data1 = JSON.stringify(frmData1);
+
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/personality',
+                        data: data1,
+                        
+                        beforeSend: function()
+                        {
+                            alert(data1);
+                            $.blockUI({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fff' },
+                                message:'<img src="../assets/loading-spinner-pink.gif"/>',
+                            });
+                            setTimeout($.unblockUI, 2000); 
+
+                            
+                            
+                        
+                        },
+                        success: function (responseData) {
+                            
+                            var responseData = $.parseJSON(responseData); //parse JSON
+                            var member_id = responseData.memberID;
+                            var msg = responseData.msg;
+                            //var status = responseData.status;
+                            
+                            alert(member_id);
+                            toastr.success(msg)
+    
+                        },
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
                         }
                     });
                     
@@ -1348,7 +1393,7 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
             value: 5,
             animate:"slow",
                 slide: function( event, ui ) {
-                $( "#health" ).val( ui.value );
+                $( "#healthy" ).val( ui.value );
             },	
             orientation: "horizontal"
         });

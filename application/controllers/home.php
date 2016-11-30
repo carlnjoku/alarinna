@@ -26,6 +26,8 @@ class Home extends CI_Controller {
         
         $data['main_content'] = 'dashboard';
         $data['memberID'] = $memberID;
+        $data['title'] = 'Alarinna | My Home Page';
+        $data['page_title'] = 'My Page | Dashboard';
 		$this->load->view('includes/template', $data); 
 	}
 
