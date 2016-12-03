@@ -334,6 +334,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         }
                     </style>
 
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+                    <script src="<?php echo base_url(); ?>assets/js/headroom.js" type="text/javascript"></script>
+                    <!-- END THEME GLOBAL SCRIPTS -->
+
                     <script>
                     // grab an element
                         var myElement = document.querySelector("header");
@@ -343,10 +347,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         headroom.init(); 
                     </script>
 
-                    <!-- BEGIN THEME GLOBAL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/js/headroom.js" type="text/javascript"></script>
-                    <!-- END THEME GLOBAL SCRIPTS -->
-
+                    
 
                 </div>
             </div>

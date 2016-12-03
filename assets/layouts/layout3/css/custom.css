@@ -50,6 +50,22 @@
 }
 
 
+.fa-plus-square-o {
+vertical-align: middle;
+}
+.fa-minus-square-o {
+vertical-align: middle;
+}
+a.faq-links {
+font-size: 20px;
+}
+.faq-links:hover {
+text-decoration: none;
+}
+.faq-links:focus {
+text-decoration: none;
+}
+
 
 
 

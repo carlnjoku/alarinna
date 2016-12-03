@@ -186,16 +186,32 @@ select#soflow-color {
                                                                         <div class="form-group">
                                                                             <label>Height</label>
                                                                             <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Blue
-                                                                                    <input type="checkbox" value="1" name="blue" />
+                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Petite
+                                                                                    <input type="checkbox" value="" name="Height" />
                                                                                     <span></span>
                                                                                 </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Less Than Average
+                                                                                    <input type="checkbox" value="" name="Height" />
                                                                                     <span></span>
                                                                                 </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Average Height
+                                                                                    <input type="checkbox" value="" name="Height" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Tall
+                                                                                    <input type="checkbox" value="" name="Height" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Pretty-Tall
+                                                                                    <input type="checkbox" value="" name="Height" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> Sky-high
+                                                                                    <input type="checkbox" value="" name="Height" />
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <label class="mt-checkbox mt-checkbox-outline"> No Preference
+                                                                                    <input type="checkbox" value="" name="Height" />
                                                                                     <span></span>
                                                                                 </label>
                                                                             </div>
@@ -473,6 +489,9 @@ select#soflow-color {
                                                 <div class="col-lg-12">
                                                     <div class="portlet-body">
                                                         <div class="mt-element-card mt-element-overlay">
+                                                            <div class="row result">
+
+                                                            </div>
                                                             <div class="row">
                                                                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                                                     <div class="mt-card-item">
@@ -1424,12 +1443,7 @@ select#soflow-color {
             <!-- END PAGE LEVEL SCRIPTS -->
             
             <script type="text/javascript" src="<?php echo base_url(); ?>sticky/jquery.sticky.js"></script>
-            <script>
-                $(window).load(function(){
-                $("#sticker").sticky({ topSpacing: 10, bottomSpacing:200 });
-                });
-            </script>
-
+        
         <script>
 
             $(document).ready(function(){
@@ -1442,38 +1456,37 @@ select#soflow-color {
                      $.ajax({
                         dataType: 'html',
                         type: 'post',
-                        url: 'http://localhost/neo4j-alarinna/web/personality',
+                        url: 'http://localhost/neo4j-alarinna/web/search',
                         data: data1,
                         
                         beforeSend: function()
                         {
                             alert(data1);
-                            $.blockUI({ 
+                            
+                            $('div.result').block({ 
                                 css: { 
                                     background: 'none',
                                     border:'none'
                                 },
-                                overlayCSS: { backgroundColor: '#fff' },
-                                message:'<img src="../assets/loading-spinner-pink.gif"/>',
+                                overlayCSS: { backgroundColor: '#eaeaea' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">loading your matches...',
+                                timeout: 15000
                             });
-                            setTimeout($.unblockUI, 2000); 
 
-                            
-                            
-                        
                         },
-                        success: function (responseData) {
-                            
-                            var responseData = $.parseJSON(responseData); //parse JSON
-                            var member_id = responseData.memberID;
-                            var msg = responseData.msg;
-                            //var status = responseData.status;
-                            
-                            alert(member_id);
-                            toastr.success(msg)
+                        success: function (response) {
+                             
+                            $('div.result').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            alert(item.nicname);
+                            $.each(responseData, function(index,item) {
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
+                            });
+
+                            //alert(item.nicname);
     
                         },
-                        error: function (responseData) {
+                        error: function (response) {
                             
                             toastr.warning('Personality update failed')
                         }
@@ -1484,3 +1497,7 @@ select#soflow-color {
                 });  
             });
         </script>
+
+
+
+        
