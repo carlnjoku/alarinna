@@ -93,7 +93,7 @@
                                                         <!-- END SIDEBAR USER TITLE -->
                                                         <!-- SIDEBAR BUTTONS -->
                                                         <div class="profile-userbuttons">
-                                                            <button type="button" class="btn btn-circle blue btn-sm">Public View</button>
+                                                            <a href="<?php echo base_url();?>profile/p_preview" type="button" class="btn btn-circle blue btn-sm">Preview Profile</a>
                                                             <button type="button" class="btn btn-circle red btn-sm">Message</button>
                                                         </div>
                                                         <!-- END SIDEBAR BUTTONS -->

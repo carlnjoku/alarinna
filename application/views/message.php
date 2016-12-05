@@ -1,3 +1,9 @@
+<!-- BEGIN PAGE LEVEL STYLES -->
+    
+         <link href="<?php echo base_url(); ?>assets/apps/css/inbox.min.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL STYLES -->
+
+<!-- BEGIN CONTAINER -->
 <div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
@@ -7,7 +13,9 @@
                                 <div class="container">
                                     <!-- BEGIN PAGE TITLE -->
                                     <div class="page-title">
-                                        <h1> <?php echo $page_title; ?></h1>
+                                        <h1>Inbox
+                                            <small>user inbox</small>
+                                        </h1>
                                     </div>
                                     <!-- END PAGE TITLE -->
                                     
@@ -17,33 +25,95 @@
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
-                                
-<span><a id="fancy" data-memberId = "44" href="javascript:;"><i class="fa fa-heart-o font-red"></i></a></span>
-                                                         
+                                    
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
-                                        <!-- BEGIN : USER CARDS -->
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="portlet light portlet-fit ">
-                                                    <div class="portlet-title">
-                                                        <div class="caption">
-                                                            <i class=" icon-layers font-green"></i>
-                                                            <span class="caption-subject font-green bold uppercase">Match Result</span>
-                                                        </div>
+                                        <div class="inbox">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="inbox-sidebar">
+                                                        <a href="javascript:;" data-title="Compose" class="btn red compose-btn btn-block">
+                                                            <i class="fa fa-edit"></i> Compose </a>
+                                                        <ul class="inbox-nav">
+                                                            <li class="active">
+                                                                <a href="javascript:;" data-type="inbox" data-title="Inbox"> Inbox
+                                                                    <span class="badge badge-success">3</span>
+                                                                </a>
+                                                            </li>
+                                                            
+                
+                                                            
+                                                        </ul>
+                                                        <ul class="inbox-contacts">
+                                                            <li class="divider margin-bottom-30"></li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar4.jpg">
+                                                                    <span class="contact-name">Adam Stone</span>
+                                                                    <span class="contact-status bg-green"></span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar2.jpg">
+                                                                    <span class="contact-name">Lisa Wong</span>
+                                                                    <span class="contact-status bg-red"></span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar5.jpg">
+                                                                    <span class="contact-name">Nick Strong</span>
+                                                                    <span class="contact-status bg-green"></span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar6.jpg">
+                                                                    <span class="contact-name">Anna Bold</span>
+                                                                    <span class="contact-status bg-yellow"></span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar7.jpg">
+                                                                    <span class="contact-name">Richard Nilson</span>
+                                                                    <span class="contact-status bg-green"></span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                    <div class="portlet-body">
-                                                        <div class="mt-element-card mt-element-overlay">
-                                                            <div class="row result" style="min-height:200px">
-                                                                                     
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="inbox-body">
+                                                        <div class="inbox-header">
+                                                            <h1 class="pull-left">Inbox</h1>
+                                                            <form class="form-inline pull-right" action="index.html">
+                                                                <div class="input-group input-medium">
+                                                                    <input type="text" class="form-control" placeholder="Password">
+                                                                    <span class="input-group-btn">
+                                                                        <button type="submit" class="btn green">
+                                                                            <i class="fa fa-search"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="inbox-content"> </div>
+                                                        <div style="clear:both"></div>
+                                                        <div class="form-group">
+                                                            
+                                                            <div class="col-md-9">
+                                                                <textarea class="form-control" rows="3" name="aboutme" id="aboutme" placeholder="in a few words describe yourself"> message</textarea>
+                                                                
                                                             </div>
                                                         </div>
+                                                         
+                                                                                            
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <!-- END : USER CARDS -->
                                     </div>
                                     <!-- END PAGE CONTENT INNER -->
                                 </div>
@@ -616,178 +686,8 @@
                     </div>
                     <!-- END CONTAINER -->
 
-
-	
-
-
-
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="<?php echo base_url()?>assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo base_url()?>assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-
-
-
-<script>
-    function LikeUnLikeButton() {
-            $("#fancy").click(function (e) {
-                var d = $(this).attr('data-memberId');
-                if ($(this).html() == '<i class="fa fa-heart-o font-red"></i>') {
-                    $(this).html('<i class="fa fa-heart font-red"></i>');
-                    alert(d);
+                      <!-- BEGIN PAGE LEVEL PLUGINS -->
+                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
                     
                     
-                }
-                else {
-                    $(this).html('unlike', true);
-                    $(this).html('<i class="fa fa-heart-o font-red"></i>');
-                    
-                }
-            });
-
-        }
-    LikeUnLikeButton();
-</script>
-            
-<script>
-//TOGGLE FACNY ICON  ON click
-$(document).ready(function(){
-    $(function() {
-        $('.like-button').click(function(){
-            var obj = $(this);
-            console.log(obj);
-            var memberID = '<?php echo $memberID; ?>';
-            if( obj.data('liked') ){
-                obj.data('liked', false);
-                obj.html('<i class="fa fa-heart font-red"></i>');
-                $.ajax({
-                    type: "POST",
-                    url: 'http://localhost/neo4j-alarinna/web/matches',
-                    data: 'memberID='+memberID,
-                    cache: false,
-                    success: function(data){
-                        if (data == 0) {
-                            alert('you have liked this item before');
-                        } else {
-                            $('a#'+item_id).addClass('liked');
-                            $('a#'+item_id).html(data);
-                        }
-                    }
-                });
-           
-            }
-            else{
-                obj.data('liked', true);
-                obj.html('<i class="fa fa-heart-o font-red"></i>');
-                
-            }
-        })
-    })
-});
-    
-</script>
-
-
-        <script>
-
-            $(document).ready(function(){
-
-                     var memberID = '<?php echo $memberID; ?>';
-                     $.ajax({
-                        dataType: 'html',
-                        type: 'get',
-                        url: 'http://localhost/neo4j-alarinna/web/matches/'+ memberID,
-                        
-                        
-                        beforeSend: function()
-                        {
-                          
-                            $('div.result').block({ 
-                                css: { 
-                                    background: 'none',
-                                    border:'none'
-                                },
-                                overlayCSS: { backgroundColor: '#eaeaea' },
-                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">loading your matches...',
-                                timeout: 15000
-                            });
-                
-                            //setTimeout($.unblockUI, 20000); 
-
-                        },
-                        success: function (response) {
-                            
-                            $('div.result').unblock(); 
-                            var responseData = $.parseJSON(response); //parse JSON
-                            $.each(responseData, function(index,item) {
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a is="fancy" data-memberId = '+item.memberID+'  href="javascript:;"><i class="fa fa-heart-o font-red"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="fa fa-hand-o-left"></i></a></li></ul></div></div></div></div>'); 
-                            });
-                        },                     
-                        
-                        error: function (responseData) {
-                            
-                            toastr.warning('Personality update failed')
-                        }
-                    });
-                    
-                  
-            });
-        </script>
-
-<!--
-    <script>
-        $(document).ready(function(){
-            $("#fancy").submit(function(e) {
-            // Fancy
-            var memberID = '<?php echo $memberID; ?>';
-            $.ajax({
-                        dataType: 'html',
-                        type: 'get',
-                        url: 'http://localhost/neo4j-alarinna/web/matches/'+ memberID,
-                        
-                        
-                        beforeSend: function()
-                        {
-                          
-                            $('div.result').block({ 
-                                css: { 
-                                    background: 'none',
-                                    border:'none'
-                                },
-                                overlayCSS: { backgroundColor: '#eaeaea' },
-                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">loading your matches...',
-                                timeout: 15000
-                            });
-                
-                            //setTimeout($.unblockUI, 20000); 
-
-                        },
-                        success: function (response) {
-                            
-                            $('div.result').unblock(); 
-                            var responseData = $.parseJSON(response); //parse JSON
-                            $.each(responseData, function(index,item) {
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
-                            });
-                        },                     
-                        
-                        error: function (responseData) {
-                            
-                            toastr.warning('Personality update failed')
-                        }
-                    });
-
-                  });
-        });
-        </script>
--->
-
-
-
-
+                   <script src="<?php echo base_url(); ?>assets/apps/scripts/inbox.min.js" type="text/javascript"></script>

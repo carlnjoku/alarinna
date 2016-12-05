@@ -18,29 +18,19 @@
     
 </div>
 
-<div id="js-grid-juicy-projects" class="cbp">
+
 <?php
         $last_id = 0;
         foreach ($result_photos as $key=> $rphotos) {
             $photo = $rphotos['photo']; // keep the last id for the paging
             ?>
            
-             <div class="cbp-item web-design logos">
-                <div class="cbp-caption">
-                    <div class="cbp-caption-defaultWrap">
-                        <img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/> 
-                    </div>
-                    <div class="cbp-caption-activeWrap">
-                        <div class="cbp-l-caption-alignCenter">
-                            <div class="cbp-l-caption-body">
-                                <a href="../assets/global/plugins/cubeportfolio/ajax/project2.html" class="cbp-singlePage cbp-l-caption-buttonLeft btn red uppercase btn red uppercase" rel="nofollow">Delete</a>
-                                <a href="<?php echo base_url();?>profile-images/<?php echo $photo; ?>" class="cbp-lightbox cbp-l-caption-buttonRight btn red uppercase btn red uppercase">view larger</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+             <div class="col-md-4" style="margin-bottom:20px">
+                <a href="">
+                    <img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/>
+                </a>
             </div>
+
 
 
             
@@ -48,7 +38,7 @@
         }
 ?>
 
-</div>
+
 
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.css">

@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
-Version: 4.7
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+
 -->
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -56,7 +46,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="page-wrapper-row">
                 <div class="page-wrapper-top">
                     <!-- BEGIN HEADER -->
-                    <header>
+                  
                     <div class="page-header">
                         <!-- BEGIN HEADER TOP -->
                         <div class="page-header-top">
@@ -64,7 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
                                     <a href="index.html">
-                                        <img src="../assets/layouts/layout3/img/logo-default1.jpg" alt="logo" class="logo-default img-responsive">
+                                        <img src="<?php echo base_url();?>assets/layouts/layout3/img/logo-default1.jpg" alt="logo" class="logo-default img-responsive">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->
@@ -125,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <li>
                                                             <a href="#">
                                                                 <span class="photo">
-                                                                    <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                                    <img src="<?php echo base_url();?>assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
                                                                 <span class="subject">
                                                                     <span class="from"> Lisa Wong </span>
                                                                     <span class="time">Just Now </span>
@@ -185,7 +175,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!-- BEGIN USER LOGIN DROPDOWN -->
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <img alt="" class="img-circle" src="../assets/layouts/layout3/img/avatar9.jpg">
+                                                <img alt="" class="img-circle" src="<?php echo base_url(); ?>assets/layouts/layout3/img/avatar9.jpg">
                                                 <span class="username username-hide-mobile">Nick</span>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-default">
@@ -278,13 +268,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <ul class="dropdown-menu pull-left">
                                                 <li class=" ">
                                                     <a href="<?php echo base_url();?>profile/edit_profile" class="nav-link  ">
-                                                        <i class="icon-bar-chart"></i> Edit Profile
-                                                        <span class="badge badge-success">1</span>
+                                                        <i class="icon-pencil"></i> Edit Profile
+                                                        
                                                     </a>
                                                 </li>
                                                 <li class=" ">
-                                                    <a href="<?php echo base_url();?>profile/view_profile" class="nav-link  ">
-                                                        <i class="icon-bulb"></i> View Profile </a>
+                                                    <a href="<?php echo base_url();?>profile/p_preview" class="nav-link  ">
+                                                        <i class="icon-eye"></i> View Profile </a>
                                                 </li>
                                                 
                                             </ul>
@@ -319,23 +309,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <!-- END HEADER MENU -->
                     </div>
-                    </header>
+                   
                     <!-- END HEADER -->
-                    <style>
-                        .headroom {
-                            will-change: transform;
-                            transition: transform 200ms linear;
-                        }
-                        .headroom--pinned {
-                            transform: translateY(0%);
-                        }
-                        .headroom--unpinned {
-                            transform: translateY(-100%);
-                        }
-                    </style>
+                    
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/js/headroom.js" type="text/javascript"></script>
                     <!-- END THEME GLOBAL SCRIPTS -->
 
                     <script>
