@@ -7,7 +7,7 @@
                                 <div class="container">
                                     <!-- BEGIN PAGE TITLE -->
                                     <div class="page-title">
-                                        <h1> <?php echo $page_title; ?></h1>
+                                        <h1 class="font-blue bold"> <?php echo $page_title; ?></h1>
                                     </div>
                                     <!-- END PAGE TITLE -->
                                     
@@ -17,9 +17,7 @@
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
-                                
-<span><a id="fancy" data-memberId = "44" href="javascript:;"><i class="fa fa-heart-o font-red"></i></a></span>
-                                                         
+                                                        
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
                                         <!-- BEGIN : USER CARDS -->
@@ -634,64 +632,53 @@
 
 
 
-<script>
-    function LikeUnLikeButton() {
-            $("#fancy").click(function (e) {
-                var d = $(this).attr('data-memberId');
-                if ($(this).html() == '<i class="fa fa-heart-o font-red"></i>') {
-                    $(this).html('<i class="fa fa-heart font-red"></i>');
-                    alert(d);
-                    
-                    
-                }
-                else {
-                    $(this).html('unlike', true);
-                    $(this).html('<i class="fa fa-heart-o font-red"></i>');
-                    
-                }
-            });
 
-        }
-    LikeUnLikeButton();
-</script>
+
             
 <script>
-//TOGGLE FACNY ICON  ON click
+
 $(document).ready(function(){
-    $(function() {
-        $('.like-button').click(function(){
-            var obj = $(this);
-            console.log(obj);
-            var memberID = '<?php echo $memberID; ?>';
-            if( obj.data('liked') ){
-                obj.data('liked', false);
-                obj.html('<i class="fa fa-heart font-red"></i>');
-                $.ajax({
-                    type: "POST",
-                    url: 'http://localhost/neo4j-alarinna/web/matches',
-                    data: 'memberID='+memberID,
-                    cache: false,
-                    success: function(data){
-                        if (data == 0) {
-                            alert('you have liked this item before');
-                        } else {
-                            $('a#'+item_id).addClass('liked');
-                            $('a#'+item_id).html(data);
-                        }
-                    }
-                });
+    var memberID = '<?php echo $memberID; ?>';
+        $.ajax({
+        dataType: 'html',
+        type: 'get',
+        url: 'http://localhost/neo4j-alarinna/web/get_fancies_matches/'+ memberID,
+        
+        
+        
+        success: function (response) {
+            
+            
+            var responseData = $.parseJSON(response); //parse JSON
+            // Convert result to string
+            var arr = [];
+            for (var prop in responseData) {
+                arr.push(responseData[prop]);
+            }
+            //console.log(arr);
+
+            var arr ='65, 55, 60';
+            var other_memberID = '55';
+            var  string = arr;
+            var main = string.includes(other_memberID);
+
+            //main == true ? alert('Yes') : alert('No');
+
+            
+            //if(main == true){alert('Yes')}else{alert('No')};
+            
+        },                     
+        
+        error: function (responseData) {
+            
+            //toastr.warning('Personality update failed')
+        }
+    });
            
-            }
-            else{
-                obj.data('liked', true);
-                obj.html('<i class="fa fa-heart-o font-red"></i>');
-                
-            }
-        })
-    })
 });
-    
+
 </script>
+
 
 
         <script>
@@ -713,8 +700,8 @@ $(document).ready(function(){
                                     background: 'none',
                                     border:'none'
                                 },
-                                overlayCSS: { backgroundColor: '#eaeaea' },
-                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">loading your matches...',
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
                                 timeout: 15000
                             });
                 
@@ -723,10 +710,17 @@ $(document).ready(function(){
                         },
                         success: function (response) {
                             
+
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
+                            var memberID = '<?php echo $memberID; ?>'
                             $.each(responseData, function(index,item) {
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a is="fancy" data-memberId = '+item.memberID+'  href="javascript:;"><i class="fa fa-heart-o font-red"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="fa fa-hand-o-left"></i></a></li></ul></div></div></div></div>'); 
+                                    
+                                    var  string = item.myfancies;
+                                    
+                                    var main = string.includes(memberID);
+                                    
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
                             });
                         },                     
                         
@@ -788,6 +782,48 @@ $(document).ready(function(){
         </script>
 -->
 
+
+
+
+<script>
+
+$(document).delegate("#fancy", "click",function(e){
+    var memberID = '<?php echo $memberID; ?>';
+    var other_memberID = $(this).attr('data-memberId');
+    var obj = {"other_memberID":other_memberID, "memberID":memberID};
+    if ($(this).html() == '<i class="fa fa-heart-o font-red"></i>') {
+        $(this).html('<i class="fa fa-heart font-red"></i>');
+        
+        alert(other_memberID);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/fancy',
+        data: obj,
+        cache: false,
+        success: function(data){
+            if (data == 0) {
+                alert('you have liked this item before');
+            } else {
+                $('a#'+item_id).addClass('liked');
+                $('a#'+item_id).html(data);
+            }
+        }
+    });
+        
+        
+    }
+    else {
+        $(this).html('unlike', true);
+        $(this).html('<i class="fa fa-heart-o font-red"></i>');
+
+        
+        
+    }
+
+ });
+
+
+</script>
 
 
 

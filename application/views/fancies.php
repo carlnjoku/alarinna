@@ -52,183 +52,8 @@
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row">
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1">
-                                                                                                    <img src="../assets/pages/img/avatars/team5.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Jennifer</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Ibadan, NG - 43</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                                                    <img src="../assets/pages/img/avatars/team6.jpg" />
-                                                                                                    <div class="mt-overlay mt-top">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Kate Beck</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Executive Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                                                    <img src="../assets/pages/img/avatars/team7.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Hugh Jackman</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Human Resource</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                                                    <img src="../assets/pages/img/avatars/team8.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Finance Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                        <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                    <div class="row result" style="min-height:200px">
+                                                                                    
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -237,142 +62,10 @@
                                                                         <!-- CHANGE AVATAR TAB -->
                                                                         <div class="tab-pane" id="tab_1_2">
                                                                             
-                                                                                <div class="portlet-body">
+                                                                            <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row">
-                                                                                       
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                                                    <img src="../assets/pages/img/avatars/team6.jpg" />
-                                                                                                    <div class="mt-overlay mt-top">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Kate Beck</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Executive Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                        <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                                                    <img src="../assets/pages/img/avatars/team7.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Hugh Jackman</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Human Resource</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                                                    <img src="../assets/pages/img/avatars/team8.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Finance Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
+                                                                                    <div class="row result_me" style="min-height:200px">
+                                                                                    
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -973,3 +666,113 @@
                     
                     
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/profile.min.js" type="text/javascript"></script>
+
+
+                    </script>
+
+
+<script>
+//Get fancies
+$(document).ready(function(){
+    var memberID = '<?php echo $memberID; ?>';
+        $.ajax({
+        dataType: 'html',
+        type: 'get',
+        url: 'http://localhost/neo4j-alarinna/web/get_fancies/'+ memberID,
+
+        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#eaeaea' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+        },
+        
+        
+        
+        success: function (response) {
+            
+            
+            var responseData = $.parseJSON(response); //parse JSON
+
+            $('div.result').unblock(); 
+                var responseData = $.parseJSON(response); //parse JSON
+                var memberID = '<?php echo $memberID; ?>'
+                $.each(responseData, function(index,item) {
+                        
+                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="<?php echo base_url(); ?>profile-images/'+item.profile_photo +' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-magnifier"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + '</h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="fa fa-heart fa-lg font-red"></i></a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                });
+
+        },                     
+        
+        error: function (responseData) {
+            
+            toastr.warning('PNo data available')
+        }
+    });
+           
+});
+    
+</script>
+
+<script>
+//Get fancies
+$(document).ready(function(){
+    var memberID = '<?php echo $memberID; ?>';
+        $.ajax({
+        dataType: 'html',
+        type: 'get',
+        url: 'http://localhost/neo4j-alarinna/web/get_fancies_me/'+ memberID,
+
+        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#ffffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+        },
+        
+        
+        
+        success: function (response) {
+            
+            
+            var responseData = $.parseJSON(response); //parse JSON
+
+            $('div.result').unblock(); 
+                var responseData = $.parseJSON(response); //parse JSON
+                var memberID = '<?php echo $memberID; ?>'
+                $.each(responseData, function(index,item) {
+                        
+                    $(".result_me").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="<?php echo base_url(); ?>profile-images/'+item.profile_photo +' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-magnifier"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + '</h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="fa fa-heart-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                });
+
+        },                     
+        
+        error: function (responseData) {
+            
+            toastr.warning('PNo data available')
+        }
+    });
+           
+});
+    
+</script>

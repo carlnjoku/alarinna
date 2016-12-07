@@ -8,7 +8,7 @@
                                 <div class="container">
                                     <!-- BEGIN PAGE TITLE -->
                                     <div class="page-title">
-                                        <h1><?php echo $page_title; ?>
+                                        <h1 class="font-blue bold"><?php echo $page_title; ?>
                                             
                                         </h1>
                                     </div>
