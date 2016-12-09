@@ -174,9 +174,9 @@
                                         <!-- END INBOX DROPDOWN -->
                                         <!-- BEGIN USER LOGIN DROPDOWN -->
                                         <li class="dropdown dropdown-user dropdown-dark">
-                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <img alt="" class="img-circle" src="<?php echo base_url(); ?>assets/layouts/layout3/img/avatar9.jpg">
-                                                <span class="username username-hide-mobile">Nick</span>
+                                            <a href="javascript:;" id="member_avatar" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                
+                                                <span class="username username-hide-mobile"><i class="fa fa-bar fa-2x"></i></span>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
@@ -324,3 +324,4 @@
      
         <div class="page-wrapper-row full-height">
                 <div class="page-wrapper-middle">
+                

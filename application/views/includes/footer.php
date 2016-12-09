@@ -139,6 +139,43 @@
         <script src="<?php echo base_url(); ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
 
+        <script>
+
+            $(document).ready(function(){
+
+                     var memberID = '<?php echo $this->session->userdata('memberID'); ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/getmember/'+ memberID,
+                        cache: true,
+                        
+                        
+                        success: function (response) {
+                            
+                           
+                            var responseData = $.parseJSON(response); //parse JSON
+                            var firstname = response.lastname;
+                            console.log(responseData)
+                           //$("#logo").html(height);
+
+                            $.each(responseData, function(index,item) {
+                                    
+                                    $("#member_avatar").append('<img alt="" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ item.profile_photo +'">'); 
+                            });
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            $(".desires").append('<div class="well"><h3>No Desires</h3> Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie loremat massa. </div>')
+                        }
+                    });
+                    
+                  
+            });
+        </script>
+
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
         
         

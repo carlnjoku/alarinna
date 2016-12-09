@@ -1,3 +1,31 @@
+<style>
+
+   .fa-heart-o:hover{
+        color:#e0fcfc;
+
+    }
+
+    .divclass{
+  font-size:5em;
+  color:grey;
+  cursor:pointer;
+}
+
+.divclass:hover .fa-heart-o:before{
+  content:&quot;f05d&quot;;
+  color:green;
+  opacity:0.4;
+}
+
+.chat{
+    color:blue;
+}
+
+.chat:hover .fa-commenting-o:before{
+    color:#e0fcfc;
+}
+
+</style>
 <div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
@@ -17,12 +45,18 @@
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
-                                                        
+                                                <a class="chat" href=""><i class="fa fa-heart-o font-red"></i></a>  
+                                                <a class="divclass"><i class="fa fa-heart-o font-grey-salt"></i></a>      
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
                                         <!-- BEGIN : USER CARDS -->
                                         <div class="row">
                                             <div class="col-md-12">
+
+                                
+                                    
+                               
+
                                                 <div class="portlet light portlet-fit ">
                                                     <div class="portlet-title">
                                                         <div class="caption">
@@ -717,10 +751,9 @@ $(document).ready(function(){
                             $.each(responseData, function(index,item) {
                                     
                                     var  string = item.myfancies;
-                                    
                                     var main = string.includes(memberID);
                                     
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
                             });
                         },                     
                         

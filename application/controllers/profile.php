@@ -109,6 +109,7 @@ class Profile extends CI_Controller {
 	{
 		$memberID = $this->session->userdata('memberID');	
 
+		
 		// Get Photos
         $handle_photos = curl_init();
 		curl_setopt_array(
@@ -124,7 +125,7 @@ class Profile extends CI_Controller {
 		$response_photos = curl_exec($handle_photos);
 		$result_photos = json_decode($response_photos, true);
 
-
+	/*
 		// Get Photos
         $handle_member = curl_init();
 		curl_setopt_array(
@@ -139,6 +140,7 @@ class Profile extends CI_Controller {
 	
 		$response_member = curl_exec($handle_member);
 		$result_member = json_decode($response_member, true);
+	
 
 		// Get About me
         $handle_aboutme = curl_init();
@@ -155,6 +157,7 @@ class Profile extends CI_Controller {
 		$response_aboutme = curl_exec($handle_aboutme);
 		$result_aboutme = json_decode($response_aboutme, true);
 
+	
 		// Get Desire
         $handle_desire = curl_init();
 		curl_setopt_array(
@@ -169,16 +172,17 @@ class Profile extends CI_Controller {
 	
 		$response_desire = curl_exec($handle_desire);
 		$result_desire = json_decode($response_desire, true);
-		
+	
+	*/
 		
 		$data['main_content'] = 'view_profile';
         $data['memberID'] = $memberID;
 		$data['title'] = 'Alarinna | Profile View';
 		$data['result_photos'] = $result_photos;
-		$data['result_member'] = $result_member;
-		$data['result_desire'] = $result_desire;
-		$data['result_aboutme'] = $result_aboutme;
-		$data['page_title'] = 'Edit Profile';
+		//$data['result_member'] = $result_member;
+		//$data['result_desire'] = $result_desire;
+		//$data['result_aboutme'] = $result_aboutme;
+		$data['page_title'] = 'Profile Preview';
 		$this->load->view('includes/template', $data);
 	}
 
@@ -186,6 +190,7 @@ class Profile extends CI_Controller {
 	{
 		$other_memberID = $this->uri->segment(3);	
 
+		
 		// Get Photos
         $handle_photos = curl_init();
 		curl_setopt_array(
@@ -201,7 +206,7 @@ class Profile extends CI_Controller {
 		$response_photos = curl_exec($handle_photos);
 		$result_photos = json_decode($response_photos, true);
 
-
+		/*
 		// Get Photos
         $handle_member = curl_init();
 		curl_setopt_array(
@@ -232,32 +237,25 @@ class Profile extends CI_Controller {
 		$response_aboutme = curl_exec($handle_aboutme);
 		$result_aboutme = json_decode($response_aboutme, true);
 
-		// Get Desire
-        $handle_desire = curl_init();
-		curl_setopt_array(
-		$handle_desire,
-			array(
-				CURLOPT_URL => "http://localhost/neo4j-alarinna/web/get_desire/$other_memberID",
-				CURLOPT_POST => false,
-				CURLOPT_RETURNTRANSFER => true
-			)
-			
-		);
+		*/
+
 	
-		$response_desire = curl_exec($handle_desire);
-		$result_desire = json_decode($response_desire, true);
-		
+
 		
 		$data['main_content'] = 'public_view';
+		$data['other_memberID']=$other_memberID;
         $data['memberID'] = $memberID = $this->session->userdata('memberID');
 		$data['title'] = 'Alarinna | Profile View';
 		$data['result_photos'] = $result_photos;
-		$data['result_member'] = $result_member;
-		$data['result_desire'] = $result_desire;
-		$data['result_aboutme'] = $result_aboutme;
+		//$data['result_member'] = $result_member;
+		//$data['result_desire'] = $result_desire;
+		//$data['result_aboutme'] = $result_aboutme;
 		$data['page_title'] = 'Edit Profile';
 		$this->load->view('includes/template', $data);
 	}
+
+
+	
 
 	public function ajax_photos()
 	{
