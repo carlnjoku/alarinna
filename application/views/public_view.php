@@ -31,9 +31,11 @@
         border-radius: 0.5rem;
     }
 
-    .modal-backdrop {
-        background-color: red;
+   .modal-backdrop
+    {
+        opacity:0.9 !important;
     }
+
 
     .modalchat.in  .modal-backdrop{ background-color: #000; }
 
@@ -42,6 +44,18 @@
         right:16%;
         outline: none;
     }
+
+    body.modal-open {
+    overflow: hidden;
+    position: fixed;
+}
+
+.indicator{
+    position:relative;
+    right:65px;
+    top: -3px;
+}
+
 
 
 </style>
@@ -306,7 +320,7 @@ a:hover, a:active, a:focus {
                                                         <!-- END SIDEBAR USER TITLE -->
                                                         <!-- SIDEBAR BUTTONS -->
                                                         <div class="profile-userbuttons">
-                                                            <button type="button" class="btn btn-circle blue btn-sm">Message</button>
+                                                            <a href="<?php echo base_url(); ?>inbox/message" class="btn btn-circle blue btn-sm">Message</a>
                                                             
                                                         </div>
                                                         <!-- END SIDEBAR BUTTONS -->
@@ -579,10 +593,11 @@ a:hover, a:active, a:focus {
                                             <div class="modal-dialog">
                                                 
                                                 <div class="container bootstrap snippet">
+                                                
     <div class="row">
 		<div class="col-md-3 bg-white ">
-            <div class=" row border-bottom padding-sm" style="height: 40px;">
-            	Member
+            <div class="row border-bottom " style="height: 40px; margin:10px width:100%">
+            	<input type="text" value="" name="query" />
             </div>
             
             <!-- =============================================================== -->
@@ -593,9 +608,10 @@ a:hover, a:active, a:focus {
                 	<a href="#" class="clearfix">
                 		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
                 		<div class="friend-name">	
-                			<strong>&nbsp; Barry</strong>
+                			<strong>&nbsp; Barry</strong> 
+                            <i class="fa fa-circle font-green-jungle"></i>
                 		</div>
-                		<div class="last-message text-muted">&nbsp; Lorem ipsum do.</div>
+                		<div class="last-message text-muted">&nbsp; Online </div>
                 		<small class="time text-muted">Yesterday</small>
                 		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                 	</a>
@@ -605,8 +621,9 @@ a:hover, a:active, a:focus {
                 		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team2.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Judo</strong>
+                            <i class="fa fa-circle font-grey-silver"></i>
                 		</div>
-                		<div class="last-message text-muted">&nbsp; Lorem ipsumt.</div>
+                		<div class="last-message text-muted">&nbsp; Offline.</div>
                 		<small class="time text-muted">Yesterday</small>
                 		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                 	</a>
@@ -616,8 +633,9 @@ a:hover, a:active, a:focus {
                 		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Ibro</strong>
+                            <i class="fa fa-circle font-grey"></i>
                 		</div>
-                		<div class="last-message text-muted">&nbsp; Lorem ipsum dolor sit amet.</div>
+                		<div class="last-message text-muted">&nbsp; Offline.</div>
                 		<small class="time text-muted">Yesterday</small>
                 		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                 	</a>
@@ -627,8 +645,9 @@ a:hover, a:active, a:focus {
                 		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team3.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Foxy</strong>
+                            <i class="fa fa-circle font-green-jungle"></i>
                 		</div>
-                		<div class="last-message text-muted"> &nbsp; Lorem ipsum dolor sit amet.</div>
+                		<div class="last-message text-muted"> &nbsp; Online</div>
                 		<small class="time text-muted">Yesterday</small>
                 		<small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                 	</a>

@@ -183,12 +183,9 @@
                                                     <a href="page_user_profile_1.html">
                                                         <i class="icon-user"></i> My Profile </a>
                                                 </li>
+                                                
                                                 <li>
-                                                    <a href="app_calendar.html">
-                                                        <i class="icon-calendar"></i> My Calendar </a>
-                                                </li>
-                                                <li>
-                                                    <a href="app_inbox.html">
+                                                    <a href="<?php echo base_url(); ?>inbox/message">
                                                         <i class="icon-envelope-open"></i> My Inbox
                                                         <span class="badge badge-danger"> 31 </span>
                                                     </a>

@@ -1,3 +1,83 @@
+<style>
+.input-box{
+    padding:15px 10px 1px 10px;
+    background-color: #f4f4f4;
+    
+}
+
+.friend-list {
+  list-style: none;
+margin-left: -40px;
+
+}
+
+.friend-list li {
+  border-bottom: 1px solid #eee;
+}
+
+.friend-list li a img {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 0px;
+}
+
+ .friend-list li a {
+  position: relative;
+  display: block;
+  padding: 10px;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+}
+
+.friend-list li.active a {
+  background-color: #f1f5fc;
+}
+
+.friend-list li a .friend-name, 
+.friend-list li a .friend-name:hover {
+  color: #777;
+
+}
+
+.friend-list li a .last-message {
+  width: 65%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.friend-list li a .time {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+}
+
+small, .small {
+  font-size: 85%;
+}
+
+.friend-list li a .chat-alert {
+  position: absolute;
+  right: 8px;
+  top: 27px;
+  font-size: 10px;
+  padding: 3px 5px;
+}
+.primary-font {
+  color: #3c8dbc;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+</style>
+
 <!-- BEGIN PAGE LEVEL STYLES -->
     
          <link href="<?php echo base_url(); ?>assets/apps/css/inbox.min.css" rel="stylesheet" type="text/css" />
@@ -30,8 +110,8 @@
                                     <div class="page-content-inner">
                                         <div class="inbox">
                                             <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="inbox-sidebar">
+                                                <div class="col-md-4">
+                                                    <div class="inbox-sidebar" style="600px">
                                                         <a href="javascript:;" data-title="Compose" class="btn red compose-btn btn-block">
                                                             <i class="fa fa-edit"></i> Compose </a>
                                                         <ul class="inbox-nav">
@@ -40,74 +120,159 @@
                                                                     <span class="badge badge-success">3</span>
                                                                 </a>
                                                             </li>
-                                                            
-                
-                                                            
+
                                                         </ul>
-                                                        <ul class="inbox-contacts">
-                                                            <li class="divider margin-bottom-30"></li>
+                                                    <div class="scroller" style="height:315px" data-always-visible="0" data-rail-visible="1">
+                                                        <ul class="friend-list" style="min-height:430px;">
+                
                                                             <li>
-                                                                <a href="javascript:;">
-                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar4.jpg">
-                                                                    <span class="contact-name">Adam Stone</span>
-                                                                    <span class="contact-status bg-green"></span>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Barry</strong> 
+                                                                        
+                                                                    </div>
+                                                                    <div class="last-message text-muted">&nbsp; Request for a drink </div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
-                                                            </li>
+                                                            </li>  
                                                             <li>
-                                                                <a href="javascript:;">
-                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar2.jpg">
-                                                                    <span class="contact-name">Lisa Wong</span>
-                                                                    <span class="contact-status bg-red"></span>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team2.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Judo</strong>
+                                                                       
+                                                                    </div>
+                                                                    <div class="last-message text-muted">&nbsp; Normal message</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
-                                                            </li>
+                                                            </li>     
                                                             <li>
-                                                                <a href="javascript:;">
-                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar5.jpg">
-                                                                    <span class="contact-name">Nick Strong</span>
-                                                                    <span class="contact-status bg-green"></span>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Ibro</strong>
+                                                                     
+                                                                    </div>
+                                                                    <div class="last-message text-muted">&nbsp; Admin</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
-                                                            </li>
+                                                            </li>        
                                                             <li>
-                                                                <a href="javascript:;">
-                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar6.jpg">
-                                                                    <span class="contact-name">Anna Bold</span>
-                                                                    <span class="contact-status bg-yellow"></span>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team3.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Foxy</strong>
+                                                                       
+                                                                    </div>
+                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:;">
-                                                                    <img class="contact-pic" src="../assets/pages/media/users/avatar7.jpg">
-                                                                    <span class="contact-name">Richard Nilson</span>
-                                                                    <span class="contact-status bg-green"></span>
+                                                            </li>   
+
+                                                             <li>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team8.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Foxy</strong>
+                                                                       
+                                                                    </div>
+                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
-                                                            </li>
+                                                            </li>  
+
+                                                             <li>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team9.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Foxy</strong>
+                                                                       
+                                                                    </div>
+                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                                                                </a>
+                                                            </li>  
+
+                                                             <li>
+                                                                <a href="#" class="clearfix">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team11.jpg">
+                                                                    <div class="friend-name">	
+                                                                        <strong>&nbsp; Foxy</strong>
+                                                                       
+                                                                    </div>
+                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <small class="time text-muted">Yesterday</small>
+                                                                    <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
+                                                                </a>
+                                                            </li>         
+                                                            
+                                                                        
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-9">
+                                                </div>
+                                                <div class="col-md-8">
                                                     <div class="inbox-body">
                                                         <div class="inbox-header">
-                                                            <h1 class="pull-left">Inbox</h1>
-                                                            <form class="form-inline pull-right" action="index.html">
-                                                                <div class="input-group input-medium">
-                                                                    <input type="text" class="form-control" placeholder="Password">
-                                                                    <span class="input-group-btn">
-                                                                        <button type="submit" class="btn green">
-                                                                            <i class="fa fa-search"></i>
-                                                                        </button>
-                                                                    </span>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="inbox-content"> </div>
-                                                        <div style="clear:both"></div>
-                                                        <div class="form-group">
+                                                           
                                                             
-                                                            <div class="col-md-9">
-                                                                <textarea class="form-control" rows="3" name="aboutme" id="aboutme" placeholder="in a few words describe yourself"> message</textarea>
-                                                                
-                                                            </div>
                                                         </div>
+
+                                                       
+
+                                                        <!-- BEGIN Portlet PORTLET-->
+                                                <div class="portlet light">
+                                                    <div class="portlet-title">
+                                                        <div class="caption font-red-sunglo">
+                                                            <i class="icon-envelope font-red-sunglo"></i>
+                                                            <span class="caption-subject bold uppercase"> Message</span>
+                                                            <span class="caption-helper"> some text</span>
+                                                        </div>
+                                                        <div class="actions">
+                                                            
+                                                            <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                                                <i class="icon-trash"></i>
+                                                            </a>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="portlet-body">
+                                                        <div class="scroller" style="height:300px" data-always-visible="0" data-rail-visible="1">
+                                                            <h4>Heading Text</h4>
+                                                            <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat
+                                                                porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                                                nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
+                                                                sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
+                                                                amet fermentum. </p>
+                                                            <p> nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+                                                                sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                                                nec elit. Cras mattis consectetur purus sit amet fermentum. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END Portlet PORTLET-->
+
+                                                       
+                                                        
+
+                                                            <div class="input-box"> 
+                                                                <div class="form-group">
+                                                                    <textarea class="form-control" rows="3" name="aboutme" id="aboutme" placeholder="Write your reply here"> </textarea>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="form-actions pull-right">
+                                                                <button type="submit" class="btn blue"><i class="fa fa-reply"></i> Reply</button>
+                                                            </div>
+                                                            <div style="clear:both"></div>
+                                                        
                                                          
                                                                                             
                                                     </div>
