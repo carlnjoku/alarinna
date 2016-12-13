@@ -168,7 +168,7 @@ a:hover, a:active, a:focus {
                                                                         <strong>&nbsp; Foxy</strong>
                                                                        
                                                                     </div>
-                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <div class="last-message text-muted"> &nbsp; Request photos</div>
                                                                     <small class="time text-muted">Yesterday</small>
                                                                     <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
@@ -178,10 +178,10 @@ a:hover, a:active, a:focus {
                                                                 <a href="#" class="clearfix">
                                                                     <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team8.jpg">
                                                                     <div class="friend-name">	
-                                                                        <strong>&nbsp; Foxy</strong>
+                                                                        <strong>&nbsp; Juicy</strong>
                                                                        
                                                                     </div>
-                                                                    <div class="last-message text-muted"> &nbsp; Online</div>
+                                                                    <div class="last-message text-muted"> &nbsp; Request personality</div>
                                                                     <small class="time text-muted">Yesterday</small>
                                                                     <small class="chat-alert text-muted"><i class="fa fa-reply"></i></small>
                                                                 </a>
@@ -191,7 +191,7 @@ a:hover, a:active, a:focus {
                                                                 <a href="#" class="clearfix">
                                                                     <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team9.jpg">
                                                                     <div class="friend-name">	
-                                                                        <strong>&nbsp; Foxy</strong>
+                                                                        <strong>&nbsp; Wendy</strong>
                                                                        
                                                                     </div>
                                                                     <div class="last-message text-muted"> &nbsp; Online</div>
@@ -204,7 +204,7 @@ a:hover, a:active, a:focus {
                                                                 <a href="#" class="clearfix">
                                                                     <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team11.jpg">
                                                                     <div class="friend-name">	
-                                                                        <strong>&nbsp; Foxy</strong>
+                                                                        <strong>&nbsp; Tontop</strong>
                                                                        
                                                                     </div>
                                                                     <div class="last-message text-muted"> &nbsp; Online</div>
@@ -247,13 +247,12 @@ a:hover, a:active, a:focus {
                                                         <div class="scroller" style="height:300px" data-always-visible="0" data-rail-visible="1">
                                                             <h4>Heading Text</h4>
                                                             <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat
-                                                                porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
+                                                                porttitor ligula, eget lacinia odio sem nec elit. </p>
+                                                            <p>Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
                                                                 nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus
                                                                 sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
                                                                 amet fermentum. </p>
-                                                            <p> nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-                                                                sem nec elit. Cras mattis consectetur purus sit amet fermentum. consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
-                                                                nec elit. Cras mattis consectetur purus sit amet fermentum. </p>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>

@@ -10,7 +10,29 @@ function GEOprocess(position) {
 	// update the page to show we have the lat and long and explain what we do next
   document.getElementById('geo').innerHTML = 'Latitude: ' + position.coords.latitude + ' Longitude: ' + position.coords.longitude;
 	// now we send this data to the php script behind the scenes with the GEOajax function
-	GEOajax("geo.php?accuracy=" + position.coords.accuracy + "&latlng=" + position.coords.latitude + "," + position.coords.longitude +"&altitude="+position.coords.altitude+"&altitude_accuracy="+position.coords.altitudeAccuracy+"&heading="+position.coords.heading+"&speed="+position.coords.speed+"");
+	GEOajax("http://localhost/alarinna/page/geo?accuracy=" + position.coords.accuracy + "&latlng=" + position.coords.latitude + "," + position.coords.longitude +"&altitude="+position.coords.altitude+"&altitude_accuracy="+position.coords.altitudeAccuracy+"&heading="+position.coords.heading+"&speed="+position.coords.speed+"");
+
+  $("#latitude").val(position.coords.latitude); 
+  $("#longitude").val(position.coords.longitude); 
+
+   alert( position.coords.longitude);
+   var geourl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+ position.coords.longitude +'&key=AIzaSyDwTHM3l29DcBR2NjLUOywLemBpXa__2zs';
+   $.getJSON(geourl, function (data) {
+      console.log(data.results[1].address_components[3].long_name);
+      var street = data.results[1].address_components[0].long_name;
+      var city = data.results[1].address_components[1].long_name;
+      var state = data.results[1].address_components[2].long_name;
+      var country = data.results[1].address_components[3].long_name;
+      var city_state = city + ', '+state;
+      $("#street").val(street);
+      $("#city").val(city);
+      $("#state").val(state);
+      $("#country").val(country);
+
+      $("#city_state").val(city_state);
+
+    });
+   
 }
 
 // this is used when the visitor bottles it and hits the "Don't Share" option
@@ -42,6 +64,8 @@ function GEOajax(url) {
 function updatePage() {
  if (xmlHttp.readyState == 4) {
   var response = xmlHttp.responseText;
-  document.getElementById("geo").innerHTML = '' + response;
+
+  //console.log(response)
+  //document.getElementById("geo").innerHTML = '' + response;
  }
 }

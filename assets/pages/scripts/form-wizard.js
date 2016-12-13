@@ -175,17 +175,35 @@ var FormWizard = function () {
                             var status = data.status;
                             var fristname = data.fristname;
 
-                            var uri_encode = 'http://localhost/alarinna/setup/confirm/'+ email;
-                            var uri = encodeURI(uri_encode);
+                            var uri = 'http://localhost/alarinna/setup/confirm/'+ memberID;
+                           
 
                            
 
-                            alert(data)
+                            alert(memberID)
                         
                             if(!memberID) {
                                 alert('error')//$("#error").html(ajax_load_error).fadeIn("3000");
                             }else{
-                                window.location= uri;
+                                
+                                var link = 'http://localhost/alarinna/setup/login';
+
+                               
+                                swal({
+                                    title: "Email Confirmation ! ",
+                                    type: "info",
+                                    html:true,
+                                    text: "Your account was created successfully. A verification email has been sent to <b>"+ email+ "</b>, Login in to your to verify your email."
+                                    //imageUrl: 'http://alarinna/assets/pages/img/email.confirm.gif'
+                                },
+                                function(){
+                                    //swal("Deleted!", "Your imaginary file has been deleted.", "success");
+                                   // "http://localhost/alarinna/setup/login"
+                                    window.location.href = link;
+                                });
+
+
+                               // window.location= 'http://localhost/alarinna/setup/login';
                             }
 
                                 console.log(memberID);

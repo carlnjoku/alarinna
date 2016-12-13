@@ -185,7 +185,7 @@
 
                                                                             <div class="row">
                                                                                 <div class="col-md-12">
-                                                                                <h3 class="font-blue">My Photos</h3>
+                                                                                <h3 class="font-blue">About Me</h3>
                                                                         
                                                                                     <hr>
                                                                                     <div class="row list-separated profile-stat aboutme"></div>
