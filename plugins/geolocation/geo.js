@@ -18,11 +18,11 @@ function GEOprocess(position) {
    alert( position.coords.longitude);
    var geourl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+ position.coords.longitude +'&key=AIzaSyDwTHM3l29DcBR2NjLUOywLemBpXa__2zs';
    $.getJSON(geourl, function (data) {
-      console.log(data.results[1].address_components[3].long_name);
-      var street = data.results[1].address_components[0].long_name;
-      var city = data.results[1].address_components[1].long_name;
-      var state = data.results[1].address_components[2].long_name;
-      var country = data.results[1].address_components[3].long_name;
+      console.log(data.results[0].address_components[3].long_name);
+      var street = data.results[0].address_components[0].long_name;
+      var city = data.results[0].address_components[1].long_name;
+      var state = data.results[0].address_components[2].long_name;
+      var country = data.results[0].address_components[3].long_name;
       var city_state = city + ', '+state;
       $("#street").val(street);
       $("#city").val(city);

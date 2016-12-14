@@ -182,7 +182,7 @@ class Setup extends CI_Controller {
         $data['result_income'] =$result_income;
         */
 
-        $this->load->view('multistep/multistep');
+        $this->load->view('multistep/multistep_new');
 	}
 
 

@@ -468,19 +468,12 @@ Bootstrap Wizard
 .form-wizard .steps {
   padding: 10px 0;
   margin-bottom: 15px;
-  background-color: #fff;
+  background-color:none;
   background-image: none;
   filter: none;
   border: 0px;
   box-shadow: none; }
-  .form-wizard .steps > li > a.step {
-    background-color: #fff;
-    background-image: none;
-    filter: none;
-    border: 0px;
-    box-shadow: none; }
-    .form-wizard .steps > li > a.step:hover {
-      background: none; }
+  
     .form-wizard .steps > li > a.step > .number {
       background-color: #eee;
       display: inline-block;
