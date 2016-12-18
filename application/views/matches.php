@@ -747,7 +747,7 @@ $(document).ready(function(){
 
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
-                            var memberID = '<?php echo $memberID; ?>'
+                            var memberID = '<?php echo $memberID; ?>';
                             $.each(responseData, function(index,item) {
                                     
                                     var  string = item.myfancies;

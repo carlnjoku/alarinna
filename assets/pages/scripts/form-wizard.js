@@ -188,7 +188,6 @@ var FormWizard = function () {
                                 
                                 var link = 'http://localhost/alarinna/setup/login';
 
-                               
                                 swal({
                                     title: "Email Confirmation ! ",
                                     type: "info",

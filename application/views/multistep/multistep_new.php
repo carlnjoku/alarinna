@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="<?php echo base_url();?>assets/multistep.css" rel="stylesheet" type="text/css" />
-        
+        <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
         <!-- BEGIN THEME LAYOUT STYLES -->
         
         <link href="<?php echo base_url(); ?>assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
@@ -58,7 +58,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </style>
 
-    <body class="login">
+ <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="<?php echo base_url();?>assets/multistep.css" rel="stylesheet" type="text/css" />
+        
+    <body class="login page-container-bg-solid">
         <div class="page-wrapper">
         <!-- BEGIN LOGO -->
         <div class="logo" style="padding:-15px">
@@ -66,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
-        <div class="content">
+        <div class="content" id="form_wizard_1">
             <!-- BEGIN LOGIN FORM -->
 
 <form class="form-horizontal" action="#" id="submit_form" method="POST">
@@ -84,14 +87,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#tab2" data-toggle="tab" class="step">
                                     <span class="number"> 2 </span>
                                     <span class="desc">
-                                        <i class="fa fa-check"></i> What do you desire </span>
+                                        <i class="fa fa-check"></i> Your desires </span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#tab3" data-toggle="tab" class="step active">
                                     <span class="number"> 3 </span>
                                     <span class="desc">
-                                        <i class="fa fa-check"></i> Tell us a bit about you</span>
+                                        <i class="fa fa-check"></i> A bit about you</span>
                                 </a>
                             </li>
                             <li>
@@ -426,159 +429,311 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 
                             </div>
 
-                            <div class="tab-pane" id="tab4">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h3 class="block">Confirm your account</h3>
-                                            <h4 class="form-section">Account</h4>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">First Name:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="firstname"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Last Name:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="slim[]"> </p>
-                                                </div>
-                                            </div>
+                          <div class="tab-pane" id="tab4">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-6">
+				<div class="form-group">
+                    <label class="control-label col-md-3">First Name:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="firstname"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="form-group">
+                    <label class="control-label col-md-3">Last Name:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="lastname"> </p>
+                    </div>
+                </div>
+			</div>
+		
+		</div>
+	
+	</div>
+	
+    <div class="create-account"> 
+        <div class="mt-element-ribbon bg-grey-steel" style="postion:relative; top:-20px">
+            <div class="ribbon ribbon-border ribbon-color-info uppercase">My Desires</div>
+        </div>
+    </div> 
 
-                                        </div>
+   
+	<div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Height:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="height_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Hair Color:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="hair_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Eye Color:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="eyes_d"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
+	<div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Profession:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="profession_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Body Type:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="bodytype_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Religion:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="religion_d"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
 
-                                        <div class="col-md-6">
-                                            
+    <div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Smoker:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="smoke_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Ethnicity:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="ethnicity_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Marital Status:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="marital_status_d"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
+	
+	<div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Income:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="income_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Interest:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="looking_for_d"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Children:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="children_d"> </p>
+                    </div>
+                </div>
+			</div>
+		
+		</div>
+	
+	</div>
 
-                                        </div>
-                                </div>
-                                <div class="row"><div class="col-md-12"><h4 class="form-section">My Desires</h4></div></div>
-                                <div class="row">
-                                        
-                                        <div class="col-md-6">
-                            
-                                            
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Height:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="height"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Hair Colour:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="hair"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Eyes Colour:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="eyes"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Religion:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="religion"> </p>
-                                                </div>
-                                            </div>
+    <div class="create-account"> 
+        <div class="mt-element-ribbon bg-grey-steel" style="postion:relative; top:-20px">
+            <div class="ribbon ribbon-border ribbon-color-info uppercase">About Me</div>
+        </div>
+    </div>  
 
-                                        </div>
-                                        
-                                        <div class="col-md-6">
+    <div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Height:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="height"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Hair Color:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="hair"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Eye Color:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="eyes"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
 
-                                            
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Profession:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="profession"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Body type:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="bodytype"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Smoker:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="smoke"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Ethnicity:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="ethnicity"> </p>
-                                                </div>
-                                            </div>
+    <div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Profession:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="profession"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Body Type:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="bodytype"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Religion:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="religion"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
 
-                                        </div>
-                                </div>
-                                <div class="row"><div class="col-md-12"><h4 class="form-section">About Me</h4></div></div>
-                                <div class="row">
-                                
-                                        <div class="col-md-6">
-                                        
-                            
-                                            
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Height:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="height"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Hair Colour:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="hair"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Eyes Colour:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="eyes"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Religion:</label>
-                                                <div class="col-md-5">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="religion"> </p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        
-                                        <div class="col-md-6">
-
-                                            
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Profession:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="profession"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Body type:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="bodytype"> </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Smoker:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="smoke"> </p>
-                                                </div>
-                                            </div>
-                                                <div class="form-group">
-                                                <label class="control-label col-md-3">Ethnicity:</label>
-                                                <div class="col-md-4">
-                                                    <p class="form-control-static" style="font-weight:bold" data-display="ethnicity"> </p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                </div>
-                            </div>
+    <div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Smoker:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="smoke"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Ethnicity:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="ethnicity"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Marital Status:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="marital_status"> </p>
+                    </div>
+                </div>
+			</div>
+            
+		
+		</div>
+	
+	</div>
+	
+	<div class="row" style="position:relative; top:-25px">
+		<div class="col-md-12">
+			<div class="col-md-4">
+				<div class="form-group">
+                    <label class="control-label col-md-4">Income:</label>
+                    <div class="col-md-4">
+                        <p class="form-control-static" style="font-weight:bold" data-display="income"> </p>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="col-md-4">
+				
+			</div>
+			
+			<div class="col-md-4">
+				
+			</div>
+		
+		</div>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+     
+</div>
 
                             
                         </div>
@@ -640,6 +795,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
+
+         <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="<?php echo base_url(); ?>assets/pages/scripts/ui-sweetalert.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        
+
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="<?php echo base_url(); ?>assets/pages/scripts/form-wizard.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->

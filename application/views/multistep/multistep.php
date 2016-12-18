@@ -76,7 +76,7 @@
                             <div class="page-content">
                                 <div class="container">
                                    
-                                    <div id="geo" class="geolocation_data"></div>
+                                    
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
                                         <div class="row">
@@ -772,7 +772,7 @@
         <script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.jquery.js"></script>                                   
     </body>
 
-    <script>
+<script>
 $(document).ready(function() {
 
    $('#myCropper').slim({

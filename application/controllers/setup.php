@@ -197,7 +197,7 @@ class Setup extends CI_Controller {
     {
         
         $data['title'] = 'Confirmation successful';
-        $this->load->view('multistep/login_on_confirm', $data);
+        $this->load->view('multistep/login_on_confirm_new', $data);
     }
 
     public function auth()
