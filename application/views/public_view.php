@@ -887,7 +887,6 @@ a:hover, a:active, a:focus {
         </script>
 
         <script>
-
             $(document).ready(function(){
 
                      var other_memberID = '<?php echo $other_memberID; ?>';
@@ -931,7 +930,6 @@ a:hover, a:active, a:focus {
 
 
         <script>
-
             $(document).ready(function(){
 
                      var other_memberID = '<?php echo $other_memberID; ?>';
@@ -980,14 +978,13 @@ a:hover, a:active, a:focus {
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Health Lifestyle</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.health +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.healthy+'%"><span class="sr-only"> '+item.healthy+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.healthy+'%</div></div>');
 
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Extrovert</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.extrovert +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.extrovert+'%"><span class="sr-only"> '+item.extrovert+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.extrovert+'%</div></div>');  
-                            
-                            
+         
                             });
                         },                     
                         
                         error: function (responseData) {
                             
-                            toastr.warning('No data found')
+                                    toastr.warning('No data found')
                         }
                     });
                     
@@ -999,10 +996,6 @@ a:hover, a:active, a:focus {
 
 
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-                                                       
-                           
-
 <script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.jquery.js"></script>   
 <script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.kickstart.js"></script> 
 

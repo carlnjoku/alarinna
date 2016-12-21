@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <head>
         <meta charset="utf-8" />
-        <title>Alarinna | Most popular Africa dating website</title>
+        <title>Alarinna | The leading Africa dating website</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="#1 Africa dating website "
@@ -43,8 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
+    
+
     <body class="login">
         <div class="page-wrapper">
+
         <!-- BEGIN LOGO -->
         <div class="logo" style="padding:-15px">
                 <img src="<?php echo base_url(); ?>assets/layouts/layout3/img/logo-default.png" alt="logo" class="logo-default-home"> </a>
@@ -59,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <button class="close" data-close="alert"></button>
                     <span> Enter any username and password. </span>
                 </div>
-                <div id="geo" class="geolocation_data"></div>
+                <div id="geo" class="geolocation_data" style="display:none"></div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                     <label class="control-label visible-ie8 visible-ie9">Username</label>
@@ -144,11 +147,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                  <div class="form-group">
-                    <label class="control-label col-md-3">I am</label>
+                    <label class="control-label col-md-3">I am a</label>
                     <div class="col-md-9">
                         <select name="gender" id="gender" class="form-control smoke">
-                        <option value="man">Looking for a man</option>
-                        <option value="woman">Looking for a woman</option>                                                                                        
+                        <option value="1">Man Looking for a woman</option>
+                        <option value="0">Woman Looking for a man</option>                                                                                        
                         </select>
                     </div>
                 </div>
@@ -156,39 +159,61 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group">
                         <label class="control-label col-md-3">Birthday</label>
                         <div class="col-md-3">
-                            <select name="day" id="smoke" class="form-control day">
+                            <select name="day" id="day" class="form-control day">
                                 <option value="">Day</option>
-                                <option value="1">1</option> 
-                                <option value="2">2</option>                                                                                     
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value='1'>01</option>
+                                <option value='2'>02</option>
+                                <option value='3'>03</option>
+                                <option value='4'>04</option>
+                                <option value='5'>05</option>
+                                <option value='6'>06</option>
+                                <option value='7'>07</option>
+                                <option value='8'>08</option>
+                                <option value='9'>09</option>
+                                <option value='10'>10</option>
+                                <option value='11'>11</option>
+                                <option value='12'>12</option>
+                                <option value='13'>13</option>
+                                <option value='14'>14</option>
+                                <option value='15'>15</option>
+                                <option value='16'>16</option>
+                                <option value='17'>17</option>
+                                <option value='18'>18</option>
+                                <option value='19'>19</option>
+                                <option value='20'>20</option>
+                                <option value='21'>21</option>
+                                <option value='22'>22</option>
+                                <option value='23'>23</option>
+                                <option value='24'>24</option>
+                                <option value='25'>25</option>
+                                <option value='26'>26</option>
+                                <option value='27'>27</option>
+                                <option value='28'>28</option>
+                                <option value='29'>29</option>
+                                <option value='30'>30</option>
+                                <option value='31'>31</option>
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <select name="month" id="month" class="form-control month">
-                                <option value="">Month</option>
-                                <option value="January">January</option>
-                                <option value="January">February</option>
-                                <option value="March">March</option>
-                                <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
-                                <option value="September">September</option>
-                                <option value="October">October</option>
-                                <option value="November">November</option>
-                                <option value="December">December</option>                                                                                     
-                            </select>
+                            <?php
+                                echo "<select  name='month'' id='month'' class='form-control month' >";
+                                for($i=0;$i<=11;$i++){
+                                $month=date('F',strtotime("first day of -$i month"));
+                                echo "<option value=$month>$month</option> ";
+                                }
+                                echo "</select>";
+                            ?>
+                            
                         </div>
                         <div class="col-md-3">
-                            <select name="year" id="year" class="form-control year">
-                                <option value="">Year</option>
-                                <option value="1980">1980</option> 
-                                <option value="1981">1981</option>  
-                                <option value="1982">1982</option>                                                                                       
-                            </select>
+                            
+                            <?php echo '<select name="year" id="year" class="form-control year">';
+                                    for($i=18;$i<=85;$i++){
+                                    $year=date('Y',strtotime("last day of -$i year"));
+                                    echo "<option name='$year'>$year</option>";
+                                    }
+                                    echo "</select>";
+                                ?>
                         </div>
                     </div>
                     <div class="form-group">
@@ -304,7 +329,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     $("#latitude").val(position.coords.latitude); 
     $("#longitude").val(position.coords.longitude); 
-    alert( position.coords.longitude);
+    //alert( position.coords.longitude);
 
 
 }
@@ -537,8 +562,8 @@ var Login = function() {
             },
 
             submitHandler: function (form) {
-                    $('.register-form').submit(function(e){
-            e.preventDefault(); // Prevent Default Submission
+                   
+           // e.preventDefault(); // Prevent Default Submission
 
             var frmData = $('.register-form').serializeArray()
                         .reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
@@ -618,9 +643,9 @@ var Login = function() {
 
             } 
                 
-            })
+            });
             
-        });
+       
             
            
         }

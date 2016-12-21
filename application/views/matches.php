@@ -744,6 +744,7 @@ $(document).ready(function(){
                         },
                         success: function (response) {
                             
+                            console.log(memberID);
 
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON

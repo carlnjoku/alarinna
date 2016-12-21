@@ -20,57 +20,7 @@
                             <div class="page-content">
                                 <div class="container">
                                 <style>
-                                   .selectdiv {
-                                        position: relative;
-                                        /*Don't really need this just for demo styling*/
-                                        
-                                  
-                                        min-width: 200px;
-                                       
-                                        }
-
-                                        .selectdiv:after {
-                                            content: '\f078';
-                                            font: normal normal normal 17px/1 FontAwesome;
-                                            color: #0ebeff;
-                                            right: 11px;
-                                            top: 6px;
-                                            height: 34px;
-                                            padding: 15px 0px 0px 8px;
-                                            border-left: 1px solid #0ebeff;
-                                            position: absolute;
-                                            pointer-events: none;
-                                        }
-
-                                        /* IE11 hide native button (thanks Matt!) */
-                                        select::-ms-expand {
-                                        display: none;
-                                        }
-
-                                        .selectdiv select {
-                                        -webkit-appearance: none;
-                                        -moz-appearance: none;
-                                        appearance: none;
-                                        /* Add some styling */
-                                        
-                                        outline:none;
-                                        border:none;
-                                        display: block;
-                                        width: 100%;
-                                        max-width: 320px;
-                                        height: 35px;
-                                        float: right;
-                                        margin: 5px 0px;
-                                        padding: 0px 24px;
-                                        font-size: 16px;
-                                        line-height: 1.75;
-                                        color: #333;
-                                        background-color: #ffffff;
-                                        background-image: none;
-                                        border: 1px solid #0ebeff;
-                                        -ms-word-break: normal;
-                                        word-break: normal;
-                                        }
+                                   
 
                                         .well{
                                             background-color: #4299d4;
@@ -83,99 +33,80 @@
 
                                         
 
-/* -------------------- Select Box Styles: stackoverflow.com Method */
-/* -------------------- Source: http://stackoverflow.com/a/5809186 */
-select#soflow, select#soflow-color {
-   -webkit-appearance: button;
-   -webkit-border-radius: 2px;
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   -webkit-user-select: none;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 97% center;
-   background-repeat: no-repeat;
-   border: 1px solid #d92a92;
-   color: #555;
-   font-size: inherit;
-   margin: 10px;
-   overflow: hidden;
-   padding: 8px 10px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 200px;
-}
-
-select#soflow-color {
-   color: #fff;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FF69B4, #FF69B4 40%, #FF69B4);
-   background-color: #FF69B4;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   padding-left: 15px;
-}
                                 </style>
                                     
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
-                                        <div class="search-page search-content-3">
+                                        <div class="search-page search-content-3" >
+                                        
                                         <!--START SEARCH BOX -->
                                          <div class="row">
                                             <div class="col-lg-12">
-                                                <div class="well well-lg"> 
+                                                <div class="well well-lg" > 
                                                 
                                                 
 
                                                     <a href="#demo" class="pull-right" data-toggle="collapse">Advance Search</a>
-                                                    
+                                                    <div id="geo" class="geolocation_data" style="display:none"></div>
                                                     <form id="formsearch" action="#" class="form-inline">
-                                                         <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Find</label> 
-                                                        <select id="soflow-color" name="gender">
-                                                        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                                                            <option>Woman &nbsp;&nbsp;</option>
-                                                            <option>Man &nbsp;&nbsp;</option>  
-                                                        </select>
+
+                                                        <input type="hidden" value="<?php echo $memberID; ?>" name="memberID" />
+                                                         <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">Find :</label> 
                                                         
-                                                        <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Ages between:</label> 
-                                                        <select id="soflow-color" name="age">
+                                                        <select class="form-control input-sm" name="gender" style="width:120px">
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                                                            <option>18</option>
-                                                            <option>19</option>
-                                                            <option>20</option>
-                                                            <option>21</option>
+                                                            
+                                                            <option value="female">Women</option>
+                                                            <option value="male">Men</option>
+                                                           
+                                                        </select>
+                                                        &nbsp;&nbsp;
+                                                        <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">Ages:</label> 
+                                                        <select class="form-control input-sm" name="age_from" style="width:50px">
+                                                        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                                            <option value="18">18</option>
+                                                            <?php
+                                                                for($i = 18; $i <= 85; $i++) {
+                                                                $formattedNumber = sprintf('%1d', $i);
+                                                                echo '<option value="'.$formattedNumber.'">'.$formattedNumber.'</option>';
+                                                                }
+                                                            ?>
                                                         </select>
 
-                                                        <label class="sr" for="exampleInputEmail2" style="font-size:18px; font-weight:bold">Located in:</label> 
-                                                        <select id="soflow-color" name="location">
+                                                        
+                                                        <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">-</label> 
+                                                        
+                                                        <select class="form-control input-sm" name="age_to" style="width:50px">
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                                                            <option>Lagos</option>
-                                                            <option>Abuja</option>
-                                                            <option>Ibadan</option>
-                                                            <option>Port Harcourt</option>
+                                                            <option value="45">45</option>
+                                                            <?php
+                                                                for($i = 18; $i <= 85; $i++) {
+                                                                $formattedNumber_to = sprintf('%1d', $i);
+                                                                echo '<option value="'.$formattedNumber_to.'">'.$formattedNumber_to.'</option>';
+                                                                }
+                                                            ?>
                                                         </select>
 
-                                                    <p></p>        
+                                                        
+                                                        
+                                                        <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">&nbsp;&nbsp; Located in:</label> 
+                                                        <div class="form-group">
+                                                            <select class="form-control input-sm" name="city" style="width:180px">
+                                                                <option>Lagos</option>
+                                                                <option>Abuja</option>
+                                                                <option>Ikeja</option>
+                                                                <option>Ibadan</option>
+                                                                <option>Port Harcourt</option>
+                                                                
+                                                            </select>
+                                                        </div>
+
+                                                 <hr>
+                                                      
                                                      
                                                 <div id="demo" class="collapse">    
                                                     <!-- START ADVANCE SEARCH -->    
-                                                    <div class="portlet-title tabbable-line">
                                                     
-                                                        <ul class="nav nav-tabs" style="color:#F2F2F2">
-                                                            <li class="active">
-                                                                <a href="#portlet_tab3" data-toggle="tab"> Physical Appearance </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#portlet_tab2" data-toggle="tab"> Lifestyle </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#portlet_tab1" data-toggle="tab"> Religion & Ethnicity</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#portlet_tab1" data-toggle="tab"> Other</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
                                                    
                                                     <div class="portlet-body">
                                                      <div class="well well-lg">
@@ -186,289 +117,223 @@ select#soflow-color {
                                                                         <div class="form-group">
                                                                             <label>Height</label>
                                                                             <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Petite
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Less Than Average
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Average Height
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Tall
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Pretty-Tall
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Sky-high
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> No Preference
-                                                                                    <input type="checkbox" value="" name="Height" />
-                                                                                    <span></span>
-                                                                                </label>
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm height" name="height" style="width:180px">
+                                                                                    <option value="">Choose Height</option>
+                                                                                    
+                                                                                </select>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-
-
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label><b>Hair Color</b></label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
+               
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
                                                                     <div class="col-md-3">
                                                                         <div class="form-group">
-                                                                            <label>Eye Type</label>
+                                                                            <label>Hair Colour</label>
                                                                             <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Blue
-                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm hair" name="hair" style="width:180px">
+                                                                                    <option value="">Select Hair Color</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
                                                                     <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Eyes Color</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm eyes" name="eyes" style="width:180px">
+                                                                                    <option value="">Choose Eyes Color</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                     <div class="col-md-3">
                                                                         <div class="form-group">
                                                                             <label>Body Type</label>
                                                                             <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Petit
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Slender
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Medium
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm bodytype" name="bodytype" style="width:180px">
+                                                                                    <option value="">Choose Body Type</option>
+                                                                                    
+                                                                                </select>
                                                                             </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div class="tab-pane" id="portlet_tab2">
-                                                                <div class="row">
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Height</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
+               
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
-
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label><b>Hair Color</b></label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Height</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Hair Color</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                                     
+
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Smoker</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm" name="smoke" style="width:180px">
+                                                                                    <option value="No">No</option>
+                                                                                    <option value="Yes">Yes</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Interest</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm lookingfor" name="lookingfor" style="width:180px">
+                                                                                <option value="">Choose Interest</option>
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Profession</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm profession" name="profession" style="width:180px">
+                                                                                    <option value="">Choose Profession</option>
+                                                                                
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Income</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm income" name="income" style="width:180px">
+                                                                                    <option value="">Choose Income</option>
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Religion</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm religion" name="religion" style="width:180px">
+                                                                                    <option value="">Choose Religion</option>
+                                                                                
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Ethnicity</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm ethnicity" name="ethnicity" style="width:180px">
+                                                                                    <option value="">Choose Ethnicity</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Marital Status</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm marital_status" name="marital_status" style="width:180px">
+                                                                                    <option value="">Choose Marital Status</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Children</label>
+                                                                            <div class="mt-checkbox-list">
+
+                                                                            <div class="form-group">
+                                                                                <select class="form-control input-sm children" name="children" style="width:180px">
+                                                                                    <option value="">Choose Children</option>
+                                                                                    
+                                                                                </select>
+                                                                            </div>
+               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
                                                                 
                                                             </div>
-                                                            <div class="tab-pane" id="portlet_tab3">
-                                                              <div class="row">
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Height</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label><b>Hair Color</b></label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Height</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" style="background:#ccc" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-3">
-                                                                        <div class="form-group">
-                                                                            <label>Hair Color</label>
-                                                                            <div class="mt-checkbox-list">
-                                                                                <label class="mt-checkbox mt-checkbox-outline has-warnibg"> Checkbox 1
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 2
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                                <label class="mt-checkbox mt-checkbox-outline"> Checkbox 3
-                                                                                    <input type="checkbox" value="1" name="test" />
-                                                                                    <span></span>
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            
+                                                            
+                                                            
                                                         </div>
                                                      </div>
                                                     </div>
                                             </div>
                                                 <!-- END ADVANCE SEARCH --> 
-                                                <br>
+                                              
                                                 <div class="row">
-                                                    <div class="col-xs-12">
+                                                
+                                                    <div class="col-xs-12" style="padding-right:83px">
                                                         <div class="col-xs-2 pull-right">
                                                             <button class="btn grey bold uppercase btn-block">Clear Search</button>
                                                             
                                                         </div>
                                                         <div class="col-xs-2 pull-right">
-                                                            <button class="btn green bold uppercase btn-block">Search </button>
+                                                            <button class="btn blue-chambray bold uppercase btn-block">Search </button>
                                                         </div>
                                                         
                                                     </div>
@@ -482,380 +347,17 @@ select#soflow-color {
                                         <!-- BEGIN SEARCH BOX -->
                                     </div>
 
-                                            
-                                        
                                             <div class="row">
                                             
                                                 <div class="col-lg-12">
                                                     <div class="portlet-body">
                                                         <div class="mt-element-card mt-element-overlay">
                                                             <div class="row result">
-
+                                                                Result here
                                                             </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1">
-                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Mark Anthony</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Managing Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
-                                                                            <div class="mt-overlay mt-top">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Denzel Wash</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Finance Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">David Goodman</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Lucy Ling</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">HR Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                          
                                                         </div>
                                                     </div>
-                                                    <div class="portlet-body">
-                                                        <div class="mt-element-card mt-element-overlay">
-                                                            <div class="row">
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1">
-                                                                            <img src="../assets/pages/img/avatars/team1.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Mark Anthony</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Managing Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                            <img src="../assets/pages/img/avatars/team2.jpg" />
-                                                                            <div class="mt-overlay mt-top">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Denzel Wash</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Finance Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                            <img src="../assets/pages/img/avatars/team3.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">David Goodman</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Creative Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                            <img src="../assets/pages/img/avatars/team4.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Lucy Ling</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">HR Director</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-facebook"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-twitter"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-social-dribbble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
                                                     
                                                 </div>
                                             </div>
@@ -1432,7 +934,8 @@ select#soflow-color {
                     </div>
                     <!-- END CONTAINER -->
              <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>plugins/geolocation/geo.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
             <!-- BEGIN PAGE LEVEL PLUGINS -->
             <script src="<?php echo base_url(); ?>assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/global/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
@@ -1498,6 +1001,91 @@ select#soflow-color {
             });
         </script>
 
+        <script>
+    // Get preloaded data from database
+    var hair = '<?php echo base_url();?>hair.json';
+    $.getJSON(hair, function(data){
+            $.each(data, function(index,item) {
+                var hairs ='yello blue';
+            $("select.hair").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var height = '<?php echo base_url();?>height.json';
+    $.getJSON(height, function(data){
+            $.each(data, function(index,item) {
+            $("select.height").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var eyes = '<?php echo base_url();?>eyes.json';
+    $.getJSON(eyes, function(data){
+            $.each(data, function(index,item) {
+            $("select.eyes").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var income = '<?php echo base_url();?>income.json';
+    $.getJSON(income, function(data){
+            $.each(data, function(index,item) {
+            $("select.income").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var profession = '<?php echo base_url();?>profession.json';
+    $.getJSON(profession, function(data){
+            $.each(data, function(index,item) {
+            $("select.profession").append("<option>" + item.name + "</option>"); 
+        });
+    });
 
 
-        
+    var religion = '<?php echo base_url();?>religion.json';
+    $.getJSON(religion, function(data){
+            $.each(data, function(index,item) {
+            $("select.religion").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+
+    var ethnicity = '<?php echo base_url();?>ethnicity.json';
+    $.getJSON(ethnicity, function(data){
+            $.each(data, function(index,item) {
+            $("select.ethnicity").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+
+    var bodytype = '<?php echo base_url();?>bodytype.json';
+    $.getJSON(bodytype, function(data){
+            $.each(data, function(index,item) {
+            $("select.bodytype").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+
+    var marital_status = '<?php echo base_url();?>marital_status.json';
+    $.getJSON(marital_status, function(data){
+            $.each(data, function(index,item) {
+            $("select.marital_status").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var children = '<?php echo base_url();?>children.json';
+    $.getJSON(children, function(data){
+            $.each(data, function(index,item) {
+            $("select.children").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+    var lookingfor = '<?php echo base_url();?>lookingfor.json';
+    $.getJSON(lookingfor, function(data){
+            $.each(data, function(index,item) {
+            $("select.lookingfor").append("<option>" + item.name + "</option>"); 
+        });
+    });
+
+
+   
+
+</script>

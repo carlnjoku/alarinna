@@ -46,7 +46,29 @@ $city =$row['city'];
 $country =$row['country'];
 $profile_meter =$row['profile_meter'];
 
+$aboutme_height = $row['aboutme_height'];
+$aboutme_hair = $row['aboutme_hair'];
+$aboutme_eyes = $row['aboutme_eyes'];
+$aboutme_religion = $row['aboutme_religion'];
+$aboutme_income = $row['aboutme_income'];
+$aboutme_profession = $row['aboutme_profession'];
+$aboutme_ethnicity = $row['aboutme_ethnicity'];
+$aboutme_smoke = $row['aboutme_smoke'];
+$aboutme_marital_status = $row['aboutme_marital_status'];
+$aboutme_bodytype = $row['aboutme_bodytype'];
 
+$desire_height = $row['desire_height'];
+$desire_hair = $row['desire_hair'];
+$desire_eyes = $row['desire_eyes'];
+$desire_religion = $row['desire_religion'];
+$desire_income = $row['desire_income'];
+$desire_profession = $row['desire_profession'];
+$desire_ethnicity = $row['desire_ethnicity'];
+$desire_smoke = $row['desire_smoke'];
+$desire_marital_status = $row['desire_marital_status'];
+$desire_bodytype = $row['desire_bodytype'];
+$desire_children = $row['desire_children'];
+$desire_lookingfor = $row['desire_looking_for'];
 }
 
 ?>
@@ -251,21 +273,7 @@ $profile_meter =$row['profile_meter'];
                                                                                 <h4>About Me</h4>
 
                                                                                 
-                                                                                <?php foreach($result_aboutme as $key=>$row){
-                                                                                    $height = $row['height'];
-                                                                                    $hair = $row['hair'];
-                                                                                    $eyes = $row['eyes'];
-                                                                                    $religion = $row['religion'];
-                                                                                    $income = $row['income'];
-                                                                                    $profession = $row['profession'];
-                                                                                    $ethnicity = $row['ethnicity'];
-                                                                                    $smoke = $row['smoke'];
-                                                                                    $marital_status = $row['marital_status'];
-                                                                                    $bodytype = $row['bodytype'];
-
-                                                                                }
-
-                                                                                ?>
+                                                                
                                                                                     <div class="row">
                                                                                     
                                                                                     <form action="#" id="form_edit_aboutme" class="form-horizontal">
@@ -275,7 +283,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Height</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="height" id="height" class="form-control height">
-                                                                                                <option><?php echo $height; ?></option>
+                                                                                                <option><?php echo $aboutme_height; ?></option>
                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -284,7 +292,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Hair Colour</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="hair" id="hair" class="form-control hair">
-                                                                                                <option><?php echo $hair; ?></option> 
+                                                                                                <option><?php echo $aboutme_hair; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -293,7 +301,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Eye Colour</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="eyes" id="eyes" class="form-control eyes">
-                                                                                                <option><?php echo $eyes; ?></option>  
+                                                                                                <option><?php echo $aboutme_eyes; ?></option>  
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -302,7 +310,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Religon</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="religion" id="religion" class="form-control religion">
-                                                                                                    <option><?php echo $religion; ?></option>  
+                                                                                                    <option><?php echo $aboutme_religion; ?></option>  
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -312,7 +320,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Income</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="income" id="income" class="form-control income">
-                                                                                                    <option><?php echo $income; ?></option> 
+                                                                                                    <option><?php echo $aboutme_income; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -327,7 +335,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Profession</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="profession" id="profession" class="form-control profession">
-                                                                                                    <option><?php echo $profession; ?></option> 
+                                                                                                    <option><?php echo $aboutme_profession; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -337,17 +345,17 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Body Type</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="bodytype" id="bodytype" class="form-control bodytype">
-                                                                                                    <option><?php echo $bodytype; ?></option> 
+                                                                                                    <option><?php echo $aboutme_bodytype; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label class="control-label col-md-4">Smoking</label>
+                                                                                            <label class="control-label col-md-4">Smoker</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="smoke" id="smoke" class="form-control smoke">
-                                                                                                <option><?php echo $smoke; ?></option> 
+                                                                                                <option><?php echo $aboutme_smoke; ?></option> 
                                                                                                 <option value="yes">Yes</option>
                                                                                                 <option value="no">No</option>
                                                                                         
@@ -359,7 +367,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Ethnicity</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
-                                                                                                    <option><?php echo $ethnicity; ?></option> 
+                                                                                                    <option><?php echo $aboutme_ethnicity; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -369,7 +377,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Marital Status</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="marital_status" id="marital_status" class="form-control marital_status">
-                                                                                                    <option><?php echo $marital_status; ?></option> 
+                                                                                                    <option><?php echo $aboutme_marital_status; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
 
@@ -460,7 +468,7 @@ $profile_meter =$row['profile_meter'];
                                                                     <!-- CHANGE MEMBER DETAILS TAB -->
                                                                     <div class="tab-pane" id="tab_1_3">
                                                                         <div class="row">
-                                                                        <h3>My Desires</h3>
+                                                                        <h3>My Desires </h3>
                                                                             <form action="#" id="form_edit_desire" class="form-horizontal">
                                                                                     <div class="col-md-6">
                                                                                     <input type="hidden" name="memberID" id="memberID" value="<?php echo $memberID; ?>" />
@@ -468,7 +476,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Height</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="height" id="height" class="form-control height">
-                                                                                                    
+                                                                                                  <option><?php echo $desire_height; ?></option>  
                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -477,7 +485,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Hair Colour</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="hair" id="hair" class="form-control hair">
-                                                                                                    
+                                                                                                  <option><?php echo $desire_hair; ?></option>  
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -486,7 +494,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Eye Colour</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="eyes" id="eyes" class="form-control eyes">
-                                                                                                    
+                                                                                                   <option><?php echo $desire_eyes; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -495,7 +503,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Religon</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="religion" id="religion" class="form-control religion">
-                                                                                                    
+                                                                                                    <option><?php echo $desire_religion; ?></option>
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -505,7 +513,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Interest</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="lookingfor" id="lookingfor" class="form-control lookingfor">
-                                                                                                    
+                                                                                                    <option><?php echo $desire_lookingfor; ?></option>
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -515,7 +523,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Income</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="income" id="income" class="form-control income">
-                                                                                                    
+                                                                                                    <option><?php echo $desire_income; ?></option>
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -530,7 +538,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Profession</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="profession" id="profession" class="form-control profession">
-                                                                                                    
+                                                                                                    <option><?php echo $desire_profession; ?></option>
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -540,14 +548,14 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Body Type</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="bodytype" id="bodytype" class="form-control bodytype">
-                                                                                                    
+                                                                                                    <option><?php echo $desire_bodytype; ?></option>
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label class="control-label col-md-4">Smoking</label>
+                                                                                            <label class="control-label col-md-4">Smoker</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="smoke" id="smoke" class="form-control smoke">
                                                                                         
@@ -562,7 +570,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Ethnicity</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="ethnicity" id="ethnicity" class="form-control ethnicity">
-                                                                                                    
+                                                                                                   <option><?php echo $desire_ethnicity; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -572,7 +580,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Marital Status</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="marital_status" id="marital_status" class="form-control marital_status">
-                                                                                                    
+                                                                                                   <option><?php echo $desire_marital_status; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -582,7 +590,7 @@ $profile_meter =$row['profile_meter'];
                                                                                             <label class="control-label col-md-4">Children</label>
                                                                                             <div class="col-md-6">
                                                                                                 <select name="children" id="children" class="form-control children">
-                                                                                                    
+                                                                                                   <option><?php echo $desire_children; ?></option> 
                                                                                                                                                                                         
                                                                                                 </select>
                                                                                             </div>
@@ -1221,35 +1229,36 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     var hair = '<?php echo base_url();?>hair.json';
     $.getJSON(hair, function(data){
             $.each(data, function(index,item) {
-            $("select.hair").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+                var hairs ='yello blue';
+            $("select.hair").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var height = '<?php echo base_url();?>height.json';
     $.getJSON(height, function(data){
             $.each(data, function(index,item) {
-            $("select.height").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.height").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var eyes = '<?php echo base_url();?>eyes.json';
     $.getJSON(eyes, function(data){
             $.each(data, function(index,item) {
-            $("select.eyes").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.eyes").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var income = '<?php echo base_url();?>income.json';
     $.getJSON(income, function(data){
             $.each(data, function(index,item) {
-            $("select.income").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.income").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var profession = '<?php echo base_url();?>profession.json';
     $.getJSON(profession, function(data){
             $.each(data, function(index,item) {
-            $("select.profession").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.profession").append("<option>" + item.name + "</option>"); 
         });
     });
 
@@ -1257,7 +1266,7 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     var religion = '<?php echo base_url();?>religion.json';
     $.getJSON(religion, function(data){
             $.each(data, function(index,item) {
-            $("select.religion").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.religion").append("<option>" + item.name + "</option>"); 
         });
     });
 
@@ -1265,7 +1274,7 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     var ethnicity = '<?php echo base_url();?>ethnicity.json';
     $.getJSON(ethnicity, function(data){
             $.each(data, function(index,item) {
-            $("select.ethnicity").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.ethnicity").append("<option>" + item.name + "</option>"); 
         });
     });
 
@@ -1273,7 +1282,7 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     var bodytype = '<?php echo base_url();?>bodytype.json';
     $.getJSON(bodytype, function(data){
             $.each(data, function(index,item) {
-            $("select.bodytype").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.bodytype").append("<option>" + item.name + "</option>"); 
         });
     });
 
@@ -1281,21 +1290,21 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     var marital_status = '<?php echo base_url();?>marital_status.json';
     $.getJSON(marital_status, function(data){
             $.each(data, function(index,item) {
-            $("select.marital_status").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.marital_status").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var children = '<?php echo base_url();?>children.json';
     $.getJSON(children, function(data){
             $.each(data, function(index,item) {
-            $("select.children").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.children").append("<option>" + item.name + "</option>"); 
         });
     });
 
     var lookingfor = '<?php echo base_url();?>lookingfor.json';
     $.getJSON(lookingfor, function(data){
             $.each(data, function(index,item) {
-            $("select.lookingfor").append("<option value=" + item.name + ">" + item.name + "</option>"); 
+            $("select.lookingfor").append("<option>" + item.name + "</option>"); 
         });
     });
 
@@ -1532,4 +1541,3 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo base_url(); ?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
-

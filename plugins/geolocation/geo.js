@@ -15,7 +15,7 @@ function GEOprocess(position) {
   $("#latitude").val(position.coords.latitude); 
   $("#longitude").val(position.coords.longitude); 
 
-   alert( position.coords.longitude);
+   //alert( position.coords.longitude);
    var geourl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+position.coords.latitude+','+ position.coords.longitude +'&key=AIzaSyDwTHM3l29DcBR2NjLUOywLemBpXa__2zs';
    $.getJSON(geourl, function (data) {
       //console.log(data.results[0].address_components[3].long_name);
@@ -30,8 +30,15 @@ function GEOprocess(position) {
       $("#country").val(country);
 
       $("#city_state").val(city_state);
+      //$("select#city").append("<option value=" + city + ">" + city + "</option>"); 
+      //$("select.city1").append('<option selected="selected" value="0">'+ city+ ' </option>');
+
+      function addtoselect(param,value){
+          $('select.city1').append('&lt;option value='+country+'&gt;'+param+'&lt;/option&gt;');
+      }
 
     });
+    
    
 }
 

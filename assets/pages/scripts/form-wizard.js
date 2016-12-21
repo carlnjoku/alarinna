@@ -141,13 +141,12 @@ var FormWizard = function () {
                 },
 
                 submitHandler: function (form) {
-                    success.show();
-                    error.hide();
+                    //success.show();
+                   // error.hide();
                     //form[0].submit();
                     //add here some ajax code to submit your form or just call form.submit() if you want to submit the form without ajax
-                    $('#submit_form').submit(function(e){
-                        e.preventDefault(); // Prevent Default Submission
-
+                    
+                      
                         var frmData = $('#submit_form').serializeArray()
                                     .reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
                         
@@ -180,7 +179,7 @@ var FormWizard = function () {
 
                            
 
-                            alert(memberID)
+                            //alert(memberID)
                         
                             if(!memberID) {
                                 alert('error')//$("#error").html(ajax_load_error).fadeIn("3000");
@@ -209,9 +208,9 @@ var FormWizard = function () {
 
                             } 
                             
-                        })
+                        });
                         
-                    });
+                  
             
         }
 

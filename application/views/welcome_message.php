@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
+            <a href="#">
                 <img src="../assets/pages/img/logo-big-white.png" style="height: 17px;" alt="" /> </a>
         </div>
         <!-- END LOGO -->
