@@ -101,6 +101,16 @@
                                                             </select>
                                                         </div>
 
+                                                        <select name="meal" id="meal" onChange="changecat(this.value);">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="A">A</option>
+                                                            <option value="B">B</option>
+                                                            <option value="C">C</option>
+                                                        </select>
+                                                        <select name="category" id="category">
+                                                            <option value="" disabled selected>Select</option>
+                                                        </select>
+
                                                  <hr>
                                                       
                                                      
@@ -347,20 +357,37 @@
                                         <!-- BEGIN SEARCH BOX -->
                                     </div>
 
-                                            <div class="row">
-                                            
-                                                <div class="col-lg-12">
-                                                    <div class="portlet-body">
-                                                        <div class="mt-element-card mt-element-overlay">
-                                                            <div class="row result">
-                                                                Result here
-                                                            </div>
-                                                          
+                                              <!-- BEGIN PAGE CONTENT INNER -->
+                                    <div class="page-content-inner">
+                                        <!-- BEGIN : USER CARDS -->
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                
+                                    
+                               
+
+                                                <div class="portlet light portlet-fit ">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                            <i class=" icon-layers font-green"></i>
+                                                            <span class="caption-subject font-green bold uppercase">Search Result</span>
                                                         </div>
                                                     </div>
-                                                    
+                                                    <div class="portlet-body">
+                                                        <div class="mt-element-card mt-element-overlay">
+                                                            <div class="row result" style="min-height:200px">
+                                                                                     
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        
+                                        <!-- END : USER CARDS -->
+                                    </div>
+                                    <!-- END PAGE CONTENT INNER -->
                                         </div>
                                     </div>
                                     <!-- END PAGE CONTENT INNER -->
@@ -971,8 +998,8 @@
                                     background: 'none',
                                     border:'none'
                                 },
-                                overlayCSS: { backgroundColor: '#eaeaea' },
-                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">loading your matches...',
+                                overlayCSS: { backgroundColor: '#ffffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
                                 timeout: 15000
                             });
 
@@ -981,9 +1008,9 @@
                              
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
-                            alert(item.nicname);
+                            
                             $.each(responseData, function(index,item) {
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
+                                    $(".result").html('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
                             });
 
                             //alert(item.nicname);
@@ -1088,4 +1115,24 @@
 
    
 
+</script>
+
+
+<script>
+var mealsByCategory = {
+    A: ["Soup", "Juice", "Tea", "Others"],
+    B: ["Soup", "Juice", "Water", "Others"],
+    C: ["Soup", "Juice", "Coffee", "Tea", "Others"]
+}
+
+    function changecat(value) {
+        if (value.length == 0) document.getElementById("category").innerHTML = "<option></option>";
+        else {
+            var catOptions = "";
+            for (categoryId in mealsByCategory[value]) {
+                catOptions += "<option>" + mealsByCategory[value][categoryId] + "</option>";
+            }
+            document.getElementById("category").innerHTML = catOptions;
+        }
+    }
 </script>
