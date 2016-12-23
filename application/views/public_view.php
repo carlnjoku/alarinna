@@ -252,13 +252,145 @@ a:hover, a:active, a:focus {
     </style>
 
 
+<style>
+
+header {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  margin:   0px auto 50px;
+  height:   375px;
+  position: relative;
+  width:    100%;
+}
+
+figure.profile-banner {
+  left:     0;
+  overflow: hidden;
+  position: absolute;
+  top:      0;
+  z-index:  1;
+}
+
+figure.profile-picture {
+  background-position: center center;
+  background-size: cover;
+  border: 4px #D0D0D0 solid;
+  border-radius: 50%;
+  bottom: -50px;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 4px rgba(0,0,0,0.3);
+  height: 200px;
+  left: 120px;
+  position: absolute;
+  width: 200px;
+  z-index: 3;
+}
+
+div.profile-stats {
+  bottom: 0;
+  
+  left: 0;
+  padding: 15px 15px 15px 350px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  
+  /* Generated Gradient */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.51) 3%, rgba(0,0,0,0.75) 61%, rgba(0,0,0,0.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(3%,rgba(0,0,0,0.51)), color-stop(61%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.5)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+ background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80000000',GradientType=0 );
+
+}
+
+div.profile-stats ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.profile-stats ul li {
+  color: #efefef;
+  display: block;
+  float: left;
+  font-size: 24px;
+  margin-right: 50px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7)
+}
+
+div.profile-stats li span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+div.profile-stats a.follow {
+  display: block;
+  float: right;color: #ffffff;
+  margin-top: 5px;
+  text-decoration: none;
+  
+  /* This is a copy and paste from Bootstrap */
+  background-color: #49afcd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #49afcd;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+div.profile-stats a.follow.followed {
+  
+  /* Once again copied from Boostrap */
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(to bottom, #62c462, #51a351);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+header>h1 {
+  bottom: -50px;
+  color: #354B63;
+  font-size: 30px;
+  left: 350px;
+  position: absolute;
+  z-index: 5;
+}
+</style>
+
+
 
 
 <?php 
-    /*
+  
     foreach($result_member as $key=>$row){
     $nickname = $row['nickname'];
     $firstname = $row['firstname'];
+    $age =$row['age'];
     $lastname = $row['lastname'];
     $email = $row['email'];
     $mobile = $row['mobile'];
@@ -271,7 +403,7 @@ a:hover, a:active, a:focus {
 
 }
 
-*/
+
 ?>
 
 
@@ -281,21 +413,35 @@ a:hover, a:active, a:focus {
                     <div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
-                            <!-- BEGIN CONTENT BODY -->
-                            <!-- BEGIN PAGE HEAD-->
-                            <div class="page-head">
-                                <div class="container">
-                                    <!-- BEGIN PAGE TITLE -->
-                                    <div class="page-title">
-                                        <h1><?php echo $page_title; ?> 
-                                            
-                                        </h1>
-                                    </div>
-                                    <!-- END PAGE TITLE -->
+
+                            <header>
+                        <figure class="profile-banner">
+                            <img src="<?php echo base_url();?>love_bg4.jpg" class="img-responsive" alt="">
+                        </figure>
+                        <figure class="profile-picture" 
+                            style="background-image: url('<?php echo base_url();?>/profile-images/<?php echo $profile_photo; ?>')">
+                        </figure>
+
+                        
+                        <div class="profile-stats">
+                                   <ul>
+                                        <li><?php echo $nickname; ?>    <span><?php echo $age.' - '  .$city .', '. $country; ?></span></li>
                                     
-                                </div>
-                            </div>
-                            <!-- END PAGE HEAD-->
+                                  </ul>
+
+                             
+
+
+                            <a href="javascript:void(0);" class="follow">
+ 
+                            Follow Nick
+                            </a>
+                        </div>
+                        
+                        <h1><?php echo $nickname; ?>  <small><?php echo $age.' - '  .$city .', '. $country; ?></small></h1>
+                        </header>
+                            <!-- BEGIN CONTENT BODY -->
+                            
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
                                 <div class="container">
@@ -306,26 +452,7 @@ a:hover, a:active, a:focus {
                                             <div class="col-md-12">
                                                 <!-- BEGIN PROFILE SIDEBAR -->
                                                 <div class="profile-sidebar">
-                                                    <!-- PORTLET MAIN -->
-                                                    <div class="portlet light profile-sidebar-portlet ">
-                                                        <!-- SIDEBAR USERPIC -->
-                                                        <div class="profile-userpic" id="profile_pics">
-                                                             </div>
-                                                        <!-- END SIDEBAR USERPIC -->
-                                                        <!-- SIDEBAR USER TITLE -->
-                                                        <div class="profile-usertitle">
-                                                            <div class="profile-usertitle-name" id="profile_nickname"> </div>
-                                                            <div class="profile-usertitle-job" id="location"> </div>
-                                                        </div>
-                                                        <!-- END SIDEBAR USER TITLE -->
-                                                        <!-- SIDEBAR BUTTONS -->
-                                                        <div class="profile-userbuttons">
-                                                            <a href="<?php echo base_url(); ?>inbox/message" class="btn btn-circle blue btn-sm">Message</a>
-                                                            
-                                                        </div>
-                                                        <!-- END SIDEBAR BUTTONS -->
-                                                        <br>
-                                                    </div>
+                                                    
                                                     <!-- END PORTLET MAIN -->
                                                     <!-- PORTLET MAIN -->
                                                     <div class="portlet light ">

@@ -139,8 +139,7 @@
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                         <div class="row">
                                                                             <div class="col-md-13">
-                                                                            <h3 class="font-blue" id="photo_title"></h3>
-                                                                             <hr>
+                                                                            
                                                                                 <div id="js-grid-juicy-projects" class="cbp">
                                                                                     <div class="col-md-4 col-sm-4 col-xs-4">
                                                                                         <?php

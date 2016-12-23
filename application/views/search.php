@@ -1,4 +1,183 @@
 <link href="<?php echo base_url(); ?>assets/pages/css/search.min.css" rel="stylesheet" type="text/css" />
+<style>
+#menu {
+    list-style:none;
+    margin:35px auto 0px;
+}
+.menu {
+    height:40px;
+    list-style:none;
+    padding:0px 10px 0px 10px;
+}
+.menu li {
+    float:left;
+    display:block;
+    text-align:center;
+    position:relative;
+    margin:3px 0px 0;
+    border:none;
+}
+.menu li a {
+    color: #000;
+    display:block;
+    outline:0;
+    text-decoration:none;
+    border-bottom:1px solid #dedede;
+    padding:2px 10px;
+}
+.menu li:hover a {
+    color:#161616;
+}
+.menu li > div a {
+    padding: 0 0 0 14px;
+    border-bottom:none;
+}
+.dropdown-1column,
+.dropdown-2columns,
+.dropdown-3columns,
+.dropdown-4columns,
+.dropdown-5columns {
+    margin:-1px auto  0 -50px;
+    float:left;
+    position:absolute;
+    text-align:left;
+    padding:10px 5px 10px 5px;
+    border:1px solid #dedede;
+    background:#ccc;
+    z-index:999;
+    display:none;
+}
+.dropdown-1column {width: 130px; margin:-1px auto 0;}
+.dropdown-2columns {width: 400px;}
+.dropdown-3columns {width: 480px;}
+.dropdown-4columns {width: 640px;}
+.dropdown-5columns {width: 810px;}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5 {
+    display:inline;
+    float: left;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.col-1 {width:150px;}
+.col-2 {width:280px;}
+.col-3 {width:470px;}
+.col-4 {width:560px;}
+.col-5 {width:800px;}
+.menu li:hover .dropdown-1column,
+.menu li:hover .dropdown-2columns,
+.menu li:hover .dropdown-3columns,
+.menu li:hover .dropdown-4columns,
+.menu li:hover .dropdown-5columns {
+
+}
+.menu p, .menu h2, .menu h3, .menu ul li {
+    line-height:21px;
+    font-size:12px;
+    text-align:left;
+}
+.menu h2 {
+    font-size:21px;
+    font-weight:400;
+    letter-spacing:-1px;
+    margin:7px 0 14px 0;
+    padding-bottom:14px;
+    border-bottom:1px solid #666666;
+    color:#555;
+}
+.menu h3 {
+    font-size:15px;
+    margin:7px 0;
+    padding-bottom:2px;
+    border-bottom:1px solid #888888;
+    color:#555;
+}
+.menu p {
+    line-height:18px;
+    margin:0 0 10px 0;
+}
+.menu li:hover div a {
+    font-size:12px;
+    color:#000;
+}
+.menu li:hover div a:hover {
+    color:#000;
+}
+.strong {
+    font-weight:bold;
+}
+.italic {
+    font-style:italic;
+}
+.menu li .blackbox {
+    background-color:#333333;
+    color: #fff;
+    padding:4px 6px 4px 6px;
+}
+.menu li ul {
+    list-style:none;
+    padding:0;
+    margin:0 0 12px 0;
+}
+.menu li ul li {
+    font-size:12px;
+    line-height:24px;
+    position:relative;
+    text-shadow: 1px 1px 1px #ffffff;
+    padding:0;
+    margin:0;
+    float:none;
+    text-align:left;
+    width:130px;
+}
+.menu li ul li:hover {
+    background:none;
+    border:none;
+    padding:0;
+    margin:0;
+}
+.menu li .grisbox li {
+    border:1px solid #000;
+    margin:0px 0px 4px 0px;
+    padding:4px 6px 4px 6px;
+    width:116px;
+}
+.menu li .grisbox li:hover {
+    background:#ffffff;
+    border:1px solid #877956;
+    padding:4px 6px 4px 6px;
+    margin:0px 0px 4px 0px;
+}
+.imgclass{
+    float:left;
+    margin-right:5px;
+}
+.text{
+    width:230px;
+}
+
+</style>
+<style>
+hr.ruler {
+	border-top: 1px dashed #50C5E5;
+    position:relative;
+    top:-20px;
+}</style>
+
+<?php foreach($result_member as $key=>$row){
+
+$age = $row['age'];
+$interest_gender =$row['interest_gender'];
+$city =$row['city'];
+$country =$row['country'];
+
+}
+
+?>
 <!-- BEGIN CONTAINER -->
                     <div class="page-container">
                         <!-- BEGIN CONTENT -->
@@ -34,10 +213,16 @@
                                         
 
                                 </style>
+                                
+
                                     
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
                                         <div class="search-page search-content-3" >
+
+                                    
+ 
+                                        
                                         
                                         <!--START SEARCH BOX -->
                                          <div class="row">
@@ -56,13 +241,14 @@
                                                         <select class="form-control input-sm" name="gender" style="width:120px">
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
                                                             
+                                                            <option value="<?php echo $interest_gender;?>">Woman</option>
                                                             <option value="female">Women</option>
                                                             <option value="male">Men</option>
                                                            
                                                         </select>
                                                         &nbsp;&nbsp;
                                                         <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">Ages:</label> 
-                                                        <select class="form-control input-sm" name="age_from" style="width:50px">
+                                                        <select class="form-control input-sm" name="age_from" style="width:80px">
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
                                                             <option value="18">18</option>
                                                             <?php
@@ -76,9 +262,9 @@
                                                         
                                                         <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">-</label> 
                                                         
-                                                        <select class="form-control input-sm" name="age_to" style="width:50px">
+                                                        <select class="form-control input-sm" name="age_to" style="width:80px">
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                                                            <option value="45">45</option>
+                                                            <option value="<?php echo $age ; ?>"><?php echo $age ; ?></option>
                                                             <?php
                                                                 for($i = 18; $i <= 85; $i++) {
                                                                 $formattedNumber_to = sprintf('%1d', $i);
@@ -87,10 +273,53 @@
                                                             ?>
                                                         </select>
 
-                                                        
+                                                        <input type="hidden" value="<?php echo $city; ?>" name="city" id="city" />
                                                         
                                                         <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">&nbsp;&nbsp; Located in:</label> 
+                                                            <div class="form-group" id="menu">
+                                                                
+                                                                    <ul class="menu" style="position:relative; top:-8px"><!-- List starts here -->
+                                                                
+                                                            <li class="has-dropdown city"><a href="#"></a><!-- 3 columns starts here -->
+                                                                <div class="dropdown dropdown-3columns align_right"><!-- Container 3 columns starts here -->
+                                                                    <div class="col-3">
+                                                                        <h2>Blocks of links and text block</h2>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                         <select name="meal" id="meal" onChange="changecat(this.value);">
+                                                                            <option value="" disabled selected>Select</option>
+                                                                            <option value="A">A</option>
+                                                                            <option value="B">B</option>
+                                                                            <option value="C">C</option>
+                                                                        </select>
+                                                                        <select name="category" id="category">
+                                                                            <option value="" disabled selected>Select</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                        <p class="italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                        <ul class="grisbox">
+                                                                            <li><a href="#">Link 1</a></li>
+                                                                            <li><a href="#">Link 2</a></li>
+                                                                            <li><a href="#">Link 3</a></li>
+                                                                            <li><a href="#">Link 4</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div><!-- 3 columns ends here -->
+                                                            </li><!-- Container 3 columns ends here -->
+                                                            
+                                                            
+                                                            </li><!-- Container 1 columnn ends here -->
+                                                        </ul><!-- List ends here -->
+                                                                
+                                                                
+                                                            </div>
+                                                        
+                                                        <!--
                                                         <div class="form-group">
+                                                         
                                                             <select class="form-control input-sm" name="city" style="width:180px">
                                                                 <option>Lagos</option>
                                                                 <option>Abuja</option>
@@ -99,19 +328,18 @@
                                                                 <option>Port Harcourt</option>
                                                                 
                                                             </select>
+                                                            <i class="fa fa-angle-down fa-2x"></i>
                                                         </div>
+                                                        -->
+                                                        
 
-                                                        <select name="meal" id="meal" onChange="changecat(this.value);">
-                                                            <option value="" disabled selected>Select</option>
-                                                            <option value="A">A</option>
-                                                            <option value="B">B</option>
-                                                            <option value="C">C</option>
-                                                        </select>
-                                                        <select name="category" id="category">
-                                                            <option value="" disabled selected>Select</option>
-                                                        </select>
+                                                       
 
-                                                 <hr>
+                                                       
+                                                        
+                                                       
+
+                                                 <hr class="ruler">
                                                       
                                                      
                                                 <div id="demo" class="collapse">    
@@ -121,7 +349,7 @@
                                                     <div class="portlet-body">
                                                      <div class="well well-lg">
                                                         <div class="tab-content">
-                                                            <div class="tab-pane active" id="portlet_tab1">
+                                                            <div class="tab-pane active" id="portlet_tab1" style="position:relative; top:-50px">
                                                                 <div class="row">
                                                                     <div class="col-md-3">
                                                                         <div class="form-group">
@@ -323,11 +551,10 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
-                                                                
                                                             </div>
-                                                            
-                                                            
+                                                       <span style="color:#CFF3FD; width:400px" >                                      
+                     sdjnasnoioas iqwuiqw oioijdoiqjow dqwdn  q asjhuasbc iuasuichbasc
+                      asuicgasc ash    th aiia inhadiahud iiuadasha iiudhna  asiuhs  </span>  
                                                             
                                                         </div>
                                                      </div>
@@ -335,8 +562,8 @@
                                             </div>
                                                 <!-- END ADVANCE SEARCH --> 
                                               
-                                                <div class="row">
-                                                
+                                                <div class="row" style="position:relative; top:-20px">
+
                                                     <div class="col-xs-12" style="padding-right:83px">
                                                         <div class="col-xs-2 pull-right">
                                                             <button class="btn grey bold uppercase btn-block">Clear Search</button>
@@ -373,6 +600,7 @@
                                                             <i class=" icon-layers font-green"></i>
                                                             <span class="caption-subject font-green bold uppercase">Search Result</span>
                                                         </div>
+                                                        if result is less than 50 members show "TOO MANY FILTER"" warning  <a href="">click to move to search box</a>
                                                     </div>
                                                     <div class="portlet-body">
                                                         <div class="mt-element-card mt-element-overlay">
@@ -978,6 +1206,56 @@
 
             $(document).ready(function(){
 
+                     var mycity =  document.getElementById('city').innerHTML;
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/matches/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            //alert(mycity);
+                            console.log(memberID);
+
+                            $('div.result').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            var memberID = '<?php echo $memberID; ?>';
+                            $.each(responseData, function(index,item) {
+                                    
+                                    var  string = item.myfancies;
+                                    var main = string.includes(memberID);
+                                    
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
+                            });
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Network failure, check your connection and refresh the page')
+                        }
+                    });
+                    
+                  
+         
+
                 $("#formsearch").submit(function(e) {
                     var frmData1 = $('#formsearch').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
                                         
@@ -1005,13 +1283,20 @@
 
                         },
                         success: function (response) {
-                             
+                            
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
-                            
-                            $.each(responseData, function(index,item) {
+                            if (!responseData[0]) {
+                                
+                                $(".result").html('<div class="col-sm-12 col-xs-12"><center><h1>No match found</h1></center></div>'); 
+
+                            }else{
+                                 $.each(responseData, function(index,item) {
                                     $(".result").html('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
-                            });
+                                });
+                            }
+                            
+                                   
 
                             //alert(item.nicname);
     
@@ -1026,6 +1311,7 @@
                     e.preventDefault(); // avoid to execute the actual submit of the form.
                 });  
             });
+
         </script>
 
         <script>
@@ -1135,4 +1421,16 @@ var mealsByCategory = {
             document.getElementById("category").innerHTML = catOptions;
         }
     }
+</script>
+
+
+<script>
+jQuery("div#menu ul.menu li.has-dropdown").hover(
+    function () {
+        $(this).find("div.dropdown").slideToggle();
+    },
+    function () {
+        $(this).find("div.dropdown").slideToggle();
+    }
+);
 </script>

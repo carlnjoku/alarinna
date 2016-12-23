@@ -67,11 +67,26 @@ class Page extends CI_Controller {
     public function search()
     {
         $memberID = $this->session->userdata('memberID');	
+
+		$handle_member = curl_init();
+		curl_setopt_array(
+		$handle_member,
+			array(
+				CURLOPT_URL => "http://localhost/neo4j-alarinna/web/getmember/$memberID",
+				CURLOPT_POST => false,
+				CURLOPT_RETURNTRANSFER => true
+			)
+			
+		);
+	
+		$response_member = curl_exec($handle_member);
+		$result_member = json_decode($response_member, true);
         
         $data['main_content'] = 'search';
         $data['memberID'] = $memberID;
         $data['title'] = 'Alarinna | My Search Result';
         $data['page_title'] = 'Find A Match';
+        $data['result_member'] = $result_member;
 		$this->load->view('includes/template', $data); 
     }
 

@@ -30,8 +30,12 @@ function GEOprocess(position) {
       $("#country").val(country);
 
       $("#city_state").val(city_state);
+
+      $("#city1").append(city);
       //$("select#city").append("<option value=" + city + ">" + city + "</option>"); 
       //$("select.city1").append('<option selected="selected" value="0">'+ city+ ' </option>');
+
+      $('.city').append(city+ ' <i class="icon-heart"></i>');
 
       function addtoselect(param,value){
           $('select.city1').append('&lt;option value='+country+'&gt;'+param+'&lt;/option&gt;');
