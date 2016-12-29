@@ -25,11 +25,18 @@
             $photo = $rphotos['photo']; // keep the last id for the paging
             ?>
            
-             <div class="col-md-4" style="margin-bottom:20px">
-                <a href="">
-                    <img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/>
-                </a>
+             <div class="col-md-4" style="margin-bottom:20px">    
+            <div class="portfolio-image">
+                <a href="http://example.com/full-image.jpg" class="foobox"><img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/></a>
+
+                <div class="overlay">
+                    <a href="javascript:;" onclick="delete_photo('<?php echo $photo; ?>')" class="magnifying-glass-icon foobox">
+                        <i class="fa fa-trash fa-2x"></i>
+                    </a>
+                </div>
             </div>
+        </div>
+
 
 
 
@@ -38,7 +45,7 @@
         }
 ?>
 
-
+        
 
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.css">
@@ -95,7 +102,7 @@ $(document).ready(function() {
                     });   
             },
             label: "<i class='fa fa-plus fa-4x' style='color:#cccccc'></i>",
-            push: 'true',
+            push: 'false',
             buttonConfirmLabel: 'Apply'
            
 
@@ -103,6 +110,25 @@ $(document).ready(function() {
     });
          
 });
+</script>
+
+<script>
+function delete_photo(id)
+    {
+        //var status = confirm("Are you sure you want to delete ?");  
+        var photo_id = id;
+       alert(photo_id)
+            $.ajax({
+                type:"POST",
+                url:'<?php echo base_url();?>page/delete_photo',
+                data:{photo_id:photo_id},
+                success(html){
+                $("#photo_gallery").load('http://localhost/alarinna/profile/ajax_photos');
+                alert('Deleted');
+            }
+            });
+      
+    };
 </script>
 
 

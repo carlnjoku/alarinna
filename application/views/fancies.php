@@ -703,14 +703,21 @@ $(document).ready(function(){
             
             
             var responseData = $.parseJSON(response); //parse JSON
+            var memberID = '<?php echo $memberID; ?>'
 
             $('div.result').unblock(); 
-                var responseData = $.parseJSON(response); //parse JSON
-                var memberID = '<?php echo $memberID; ?>'
-                $.each(responseData, function(index,item) {
-                        
-                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="<?php echo base_url(); ?>profile-images/'+item.profile_photo +' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-magnifier"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + '</h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="fa fa-heart fa-lg font-red"></i></a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
-                });
+          
+            if (!responseData[0]) {
+                                
+                                $(".result").html('<div class="col-sm-12 col-xs-12"><div class="note note-info"><h4 class="block">No Fancies Yet!</h4><p> No fancies found </p></div></div>'); 
+
+                            }else{
+                                 $.each(responseData, function(index,item) {
+                                    $(".result").html('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
+                                });
+                            }
+
+               
 
         },                     
         

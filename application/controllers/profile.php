@@ -126,6 +126,23 @@ class Profile extends CI_Controller {
 		$response_photos = curl_exec($handle_photos);
 		$result_photos = json_decode($response_photos, true);
 
+
+		$array[]='';
+        foreach($result_photos as $key=>$val){
+            
+            $memberID = $val['memberID'];
+            $photo = $val['photo'];
+
+            $array[] = array(
+                'image'=>'../profile-images/'.$photo,
+                'link_url'=> '../profile-images/'.$photo,
+                'link_rel'=>'prettyPhoto'
+                );
+            
+        }
+        
+        $photos = json_encode($array, true);
+
 	/*
 		// Get Photos
         $handle_member = curl_init();
@@ -179,7 +196,8 @@ class Profile extends CI_Controller {
 		$data['main_content'] = 'view_profile';
         $data['memberID'] = $memberID;
 		$data['title'] = 'Alarinna | Profile View';
-		$data['result_photos'] = $result_photos;
+		$data['photos'] =$photos;
+		//$data['result_photos'] = $result_photos;
 		//$data['result_member'] = $result_member;
 		//$data['result_desire'] = $result_desire;
 		//$data['result_aboutme'] = $result_aboutme;
@@ -223,6 +241,22 @@ class Profile extends CI_Controller {
 		$response_photos = curl_exec($handle_photos);
 		$result_photos = json_decode($response_photos, true);
 
+		$array[]='';
+		foreach($result_photos as $key=>$val){
+           
+            $memberID = $val['memberID'];
+            $photo = $val['photo'];
+
+            $array[] = array(
+                'image'=>'http://localhost/alarinna/profile-images/'.$photo,
+                'link_url'=> 'http://localhost/alarinna/profile-images/'.$photo,
+                'link_rel'=>'prettyPhoto'
+                );
+            
+        }
+        
+        $photos = json_encode($array, true);
+
 		
 		// Get Photos
         $handle_member = curl_init();
@@ -264,8 +298,9 @@ class Profile extends CI_Controller {
 		$data['other_memberID']=$other_memberID;
         $data['memberID'] = $memberID = $this->session->userdata('memberID');
 		$data['title'] = 'Alarinna | Profile View';
-		$data['result_photos'] = $result_photos;
+		//$data['result_photos'] = $result_photos;
 		$data['result_member'] = $result_member;
+		$data['photos'] = $photos;
 		//$data['result_desire'] = $result_desire;
 		//$data['result_aboutme'] = $result_aboutme;
 		$data['page_title'] = 'Edit Profile';

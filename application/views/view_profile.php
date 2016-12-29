@@ -1,5 +1,4 @@
 
-
 <link href="<?php echo base_url(); ?>assets/global/plugins/cubeportfolio/css/cubeportfolio.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url(); ?>assets/pages/css/portfolio.min.css" rel="stylesheet" type="text/css" />
 
@@ -18,6 +17,52 @@
 
 <!-- END PAGE LEVEL PLUGINS -->
 
+<link href="fonts/ostrich_sans/stylesheet.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+<link href="<?php echo base_url(); ?>plugins/photo_slider/css/content_slider_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>plugins/photo_slider/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>plugins/photo_slider/js/jquery.content_slider.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>plugins/photo_slider/js/jquery.mousewheel.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>plugins/photo_slider/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo base_url(); ?>plugins/photo_slider/js/jquery.animate-colors.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>plugins/photo_slider/js/additional_content.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function() {
+			var image_array = new Array();
+			/*image_array = [
+				{image: '../profile-images/5863c7afb5bcb_black-woman-thinking.-pf.jpg', link_url: 'content/our_team/1big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/2.jpg', link_url: 'content/our_team/2big.jpg', link_rel: 'prettyPhoto'},
+                {image: 'content/our_team/3.jpg', link_url: 'content/our_team/3big.jpg', link_rel: 'prettyPhoto'},
+                {image: 'content/our_team/4.jpg', link_url: 'content/our_team/4big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/5.jpg', link_url: 'content/our_team/5big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/6.jpg', link_url: 'content/our_team/6big.jpg', link_rel: 'prettyPhoto'},
+				{image: 'content/our_team/7.jpg', link_url: 'content/our_team/7big.jpg', link_rel: 'prettyPhoto'}
+			];
+            */
+           
+            
+            image_array = <?php echo $photos; ?>; 
+			$('#slider1').content_slider({		// bind plugin to div id="slider1"
+				map : image_array,				// pointer to the image map
+				max_shown_items: 5,				// number of visible circles
+				hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
+				active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
+				wrapper_text_max_height: 450,	// height of widget, displayed in pixels
+				middle_click: 1,				// when main circle is clicked: 1 = slider will go to the previous layer/circle, 2 = to the next
+				under_600_max_height: 1200,		// if resolution is below 600 px, set max height of content
+				border_radius:	-1,				// -1 = circle, 0 and other = radius
+				automatic_height_resize: 1,
+				border_on_off: 0,
+				allow_shadow: 0
+			});
+		});
+	})(jQuery);
+</script>
+
 
         
 
@@ -30,7 +75,6 @@
     .photo{
         border-radius: 0.5rem;
     }
-
 </style>
 
 
@@ -46,8 +90,6 @@
     $city =$row['city'];
     $country =$row['country'];
     $profile_meter =$row['profile_meter'];
-
-
 }
 */
 ?>
@@ -138,39 +180,15 @@
                                                                         <!-- PERSONAL INFO TAB -->
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                         <div class="row">
-                                                                            <div class="col-md-13">
-                                                                            
-                                                                                <div id="js-grid-juicy-projects" class="cbp">
-                                                                                    <div class="col-md-4 col-sm-4 col-xs-4">
-                                                                                        <?php
-                                                                                                                                    
-                                                                                            foreach ($result_photos as $key=> $row) {
-                                                                                                $photo = $row['photo']; // keep the last id for the paging
-                                                                                                ?>
-                                                                                            
-                                                                                            <div class="cbp-item graphic">
-                                                                                                <div class="cbp-caption">
-                                                                                                    <div class="cbp-caption-defaultWrap">
-                                                                                                        <img  src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/>    
-                                                                                                    </div>
-                                                                                                    <div class="cbp-caption-activeWrap">
-                                                                                                        <div class="cbp-l-caption-alignCenter">
-                                                                                                            <div class="cbp-l-caption-body">
-                                                                                                            
-                                                                                                                <a href="<?php echo base_url(); ?>profile-images/<?php echo $photo; ?>" class="cbp-lightbox cbp-l-caption-buttonRight btn red uppercase btn red uppercase">view larger</a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            
-                                                                                            </div>
-
-                                        
-                                                                                                <?php
-                                                                                            }
-                                                                                        ?>
-                                                                                    </div>
+                                                                            <div class="col-md-12">
+                                                                                 <h3 class="font-blue">My Photos</h3>
+                                                                        
+                                                                                    <hr>
+                                                                                <div class="content_slider_wrapper" id="slider1" style="max-height:280px; padding-top:20px; padding-right:20px">
+                                                                                
                                                                                 </div>
+                                                                            
+                                                                              
                                                                             </div>
                                                                         </div>
 
@@ -369,9 +387,7 @@
 
 
 <script>
-
             $(document).ready(function(){
-
                      var memberID = '<?php echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
@@ -383,7 +399,6 @@
                         
                             var responseData = $.parseJSON(response); //parse JSON
                             console.log(responseData);
-
                             $.each(responseData, function(index,item) {
                                    
                                     $(".aboutme").append('<div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Height</h4><div class="font-blue-madison"> '+ item.aboutme_height +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Height</h4><div class="font-blue-madison">'+item.hair+' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Eyes Color</h4><div class="font-blue-madison"> '+ item.eyes +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Income</h4><div class="font-blue-madison"> '+ item.income +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Religion</h4><div class="font-blue-madison"> '+ item.religion +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Profession</h4><div class="font-blue-madison"> '+ item.profession +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Smokes</h4><div class="font-blue-madison"> '+ item.smoke +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Body Type</h4><div class="font-blue-madison"> '+ item.bodytype +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Ethnicity</h4><div class="font-blue-madison"> '+ item.ethnicity +' </div></div><div class="col-md-3 col-sm-3 col-xs-5"><h4 class="block">Marital Status</h4><div class="font-blue-madison"> '+ item.marital_status +' </div></div>'); 
@@ -401,9 +416,7 @@
         </script>
 
         <script>
-
             $(document).ready(function(){
-
                      var memberID = '<?php echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
@@ -433,9 +446,7 @@
         </script>
 
         <script>
-
             $(document).ready(function(){
-
                      var memberID = '<?php echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
@@ -451,11 +462,11 @@
                             var firstname = response.lastname;
                             console.log(responseData)
                            //$("#logo").html(height);
-
                             $.each(responseData, function(index,item) {
                                     
-                                    $("#profile_pics").append('<img src="<?php echo base_url();?>profile-images/'+ item.profile_photo +' " class="img-responsive" alt="">'); 
+                                    $("#profile_pics").append('<img src="<?php echo base_url();?>profile-images/'+ item.avatar +' " class="img-responsive" alt="">'); 
                                     $("#nickname").append(item.nickname);
+                                    $("#profile_bg").append(item.profile_bg);
                                     $("#location").append(item.city +', '+item.country);
                                     $("#about_title").append('About Me');
                                     $("#desire_title").append('My Desires' );
@@ -477,9 +488,7 @@
         </script>
 
 <script>
-
             $(document).ready(function(){
-
                      var memberID = '<?php echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
@@ -500,31 +509,21 @@
                             });
                 
                             //setTimeout($.unblockUI, 20000); 
-
                         },
                         success: function (response) {
                             $('div.persona').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
                             console.log(responseData);
-
                             $.each(responseData, function(index,item) {
                                    
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Loving</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.loving +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.loving+'%"><span class="sr-only"> '+item.loving+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.loving+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Caring</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.caring +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.caring+'%"><span class="sr-only"> '+item.caring+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.caring+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Confident</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.confident +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.confident+'%"><span class="sr-only"> '+item.confident+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.confident+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Flirty</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.flirty +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.flirty+'%"><span class="sr-only"> '+item.flirty+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.flirty+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Faithful</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.faithful +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.faithful+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.faithful+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Adventrous</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.adventrous +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.adventrous+'%"><span class="sr-only"> '+item.adventrous+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.adventrous+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Patient</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.patient +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.patient+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.patient+'%</div></div>'); 
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Health Lifestyle</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.health +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.healthy+'%"><span class="sr-only"> '+item.healthy+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.healthy+'%</div></div>');
-
                                     $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Extrovert</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.extrovert +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.extrovert+'%"><span class="sr-only"> '+item.extrovert+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.extrovert+'%</div></div>');  
                             
                             

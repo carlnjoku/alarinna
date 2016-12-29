@@ -160,7 +160,7 @@
 
                             $.each(responseData, function(index,item) {
                                     
-                                    $("#member_avatar").append('<img alt="" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ item.profile_photo +'">'); 
+                                    $("#member_avatar").append('<img alt="" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ item.avatar +'">'); 
                             });
                         },                     
                         

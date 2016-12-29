@@ -18,11 +18,7 @@
     
 
 <style>
-.slim {
-    border-radius: 0.5rem;
-    width:230px;
-    height:230px;
-}
+
 .photo{
     border-radius: 0.5rem;
 }
@@ -44,7 +40,7 @@
 header {
   box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   margin:   0px auto 50px;
-  height:   375px;
+  height:   393px;
   position: relative;
   width:    100%;
 }
@@ -83,15 +79,7 @@ div.profile-stats {
   right: 0;
   z-index: 2;
   
-  /* Generated Gradient */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.51) 3%, rgba(0,0,0,0.75) 61%, rgba(0,0,0,0.5) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(3%,rgba(0,0,0,0.51)), color-stop(61%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.5)));
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
- background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80000000',GradientType=0 );
-
+  background: rgba(0, 0, 0, 0.6);
 }
 
 div.profile-stats ul {
@@ -173,6 +161,90 @@ header>h1 {
 }
 </style>
 
+<style>
+.portfolio-image {
+	position: relative;
+	display: inline-block;
+}
+
+.portfolio-image img {
+	vertical-align: top;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	/* background-color: #151515; */ /* for dark overlay on top of the image */
+	background: transparent;
+	opacity: 0;
+	transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+.portfolio-image:hover .overlay {
+	opacity: 0.8;
+}
+
+.magnifying-glass-icon {
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	top: 85%;
+	left: 85%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	padding: 7px;
+	line-height: 1;
+    border: 2px #FFF solid;
+}
+
+.magnifying-glass-icon:hover {
+	background: rgba(0,0,0,0.9);
+	color: #fff;
+}
+
+.user-glass-icon{
+    color: #fff;
+	text-align: center;
+	position: absolute;
+	top: 70%;
+	left: 85%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	padding: 7px;
+	line-height: 1px;
+    border: 2px #FFF solid;
+    
+}
+
+.user-glass-icon:hover{
+    background: rgba(0,0,0,0.9);
+	color: #fff;
+}
+
+@media only screen and (max-width: 400px) {
+	.portfolio-image {
+		display: block;
+	}
+}
+
+
+</style>
+
+
+
 <script>
 // This just toggles the follow/following of the button
 $('a.follow').click(function () {
@@ -199,7 +271,8 @@ $age = $row['age'];
 $email = $row['email'];
 $mobile = $row['mobile'];
 $aboutme = $row['aboutme'];
-$profile_photo =$row['profile_photo'];
+$avatar =$row['avatar'];
+$profile_bg =$row['profile_bg'];
 $city =$row['city'];
 $country =$row['country'];
 $profile_meter =$row['profile_meter'];
@@ -237,17 +310,24 @@ $desire_lookingfor = $row['desire_looking_for'];
 <!-- BEGIN CONTAINER -->
                 <div class="page-container">
 
-               
-                    <!-- BEGIN CONTENT -->
+
+                <!-- BEGIN CONTENT -->
                     <div class="page-content-wrapper">
 
                      
                         <header>
-                        <figure class="profile-banner">
-                            <img src="<?php echo base_url();?>love_bg4.jpg" class="img-responsive" alt="">
+                        <figure class="slim_banner" >
+                            
+                            <div  id="profile_banner">
+                                <input type="file" />
+                                <img src="<?php echo base_url();?>profile-images/<?php echo $profile_bg; ?>" class="img-responsive" alt="">
+                            </div>
+                            
                         </figure>
                         <figure class="profile-picture" 
-                            style="background-image: url('<?php echo base_url();?>/profile-images/<?php echo $profile_photo; ?>')">
+                            style="background-image: url('<?php echo base_url();?>profile-images/<?php echo $avatar; ?>')">
+                        
+                            
                         </figure>
 
                         
@@ -257,8 +337,9 @@ $desire_lookingfor = $row['desire_looking_for'];
                                     
                                   </ul>
 
-                            <a href="javascript:void(0);" class="follow">
-                            Follow Nick
+                            <a href="<?php echo base_url();?>profile/p_preview" class="follow">
+                            Profile Preview
+                        
                             </a>
                         </div>
                         
@@ -358,9 +439,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                     <li>
                                                                         <a href="#tab_1_4" data-toggle="tab">Change Password</a>
                                                                     </li>
-                                                                    <li>
-                                                                        <a href="#tab_1_5" data-toggle="tab">Privacy Settings</a>
-                                                                    </li>
+                                                                    
                                                                 </ul>
                                                             </div>
                                                             <div class="portlet-body">
@@ -584,7 +663,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                     <div class="tab-pane" id="tab_1_2">
 
                                                                     
-                                                                        
+                                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
 
                                                                         <div class="note note-info">
                                                                             <h3>Photo Upload Tip</h3>
@@ -611,11 +690,23 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                                         $photo = $row['photo']; // keep the last id for the paging
                                                                                         ?>
                                                                                         
-                                                                                        <div class="col-md-4" style="margin-bottom:20px">
-                                                                                            <a href="">
-                                                                                                <img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/>
-                                                                                            </a>
+                                                                                    <div class="col-md-4" style="margin-bottom:20px">    
+                                                                                        <div class="portfolio-image">
+                                                                                            <a href="http://example.com/full-image.jpg" class="foobox"><img class="photo" style="width:230px; height:230px" src="<?php echo base_url();?>profile-images/<?php echo $photo; ?>"/></a>
+
+                                                                                            <div class="overlay">
+                                                                                                <a href="javascript:;" onclick="delete_photo('<?php echo $photo; ?>')" class="magnifying-glass-icon foobox">
+                                                                                                    <i class="fa fa-trash"></i>
+                                                                                                </a>
+
+                                                                                                <a href="javascript:;" onclick="make_profile_photo('<?php echo $photo; ?>')" data-toggle="tooltip" data-placement="left" title="Make Profile Picture"  class="user-glass-icon foobox">
+                                                                                                    <i class="fa fa-user"></i>
+                                                                                                </a>
+                                                                                            </div>
                                                                                         </div>
+                                                                                    </div>
+
+                                                                              
 
                                                                                         
                                                                                         <?php
@@ -623,6 +714,8 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                                 ?>
                                                                                 
                                                                                 </div>
+
+
 
                                                                                 <!--
                                                                                 <div class="col-md-4" style="margin-bottom:20px">
@@ -808,39 +901,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                         </form>
                                                                     </div>
                                                                     <!-- END CHANGE PASSWORD TAB -->
-                                                                    <!-- PRIVACY SETTINGS TAB -->
-                                                                    <div class="tab-pane" id="tab_1_5">
-
                                                                     
-                                                                    
-                                                                        <form action="#" id="edit_privacy">
-                                                                            <table class="table table-light table-hover">
-                                                                                <tr>
-                                                                                    <td> Hide my profile from the public .. </td>
-                                                                                    <td>
-                                                                                        <div class="mt-radio-inline" id="public">
-                                                                                            <input type="checkbox" checked class="make-switch" id="public_view" name="public_view" data-size="mini">
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td> Hide my profile from search engines. </td>
-                                                                                    <td>
-                                                                                        
-                                                                                            <div class="mt-radio-inline" id="search">
-                                                                                            <input type="checkbox" checked class="make-switch" id="searchable" name="searchable" data-size="mini">
-                                                                                        </div>
-                                                                                        
-                                                                                    </td>
-                                                                                </tr>
-                                                                                
-                                                                                
-                                                                                
-                                                                            </table>
-                                                                            
-                                                                        </form>
-                                                                    </div>
-                                                                    <!-- END PRIVACY SETTINGS TAB -->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1029,7 +1090,6 @@ $desire_lookingfor = $row['desire_looking_for'];
 	return element.getAttribute('data-' + key);  
    
     }
-
     function createSlider ( slider ) {
         
             noUiSlider.create(slider, {
@@ -1067,6 +1127,9 @@ $(document).ready(function() {
             saveInitialImage:true,
             service: 'http://localhost/alarinna/plugins/slim-image-upload-and-ratio-cropping-plugin/server/async.php',
             download: false,
+            instantEdit: true,
+           // minSize:0.04,
+            forceSize:true,
             size: {width:640, height:640},
             willSave: function(data, ready) {
                 //alert('saving!');
@@ -1094,12 +1157,52 @@ $(document).ready(function() {
                    
             },
             label: "<i class='fa fa-plus fa-4x' style='color:#cccccc'></i>",
-            push: true,
+            push: false,
             buttonConfirmLabel: 'Apply'
  
            
     });
 
+    $('#profile_banner').slim({
+            ratio: '4:1',
+            saveInitialImage:true,
+            service: 'http://localhost/alarinna/plugins/slim-image-upload-and-ratio-cropping-plugin/server/async.php',
+            download: false,
+            instantEdit: true,
+            size: {width:1300, height:378},
+            willRequest: function(data, ready) {
+                //alert('saving!');
+                ready(data);
+               
+            },
+            didUpload: function(error, data, response) {
+                    console.log(response);
+                    var memberID = '<?php echo $memberID; ?>';
+                    var filename = response.file;
+                    var datastring = {"memberID":memberID,"filename":filename} ;
+                    
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost/neo4j-alarinna/web/profile_bg_photo_upload",
+                        data: datastring,
+                        success: function (response) {
+                           
+                            //$("#photo_gallery").load('http://localhost/alarinna/profile/ajax_photos');
+                            //load("now_playing.php");
+                             
+                        }
+                    });   
+                    
+                   
+            },
+            label: "<i class='fa fa-plus fa-4x' style='color:#cccccc'></i>",
+            push: false,
+            buttonConfirmLabel: 'Confirm'
+ 
+           
+    });
+
+    
     
     // Submit forms without validation
     $("#form_edit_aboutme").submit(function(e) {
@@ -1125,10 +1228,7 @@ $(document).ready(function() {
                                 message:'<img src="../assets/loading-spinner-pink.gif"/>',
                             });
                             setTimeout($.unblockUI, 2000); 
-
-                            
-                            
-                        
+  
                         },
                         success: function (responseData) {
                             
@@ -1392,6 +1492,48 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
     }
 });
 
+</script>
+
+
+<script>
+function delete_photo(id)
+    {
+        //var status = confirm("Are you sure you want to delete ?");  
+        var photo_id = id;
+       alert(photo_id)
+            $.ajax({
+                type:"POST",
+                url:'<?php echo base_url();?>page/delete_photo',
+                data:{photo_id:photo_id},
+                success(html){
+                $("#photo_gallery").load('http://localhost/alarinna/profile/ajax_photos');
+                alert('Deleted');
+            }
+            });
+      
+    };
+</script>
+
+<script>
+function make_profile_photo(id)
+    {
+        //var status = confirm("Are you sure you want to delete ?");  
+        var photoID = id;
+        var memberID = '<?php echo $memberID;?>';
+        var obj = {"photoID":photoID, "memberID":memberID};
+       alert(photoID)
+            $.ajax({
+                type:"POST",
+                url:'http://localhost/neo4j-alarinna/web/make_profile_photo',
+                data:obj,
+                success(html.photoID){
+                    $("#profile_pics").append('<img src="<?php echo base_url();?>profile-images/'+ html.photoID +' " class="img-responsive" alt="">'); 
+                    
+                    alert(html.photoID);
+            }
+            });
+      
+    };
 </script>
 
 
@@ -1674,6 +1816,32 @@ $('input[name="searchable"]').on('switchChange.bootstrapSwitch', function(event,
                     
                   
             });
+</script>
+
+<script>
+$(function() {
+// OPACITY OF BUTTON SET TO 0%
+$(".roll").css("opacity","0");
+ 
+// ON MOUSE OVER
+$(".roll").hover(function () {
+ 
+// SET OPACITY TO 70%
+$(this).stop().animate({
+opacity: .6
+}, "fast");
+},
+              
+ 
+// ON MOUSE OUT
+function () {
+ 
+// SET OPACITY BACK TO 50%
+$(this).stop().animate({
+opacity: 0
+}, "slow");
+});
+});
 </script>
 
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
