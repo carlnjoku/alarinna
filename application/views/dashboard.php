@@ -27,28 +27,25 @@
                                         <div class="row">
                                             
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
+                                                <a href="<?php echo base_url();?>page/fancies"><div class="dashboard-stat2" style="max-height:80px">
                                                     <div class="display">
                                                         <div class="number">
                                                             <h3 class="font-red">
                                                                 <span data-counter="counterup" data-value="1349">5</span>
                                                             </h3>
-                                                            <small>LIKES</small>
+                                                            <small>FANCIES</small>
                                                         </div>
                                                         <div class="icon">
                                                             <i class="icon-heart"></i>
                                                         </div>
                                                     </div>
-                                                   <!-- <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar10.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar11.jpg">
-                                                    -->
+                                                </a>
+                                                  
                                                     
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
+                                                 <a href="<?php echo base_url();?>page/chat"><div class="dashboard-stat2" style="max-height:80px">
                                                     <div class="display">
                                                         <div class="number">
                                                             <h3 class="font-red">
@@ -60,17 +57,11 @@
                                                             <i class="icon-bubble"></i>
                                                         </div>
                                                     </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar6.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
-                                                    -->
+                                                    
                                                 </div>
                                             </div>
-                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
+                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" >
+                                                 <a href="<?php echo base_url();?>inbox/message"><div class="dashboard-stat2 " style="max-height:80px">
                                                     <div class="display">
                                                         <div class="number">
                                                             <h3 class="font-red">
@@ -82,15 +73,12 @@
                                                             <i class="icon-envelope"></i>
                                                         </div>
                                                     </div>
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    -->
+                                                </a>
                                                    
                                                 </div>
                                             </div>
                                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                <div class="dashboard-stat2 ">
+                                                 <a href="<?php echo base_url();?>page/requests"><div class="dashboard-stat2" style="max-height:80px">
                                                     <div class="display">
                                                         <div class="number">
                                                             <h3 class="font-red">
@@ -102,14 +90,8 @@
                                                             <i class="icon-question"></i>
                                                         </div>
                                                     </div>
-
-                                                    <!--
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar3.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar5.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar2.jpg">
-                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                    -->
+                                                    </a>
+                                                    
                                                 </div>
                                             </div>
                                            
@@ -130,140 +112,9 @@
                                                             
                                                             <div class="portlet-body">
                                                         <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                            <div class="row">
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1">
-                                                                            <img src="../assets/pages/img/avatars/team5.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Jennifer</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Lagos, Nigeria (32)</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                            <img src="../assets/pages/img/avatars/team6.jpg" />
-                                                                            <div class="mt-overlay mt-top">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Kate Beck</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Executive Manager</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                               
-                                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                                    <div class="mt-card-item">
-                                                                        <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                            <img src="../assets/pages/img/avatars/team8.jpg" />
-                                                                            <div class="mt-overlay">
-                                                                                <ul class="mt-info">
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-magnifier"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a class="btn default btn-outline" href="javascript:;">
-                                                                                            <i class="icon-link"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="mt-card-content">
-                                                                            <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                            <p class="mt-card-desc font-grey-mint">Finance Manager</p>
-                                                                            <div class="mt-card-social">
-                                                                                <ul>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-heart"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-bubble"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="javascript:;">
-                                                                                            <i class="icon-envelope"></i>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                            <div class="row result_suggest" style="min-height:200px">
+                                                             
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1136,3 +987,62 @@
                 $("#sticker").sticky({ topSpacing: 10, bottomSpacing:200 });
                 });
             </script>
+
+            <script>
+
+            $(document).ready(function(){
+               
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/suggested_matches/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_suggest').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_suggest').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>You do not have any match just yet.....</h1>Suggest matches</center></div>'); 
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $.each(responseData, function(index,item) {
+                                        
+                                        var  string = item.myfancies;
+                                        var main = string.includes(item.memberID);
+                                        
+                                        $('.result_suggest').append('<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-down"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay mt-top"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>');
+
+                                        
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                
+            });
+        </script>

@@ -233,57 +233,57 @@
                         </div>
                         <!-- END HEADER TOP -->
                         <!-- BEGIN HEADER MENU -->
-                        <div class="page-header-menu">
+                        <div class="page-header-menu" style="background-color:#4299d4">
                             <div class="container">
                                 <!-- BEGIN HEADER SEARCH BOX -->
                                 
-                                <span style="position:relative; top:10px; top:17px; left:50%" class="font-red"><b><a href="#">UPGARDE</a></b></span>
+                                <span style="position:relative; top:10px; top:10px; left:55%"><button class="btn btn-sx btn-circle  white btn-outline">UPGRADE</button></span>
                                 <!-- END HEADER SEARCH BOX -->
                                 <!-- BEGIN MEGA MENU -->
                                 <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
                                 <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
-                                <div class="hor-menu  ">
-                                    <ul class="nav navbar-nav">
-                                        <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>home/dashboard"> Dashboard
+                                <div class="hor-menu" style="background-color:#ccc">
+                                    <ul class="nav navbar-nav"  style="background-color:#4299d4;">
+                                        <li class="menu-dropdown classic-menu-dropdown">
+                                            <a class="font-white" href="<?php echo base_url();?>home/dashboard"> Dashboard
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="javascript:;"> Profile
+                                            <a class="font-white" href="javascript:;"> Profile
                                                 <span class="arrow"></span>
                                             </a>
                                             <ul class="dropdown-menu pull-left">
                                                 <li class=" ">
-                                                    <a href="<?php echo base_url();?>profile/edit_profile" class="nav-link  ">
+                                                    <a class="font-white" href="<?php echo base_url();?>profile/edit_profile" class="nav-link  ">
                                                         <i class="icon-pencil"></i> Edit Profile
                                                         
                                                     </a>
                                                 </li>
                                                 <li class=" ">
-                                                    <a href="<?php echo base_url();?>profile/p_preview" class="nav-link  ">
+                                                    <a class="font-white" href="<?php echo base_url();?>profile/p_preview" class="nav-link  ">
                                                         <i class="icon-eye"></i> View Profile </a>
                                                 </li>
                                                 
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>page/matches"> Match
+                                            <a class="font-white" href="<?php echo base_url();?>page/matches"> Match
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
 
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>page/search"> Search
+                                            <a class="font-white" href="<?php echo base_url();?>page/search"> Search
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
 
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a href="<?php echo base_url();?>home/dashboard"> Event
+                                            <a class="font-white" href="<?php echo base_url();?>home/dashboard"> Event
                                                 <span class="arrow"></span>
                                             </a>
                                             

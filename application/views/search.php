@@ -170,124 +170,7 @@ hr.ruler {
 </style>
 
 <style>
-/* Global */
 
-
-a {
-	-webkit-transition: all 150ms ease;
-	-moz-transition: all 150ms ease;
-	-ms-transition: all 150ms ease;
-	-o-transition: all 150ms ease;
-	transition: all 150ms ease; 
-	}
-    a:hover {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
-        filter: alpha(opacity=50); /* IE7 */
-        opacity: 0.6;
-        text-decoration: none;
-    }
-
-
-/* Container */
-.container-fluid {
-    background: #FFFFFF;
-    margin: 40px auto 10px;
-    padding: 20px 40px 0;
-    max-width: 960px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Page Header */
-.page-header {
-    background: #f9f9f9;
-    margin: -30px -40px 40px;
-    padding: 20px 40px;
-    border-top: 4px solid #ccc;
-    color: #999;
-    text-transform: uppercase;
-    }
-    .page-header h3 {
-        line-height: 0.88rem;
-        color: #000;
-        }
-
-
-
-/* Thumbnail Box */
-.caption h4 {
-    font-size: 1rem;
-    color: #444;
-    }
-    .caption p {
-        font-size: 0.75rem;
-        color: #999;
-        }
-        .btn.btn-mini {
-            font-size: 0.63rem;
-            }
-
-
-/* Carousel Control */
-.control-box {
-    text-align: right;
-    width: 100%;
-    }
-    .carousel-control{
-        background: #666;
-        border: 0px;
-        border-radius: 0px;
-        display: inline-block;
-        font-size: 34px;
-        font-weight: 200;
-        line-height: 18px;
-        opacity: 0.5;
-        padding: 4px 10px 0px;
-        position: static;
-        height: 30px;
-        width: 15px;
-        }
-
-
-/* Footer */
-.footer {
-    margin: auto;
-    width: 100%;
-    max-width: 960px;
-    display: block;
-    font-size: 0.69rem;
-    }
-    .footer, .footer a {
-        color: #c9e4f7;
-        }
-        p.right  { 
-            float: right; 
-            }
-
-
-/* Mobile Only */
-@media (max-width: 767px) {
-    .page-header, .control-box {
-    text-align: center;
-    } 
-}
-@media (max-width: 479px) {
-    .caption {
-    word-break: break-all;
-    }
-}
-
-
-/* ADD-ON
--------------------------------------------------- */
-body:after{content:"less than 320px";font-size:1rem;font-weight:bold;position:fixed;bottom:0;width:100%;text-align:center;background-color:hsla(1,60%,40%,0.7);color:#fff;height:20px;padding-top:0;margin-left:0;left:0}@media only screen and (min-width:320px){body:after{content:"320 to 480px";background-color:hsla(90,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:480px){body:after{content:"480 to 768px";background-color:hsla(180,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:768px){body:after{content:"768 to 980px";background-color:hsla(270,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:980px){body:after{content:"980 to 1024px";background-color:hsla(300,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:1024px){body:after{content:"1024 and up";background-color:hsla(360,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
-
-::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
-::-moz-selection { background: #ff5e99; color: #FFFFFF; }
-
-a, a:focus, a:active, a:hover, object, embed { outline: none; }
-:-moz-any-link:focus { outline: none; }
-input::-moz-focus-inner { border: 0; }
 </style>
 
 <?php foreach($result_member as $key=>$row){
@@ -1329,8 +1212,9 @@ $country =$row['country'];
 
             $(document).ready(function(){
 
+                     /*
                      var mycity =  document.getElementById('city').innerHTML;
-                     var memberID = '<?php echo $memberID; ?>';
+                     var memberID = '<?php //echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
                         type: 'get',
@@ -1360,13 +1244,13 @@ $country =$row['country'];
 
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
-                            var memberID = '<?php echo $memberID; ?>';
+                            var memberID = '<?php //echo $memberID; ?>';
                             $.each(responseData, function(index,item) {
                                     
                                     var  string = item.myfancies;
                                     var main = string.includes(memberID);
                                     
-                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php //echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
                             });
                         },                     
                         
@@ -1375,6 +1259,7 @@ $country =$row['country'];
                             toastr.warning('Network failure, check your connection and refresh the page')
                         }
                     });
+                    */
                     
                   
          
@@ -1403,19 +1288,27 @@ $country =$row['country'];
                                 message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
                                 timeout: 15000
                             });
+                           
 
                         },
                         success: function (response) {
                             
                             $('div.result').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
+                            console.log(responseData)
                             if (!responseData[0]) {
                                 
                                 $(".result").html('<div class="col-sm-12 col-xs-12"><div class="note note-info"><h4 class="block">Info!</h4><p> No match found </p></div></div>'); 
 
                             }else{
+                                  $('.result').empty();
                                  $.each(responseData, function(index,item) {
-                                    $(".result").html('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
+                                    var  string = item.myfancies;
+                                    var main = string.includes(item.memberID);
+                                    
+                                   // alert(main)
+                                    
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>').appendTo('.result'); 
                                 });
                             }
                             
@@ -1558,11 +1451,3 @@ jQuery("div#menu ul.menu li.has-dropdown").hover(
 );
 </script>
 
-<script>
-// Carousel Auto-Cycle
-  $(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 6000
-    })
-  });
-</script>

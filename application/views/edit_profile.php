@@ -38,7 +38,12 @@
 <style>
 
 header {
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  /*box-shadow: inset 1px 1px 60px 3px rgba(0,0,0,0.5), inset 1px 1px 60px 3px rgba(0,0,0,0.5);*/
+
+    -moz-box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3);
+     -webkit-box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3);
+
   margin:   0px auto 50px;
   height:   393px;
   position: relative;
@@ -78,8 +83,6 @@ div.profile-stats {
   position: absolute;
   right: 0;
   z-index: 2;
-  
-  background: rgba(0, 0, 0, 0.6);
 }
 
 div.profile-stats ul {
@@ -89,13 +92,12 @@ div.profile-stats ul {
 }
 
 div.profile-stats ul li {
-  color: #efefef;
+  color: #000000;
   display: block;
   float: left;
   font-size: 24px;
-  font-weight: bold;
   margin-right: 50px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7)
+  
 }
 
 div.profile-stats li span {
@@ -319,13 +321,13 @@ $desire_lookingfor = $row['desire_looking_for'];
                         <figure class="slim_banner" >
                             
                             <div  id="profile_banner">
-                                <input type="file" />
+                               
                                 <img src="<?php echo base_url();?>profile-images/<?php echo $profile_bg; ?>" class="img-responsive" alt="">
+                                 <input type="file" />
                             </div>
                             
                         </figure>
-                        <figure class="profile-picture" 
-                            style="background-image: url('<?php echo base_url();?>profile-images/<?php echo $avatar; ?>')">
+                        <figure class="profile-picture" style="background-image: url('<?php echo base_url();?>profile-images/<?php echo $avatar; ?>')">
                         
                             
                         </figure>
@@ -343,7 +345,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                             </a>
                         </div>
                         
-                        <h1><?php echo $nickname; ?>  <small><?php echo $city .', '. $country; ?></small></h1>
+                        
                         </header>
                         <!-- BEGIN CONTENT BODY -->
                         <!-- BEGIN PAGE HEAD-->
@@ -668,6 +670,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                         <div class="note note-info">
                                                                             <h3>Photo Upload Tip</h3>
                                                                             <p>A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
+                                                                            <div id="member_avatar">kdslkd</div>
                                                                         </div>
 
                                                                             <div class="row">
@@ -1521,16 +1524,31 @@ function make_profile_photo(id)
         var photoID = id;
         var memberID = '<?php echo $memberID;?>';
         var obj = {"photoID":photoID, "memberID":memberID};
+        var urls = '<?php echo base_url();?>profile/edit_profile';
        alert(photoID)
             $.ajax({
                 type:"POST",
                 url:'http://localhost/neo4j-alarinna/web/make_profile_photo',
                 data:obj,
-                success(html.photoID){
-                    $("#profile_pics").append('<img src="<?php echo base_url();?>profile-images/'+ html.photoID +' " class="img-responsive" alt="">'); 
+                success(response){
+                    var responseData = $.parseJSON(response); //parse JSON
                     
-                    alert(html.photoID);
-            }
+                    console.log(responseData);
+                    //$("#logo").html(height);
+                
+                    $('#member_avatar').replaceWith('<img alt="" width="40" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ responseData.avatar +'">');
+                    $(".profile-picture").replaceWith("<figure class='profile-picture' style='background-image: url('<?php echo base_url();?>profile-images/woman_avatar.jpg)></figure>'"); 
+                    /*
+                    $.each(responseData, function(index,item) {
+                            alert(item.avatar)
+                            //$(".profile-picture").load(document.urls, '.profile-picture'); 
+                            $('#member_avatar').append('<img alt="" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ responseData.avatar +'">');
+
+                            //$('#your_div_id').html(data);
+                
+                    });
+                    */
+                }
             });
       
     };
