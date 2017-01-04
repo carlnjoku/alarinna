@@ -33,13 +33,6 @@
     
 }
 
-.fa-heart-o{
-    font-size: 23px;
-    color:#cccccc;
-}
-.fa-heart-o:hover:before{
-   color: #FF1493; 
-}
 
 
 .comments-full:before{
@@ -106,7 +99,7 @@
                                         <!-- BEGIN : USER CARDS -->
                                         <div class="row">
                                             <div class="col-md-12">
-                                            
+                                              
                                                 <div class="portlet light portlet-fit ">
                                                     <div class="portlet-title">
                                                         <div class="caption">
@@ -722,18 +715,15 @@
 
 
 
-
-            
+<!--           
 <script>
 
 $(document).ready(function(){
-    var memberID = '<?php echo $memberID; ?>';
+    var memberID = '<?php //echo $memberID; ?>';
         $.ajax({
         dataType: 'html',
         type: 'get',
         url: 'http://localhost/neo4j-alarinna/web/get_fancies_matches/'+ memberID,
-        
-        
         
         success: function (response) {
             
@@ -767,6 +757,8 @@ $(document).ready(function(){
 });
 
 </script>
+-->
+
 
 <script>
 
@@ -805,13 +797,12 @@ $(document).ready(function(){
                                 var memberID = '<?php echo $memberID; ?>';
                                 $.each(responseData, function(index,item) {
                                         
-                                        var  string = item.myfancies;
+                                        var string = item.myfancies;
                                         var main = string.includes(memberID);
-                                        //alert(main)
+                                        //alert(string)
                                         
                                         
-                                        
-                                        $(".result_suggest").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
+                                        $(".result_suggest").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
                                 
                                 });
                             }
@@ -828,7 +819,8 @@ $(document).ready(function(){
                 
             });
         </script>
-
+        
+        
 
 
         <script>
@@ -871,6 +863,8 @@ $(document).ready(function(){
                                         
                                         var  string = item.myfancies;
                                         var main = string.includes(memberID);
+                                        
+                                        
                                         
                                         /*
                                         $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>');
@@ -945,11 +939,11 @@ $(document).ready(function(){
 
 
 
-
+<!--
 <script>
 
 $(document).delegate1("#fancy", "click",function(e){
-    var memberID = '<?php echo $memberID; ?>';
+    var memberID = '<?php //echo $memberID; ?>';
     var other_memberID = $(this).attr('data-memberId');
     var obj = {"other_memberID":other_memberID, "memberID":memberID};
     if ($(this).html() == '<i class="fa fa-heart-o fa-lg"></i>') {
@@ -986,7 +980,7 @@ $(document).delegate1("#fancy", "click",function(e){
 
 </script>
 
-
+-->
 
 <script>
 
@@ -1003,7 +997,10 @@ $(document).ready(function(){
     $(document).delegate(".toggableIcon", "click",function(e){
     var memberID = '<?php echo $memberID; ?>';
     var other_memberID = $(this).attr('data-othermemberID');
+    var fancy_strings = $(this).attr('data-string');
     var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+    alert(fancy_strings);
     if($(this).attr("data-heart-value")=="true")
     {
         console.log(obj);
@@ -1013,12 +1010,7 @@ $(document).ready(function(){
         data: obj,
         cache: false,
             success: function(data){
-                if (data == 0) {
-                    alert('you have liked this item before');
-                } else {
-                    $('a#'+item_id).addClass('liked');
-                    $('a#'+item_id).html(data);
-                }
+                alert('Unfancied')
             }
         });
         $(this)
@@ -1029,22 +1021,17 @@ $(document).ready(function(){
         console.log(obj);
         $.ajax({
         type: "POST",
-        url: 'http://localhost/neo4j-alarinna/web/fancy',
+        url: 'http://localhost/neo4j-alarinna/web/unfancy',
         data: obj,
         cache: false,
             success: function(data){
-                if (data == 0) {
-                    alert('you have liked this item before');
-                } else {
-                    $('a#'+item_id).addClass('liked');
-                    $('a#'+item_id).html(data);
-                }
+                alert('Fancied')
             }
         });
         $(this)
             .attr("data-heart-value", "true")
-            .removeClass("heart-full")
-            .addClass("heart-outline"); 
+            .removeClass("heart-outline")
+            .addClass("heart-full"); 
     }
     
 });

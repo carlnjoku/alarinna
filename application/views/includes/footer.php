@@ -76,39 +76,8 @@
             </div>
         </div>
         <!-- BEGIN QUICK NAV -->
-        <nav class="quick-nav">
-            <a class="quick-nav-trigger" href="#0">
-                <span aria-hidden="true"></span>
-            </a>
-            <ul>
-                <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
-                        <span>Purchase Metronic</span>
-                        <i class="icon-basket"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
-                        <span>Customer Reviews</span>
-                        <i class="icon-users"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/showcast/" target="_blank">
-                        <span>Showcase</span>
-                        <i class="icon-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/metronic-theme/changelog/" target="_blank">
-                        <span>Changelog</span>
-                        <i class="icon-graph"></i>
-                    </a>
-                </li>
-            </ul>
-            <span aria-hidden="true" class="quick-nav-bg"></span>
-        </nav>
-        <div class="quick-nav-overlay"></div>
+       
+       
         <!-- END QUICK NAV -->
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
@@ -129,6 +98,7 @@
         <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
 
+        
          
         
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
@@ -157,24 +127,28 @@
                             var firstname = response.lastname;
                             console.log(responseData)
                            //$("#logo").html(height);
+                           
 
                             $.each(responseData, function(index,item) {
-                                    
                                     $("#member_avatar").append('<img alt="" class="img-circle" src="<?php echo base_url(); ?>profile-images/'+ item.avatar +'">'); 
                             });
                         },                     
                         
                         error: function (responseData) {
                             
-                            $(".desires").append('<div class="well"><h3>No Desires</h3> Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie lorem at massa Integer molestie loremat massa. </div>')
+                            //$(".desires").append('<div class="well"><h3>No Desires</h3> </div>')
                         }
                     });
-                    
-                  
+
+                   
+                     
             });
         </script>
 
-        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+       
+       
+
+       
 
         
         

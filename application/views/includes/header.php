@@ -40,6 +40,27 @@
         <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
+    <style>
+    .heart-outline-menu:before{
+    content:"\f08a";
+    color:#dedede;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 1px;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 27px;
+    }
+    .heart-outline-menu:hover:before{
+   color: #FF1493; 
+}
+img.logo-shadow {
+    
+}
+    </style>
+
     <body class="page-container-bg-solid">
    
         <div class="page-wrapper">
@@ -54,7 +75,7 @@
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
                                     <a href="index.html">
-                                        <img src="<?php echo base_url();?>assets/layouts/layout3/img/logo-default1.jpg" alt="logo" class="logo-default img-responsive">
+                                        <img src="<?php echo base_url();?>assets/layouts/layout3/img/logo-default1.png" alt="logo" width="180" class="logo-default img-responsive logo-shadow">
                                     </a>
                                 </div>
                                 <!-- END LOGO -->
@@ -67,116 +88,36 @@
                                         <!-- BEGIN NOTIFICATION DROPDOWN -->
                                         <!-- DOC: Apply "dropdown-hoverable" class after "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
                                         <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
-                                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
-                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <i class="icon-heart"></i>
-                                                <span class="badge badge-default">7</span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li class="external">
-                                                    <h3>You have
-                                                        <strong>12 pending</strong> tasks</h3>
-                                                    <a href="app_todo.html">view all</a>
-                                                </li>
-                                                <li>
-                                                    <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-                                                        
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <i class="fa fa-heart-o fa-4x"></i>
+                                                    <span style="position:relative; top:-10px; left:-40px" class="badge badge-danger"> 9 </span>
+                                             </a>
                                         </li>
-                                        <!-- END NOTIFICATION DROPDOWN -->
-                                        <!-- BEGIN TODO DROPDOWN -->
-                                        <li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
-                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <i class="icon-question"></i>
-                                                <span class="badge badge-red">3</span>
-                                            </a>
-                                           
+
+                                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <i class="fa fa-commenting-o fa-4x"></i>
+                                                    <span style="position:relative; top:-10px; left:-40px" class="badge badge-danger"> 3 </span>
+                                             </a>
                                         </li>
-                                        <!-- END TODO DROPDOWN -->
-                                        <li class="droddown dropdown-separator">
-                                            <span class="separator"></span>
+
+                                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <i class="icon-envelope"></i>
+                                                    <span style="position:relative; top:-10px; left:-40px" class="badge badge-inverse"> 6 </span>
+                                             </a>
                                         </li>
-                                        <!-- BEGIN INBOX DROPDOWN -->
-                                        <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
-                                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                <span class="circle">4</span>
-                                                <span class="corner"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li class="external">
-                                                    <h3>You have
-                                                        <strong>3 New</strong> Messages</h3>
-                                                    <a href="app_inbox.html">view all</a>
-                                                </li>
-                                                <li>
-                                                    <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                                        <li>
-                                                            <a href="#">
-                                                                <span class="photo">
-                                                                    <img src="<?php echo base_url();?>assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
-                                                                <span class="subject">
-                                                                    <span class="from"> Lisa Wong </span>
-                                                                    <span class="time">Just Now </span>
-                                                                </span>
-                                                                <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <span class="photo">
-                                                                    <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
-                                                                <span class="subject">
-                                                                    <span class="from"> Richard Doe </span>
-                                                                    <span class="time">16 mins </span>
-                                                                </span>
-                                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <span class="photo">
-                                                                    <img src="../assets/layouts/layout3/img/avatar1.jpg" class="img-circle" alt=""> </span>
-                                                                <span class="subject">
-                                                                    <span class="from"> Bob Nilson </span>
-                                                                    <span class="time">2 hrs </span>
-                                                                </span>
-                                                                <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <span class="photo">
-                                                                    <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
-                                                                <span class="subject">
-                                                                    <span class="from"> Lisa Wong </span>
-                                                                    <span class="time">40 mins </span>
-                                                                </span>
-                                                                <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-                                                                <span class="photo">
-                                                                    <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
-                                                                <span class="subject">
-                                                                    <span class="from"> Richard Doe </span>
-                                                                    <span class="time">46 mins </span>
-                                                                </span>
-                                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+
+                                         <li class="dropdown dropdown-extended dropdown-notification dropdown-dark"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                    <i class="fa fa-bell-o fa-4x"></i>
+                                                    <span style="position:relative; top:-10px; left:-35px" class="badge badge-info"> 6 </span>
+                                             </a>
                                         </li>
-                                        <!-- END INBOX DROPDOWN -->
+
+                                        
                                         <!-- BEGIN USER LOGIN DROPDOWN -->
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             <a href="javascript:;" id="member_avatar" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                                 
-                                                <span class="username username-hide-mobile"><i class="fa fa-bar fa-2x"></i></span>
+                                                <span class="username username-hide-mobile"><i class="fa fa-bars"></i></span>
                                             </a>
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
@@ -186,28 +127,23 @@
                                                 
                                                 <li>
                                                     <a href="<?php echo base_url(); ?>inbox/message">
-                                                        <i class="icon-envelope-open"></i> My Inbox
-                                                        <span class="badge badge-danger"> 31 </span>
+                                                        <i class="icon-settings"></i> Account Settings
+                                                        
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo base_url(); ?>page/requests">
-                                                        <i class="icon-rocket"></i> Requests
+                                                        <i class="icon-question"></i> Requests
                                                         <span class="badge badge-success"> 7 </span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo base_url(); ?>page/visitors">
-                                                        <i class="icon-rocket"></i> Visitors
-                                                        <span class="badge badge-success"> 7 </span>
+                                                        <i class="icon-eye"></i> Visitors
+                                                        <span class="badge badge-primary visitor"> </span>
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="<?php echo base_url(); ?>page/fancies">
-                                                        <i class="icon-rocket"></i> Fancies
-                                                        <span class="badge badge-success"> 7 </span>
-                                                    </a>
-                                                </li>
+                                                
                                                 <li class="divider"> </li>
                                                 <li>
                                                     <a href="page_user_lock_1.html">

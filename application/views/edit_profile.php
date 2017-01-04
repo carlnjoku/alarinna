@@ -151,6 +151,7 @@ div.profile-stats a.follow.followed {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  float:right
 }
 
 header>h1 {
@@ -333,16 +334,14 @@ $desire_lookingfor = $row['desire_looking_for'];
                         </figure>
 
                         
-                        <div class="profile-stats">
+                        <div class="profile-stats" style="padding-right:57px;">
                             <ul>
                                         <li><?php echo $nickname; ?>    <span><?php echo $age.' - '  .$city .', '. $country; ?></span></li>
                                     
                                   </ul>
 
-                            <a href="<?php echo base_url();?>profile/p_preview" class="follow">
-                            Profile Preview
-                        
-                            </a>
+                          
+                            <a  style="position:relative; left:530px; top:13px "href="<?php echo base_url();?>profile/p_preview" class=" btn btn-circle red">Preview Profile</a>
                         </div>
                         
                         
@@ -665,12 +664,12 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                     <div class="tab-pane" id="tab_1_2">
 
                                                                     
-                                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
+                                                                        <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!"></a>
 
                                                                         <div class="note note-info">
                                                                             <h3>Photo Upload Tip</h3>
                                                                             <p>A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
-                                                                            <div id="member_avatar">kdslkd</div>
+                                                                            
                                                                         </div>
 
                                                                             <div class="row">
@@ -740,6 +739,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                     <!-- CHANGE MEMBER DETAILS TAB -->
                                                                     <div class="tab-pane" id="tab_1_3">
                                                                         <div class="row">
+                                                                        <div class="col-md-12">
                                                                         <h3>My Desires </h3>
                                                                             <form action="#" id="form_edit_desire" class="form-horizontal">
                                                                                     <div class="col-md-6">
@@ -881,6 +881,7 @@ $desire_lookingfor = $row['desire_looking_for'];
                                                                                     </div>
                                                                                 
                                                                                 </form>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                     <!-- END MEMBER DETAILS TAB -->
@@ -1903,3 +1904,4 @@ opacity: 0
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo base_url(); ?>assets/pages/scripts/components-bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
+

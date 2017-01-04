@@ -179,5 +179,16 @@ class Page extends CI_Controller {
         $this->load->view('slider', $data);
     }
 
+    public function tooltip()
+    {
+        $memberID = $this->session->userdata('memberID');	
+        
+        $data['main_content'] = 'tooltip';
+        $data['memberID'] = $memberID;
+        $data['title'] = 'Alarinna | My Visitors';
+        $data['page_title'] = 'Tooltip';
+		$this->load->view('includes/template', $data); 
+    }
+
     
 }

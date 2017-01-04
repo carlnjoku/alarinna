@@ -19,7 +19,7 @@
 	(function($){
 		$(document).ready(function() {
 			var image_array = new Array();
-			/*image_array = [
+			image_array = [
 				{image: '../profile-images/5863c7afb5bcb_black-woman-thinking.-pf.jpg', link_url: 'content/our_team/1big.jpg', link_rel: 'prettyPhoto'},
 				{image: 'content/our_team/2.jpg', link_url: 'content/our_team/2big.jpg', link_rel: 'prettyPhoto'},
                 {image: 'content/our_team/3.jpg', link_url: 'content/our_team/3big.jpg', link_rel: 'prettyPhoto'},
@@ -28,7 +28,15 @@
 				{image: 'content/our_team/6.jpg', link_url: 'content/our_team/6big.jpg', link_rel: 'prettyPhoto'},
 				{image: 'content/our_team/7.jpg', link_url: 'content/our_team/7big.jpg', link_rel: 'prettyPhoto'}
 			];
-            */
+            
+			var array_length = image_array.length;
+			 //alert(image_array.length); 
+
+			 if(array_length > 1){
+				 alert('cool')
+			 }else{
+				 alert('not cool')
+			 }
            
             
             image_array = <?php echo $photos; ?>; 
@@ -57,6 +65,7 @@
 <body>
 
 
+<a  style="position:relative; left:530px; top:13px "href="<?php echo base_url();?>profile/p_preview" class=" btn btn-circle red"> Send Message</a>
 
 
 <div class="content_slider_wrapper" id="slider1">

@@ -33,35 +33,40 @@
 	(function($){
 		$(document).ready(function() {
 			var image_array = new Array();
-			/*image_array = [
-				{image: '../profile-images/5863c7afb5bcb_black-woman-thinking.-pf.jpg', link_url: 'content/our_team/1big.jpg', link_rel: 'prettyPhoto'},
-				{image: 'content/our_team/2.jpg', link_url: 'content/our_team/2big.jpg', link_rel: 'prettyPhoto'},
-                {image: 'content/our_team/3.jpg', link_url: 'content/our_team/3big.jpg', link_rel: 'prettyPhoto'},
-                {image: 'content/our_team/4.jpg', link_url: 'content/our_team/4big.jpg', link_rel: 'prettyPhoto'},
-				{image: 'content/our_team/5.jpg', link_url: 'content/our_team/5big.jpg', link_rel: 'prettyPhoto'},
-				{image: 'content/our_team/6.jpg', link_url: 'content/our_team/6big.jpg', link_rel: 'prettyPhoto'},
-				{image: 'content/our_team/7.jpg', link_url: 'content/our_team/7big.jpg', link_rel: 'prettyPhoto'}
-			];
-            */
-           
+
+            image_array = <?php echo $photos;?>;
+            var array_length = image_array.length;
             
-            image_array = <?php echo $photos;?> 
-			$('#slider1').content_slider({		// bind plugin to div id="slider1"
-				map : image_array,				// pointer to the image map
-				max_shown_items: 5,				// number of visible circles
-				hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
-				active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
-				wrapper_text_max_height: 450,	// height of widget, displayed in pixels
-				middle_click: 1,				// when main circle is clicked: 1 = slider will go to the previous layer/circle, 2 = to the next
-				under_600_max_height: 1200,		// if resolution is below 600 px, set max height of content
-				border_radius:	-1,				// -1 = circle, 0 and other = radius
-				automatic_height_resize: 1,
-				border_on_off: 0,
-				allow_shadow: 0
-			});
+            if(array_length > 1){
+				 alert('cool')
+                 image_array = <?php echo $photos;?> 
+                $('#slider1').content_slider({		// bind plugin to div id="slider1"
+                    map : image_array,				// pointer to the image map
+                    max_shown_items: 5,				// number of visible circles
+                    hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
+                    active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
+                    wrapper_text_max_height: 450,	// height of widget, displayed in pixels
+                    middle_click: 1,				// when main circle is clicked: 1 = slider will go to the previous layer/circle, 2 = to the next
+                    under_600_max_height: 1200,		// if resolution is below 600 px, set max height of content
+                    border_radius:	-1,				// -1 = circle, 0 and other = radius
+                    automatic_height_resize: 1,
+                    border_on_off: 0,
+                    allow_shadow: 0
+                });
+			 }else{
+				 $('#slider1').append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h2>No photo uploaded yet</h2><a class="btn btn-circle red" id="photo_request"  data-othermemberID="<?php echo $other_memberID;?>" href="javascript:;">Request Photos</a></center></div>')
+			 }
+
+
+            
+
+			
 		});
 	})(jQuery);
 </script>
+
+
+
 
 
 
@@ -300,21 +305,30 @@ a:hover, a:active, a:focus {
 
 <style>
 
+
+
 header {
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  /*box-shadow: inset 1px 1px 60px 3px rgba(0,0,0,0.5), inset 1px 1px 60px 3px rgba(0,0,0,0.5);*/
+
+    -moz-box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3);
+     -webkit-box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 2px 24px  rgba(0, 0, 0, 0.3);
+
   margin:   0px auto 50px;
-  height:   375px;
+  height:   393px;
   position: relative;
   width:    100%;
 }
 
 figure.profile-banner {
+  background: rgba(0, 0, 0, .9);
   left:     0;
   overflow: hidden;
   position: absolute;
   top:      0;
   z-index:  1;
-  width:100%;
+  
+  
 }
 
 figure.profile-picture {
@@ -329,26 +343,16 @@ figure.profile-picture {
   position: absolute;
   width: 200px;
   z-index: 3;
+  
 }
 
 div.profile-stats {
   bottom: 0;
-  
   left: 0;
   padding: 15px 15px 15px 350px;
   position: absolute;
   right: 0;
   z-index: 2;
-  
-  /* Generated Gradient */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.51) 3%, rgba(0,0,0,0.75) 61%, rgba(0,0,0,0.5) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(3%,rgba(0,0,0,0.51)), color-stop(61%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.5)));
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
- background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80000000',GradientType=0 );
-
 }
 
 div.profile-stats ul {
@@ -358,12 +362,12 @@ div.profile-stats ul {
 }
 
 div.profile-stats ul li {
-  color: #efefef;
+  color: #000000;
   display: block;
   float: left;
   font-size: 24px;
   margin-right: 50px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7)
+  
 }
 
 div.profile-stats li span {
@@ -435,6 +439,7 @@ header>h1 {
 <?php 
   
     foreach($result_member as $key=>$row){
+    $other_memberID = $row['memberID'];
     $nickname = $row['nickname'];
     $firstname = $row['firstname'];
     $age =$row['age'];
@@ -461,11 +466,18 @@ header>h1 {
                     <div class="page-container">
                         <!-- BEGIN CONTENT -->
                         <div class="page-content-wrapper">
-
-                            <header>
-                        <figure class="profile-banner">
-                            <img src="<?php echo base_url();?>profile-images/<?php echo $profile_bg; ?>" class="img-responsive" alt="">
+                        <header>
+                        <figure class="slim_banner" >
+                            
+                            <div  id="profile_banner">
+                               
+                                <img src="<?php echo base_url();?>profile-images/<?php echo $profile_bg; ?>" class="img-responsive" alt="">
+                              
+                            </div>
+                            
                         </figure>
+
+                        
                         <figure class="profile-picture" 
                             style="background-image: url('<?php echo base_url();?>/profile-images/<?php echo $avatar; ?>')">
                         </figure>
@@ -476,17 +488,12 @@ header>h1 {
                                         <li><?php echo $nickname; ?>    <span><?php echo $age.' - '  .$city .', '. $country; ?></span></li>
                                     
                                   </ul>
-
-                             
-
-
-                            <a href="javascript:void(0);" class="follow">
- 
-                            Follow <?php echo $nickname;?>
-                            </a>
+                                  
+                                   <a  style="position:relative; left:530px; top:13px "href="<?php echo base_url();?>inbox/message" class=" btn btn-circle red"> Send Message</a>
+                                  
                         </div>
                         
-                        <h1><?php echo $nickname; ?>  <small><?php echo $age.' - '  .$city .', '. $country; ?></small></h1>
+                        
                         </header>
                             <!-- BEGIN CONTENT BODY -->
                             
@@ -509,29 +516,21 @@ header>h1 {
                                                          <div class="row">
                                                                 <div class="col-md-11 col-sm-11 col-xs-11">
                                                                     <br>
-                                                                    <a href "javascript:;"><span class="fa-stack fa-2x font-red tooltips"  data-placement="bottom" data-original-title="Fancy">
-                                                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                                                        <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
-                                                                    </span></a>
-                                                                    <a style="text-decoration:none" data-toggle="modal" href="#ajax">  
-                                                                    <span class="fa-stack fa-2x font-purple-medium tooltips"  data-placement="bottom" data-original-title="Chat">
-                                                                        <i class="fa fa-circle fa-stack-2x tooltips"></i>
-                                                                        <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
-                                                                    </span>
+                                                                    <a class = "fancy" href "javascript:;" data-other-memberID="<?php echo $other_memberID; ?>">
+                                                                        
                                                                     </a>
-
-                                                                    <span class="fa-stack fa-2x font-green tooltips"  data-placement="bottom" data-original-title="Request A Drink">
-                                                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                                                        <i class="fa fa-glass fa-stack-1x fa-inverse"></i>
-                                                                    </span>
-
-                                                                    <span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Flirt">
-                                                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                                                        <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i>
-                                                                    </span>
-
+                                                                    <a style="text-decoration:none" data-toggle="modal" href="#ajax">  
+                                                                        <span class="fa-stack fa-2x font-purple-medium tooltips"  data-placement="bottom" data-original-title="Chat">
+                                                                            <i class="fa fa-circle fa-stack-2x tooltips"></i>
+                                                                            <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                    <a class="date_request" style="text-decoration:none" data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;">  
+                                                                        
+                                                                    </a>
+                                                                    <a class="drinks_request" style="text-decoration:none"  data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;">  
                                                                     
-                                                              
+                                                                    </a>                                                   
 
                                                                 </div>
                                                                 
@@ -609,7 +608,7 @@ header>h1 {
                                                                             <div class="col-md-12">
                                                                               <h3 class="font-blue" id="profile_nickname_photos"></h3>
                                                                               <hr>
-                                                                                <div class="content_slider_wrapper" id="slider1" style="max-height:280px; padding-top:20px; padding-right:20px">
+                                                                                <div class="content_slider_wrapper" id="slider1" style="max-height:280px">
                                                                                 
                                                                                 </div>
                                                                                 <!--
@@ -703,11 +702,15 @@ header>h1 {
                                                                     <div class="caption caption-md">
                                                                         <i class="icon-globe theme-font hide"></i>
                                                                 
-                                                                        <h3 id="personality_title" class="font-blue"></h3>
+                                                                        <h3 id="personality_title" class="font-blue"> </h3>
+                                                                        
+                                                                        
+                                                                        
                                                                     </div>
-                                                                    
+                                                                    <span class="pull-right" id="personality_title2" style="position:relative; top:20px"></span>
                                                                 </div>
                                                                 <div class="portlet-body">
+                                                                 
                                                                     <div class="portlet-body form">
                                                                           
                                                                             <div class="row">
@@ -928,43 +931,12 @@ header>h1 {
 	</div>
 </div>
                                             
-                                        </div> 
-                                     </div> 
+    </div> 
+    </div> 
 
 
 
 
-                     <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-                    
-                    
-                    <!-- END PAGE LEVEL PLUGINS -->
-                    
-                    
-                    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                    <!-- <script src="<?php echo base_url(); ?>assets/pages/scripts/components-nouisliders.js" type="text/javascript"></script> -->
-                    <!-- END PAGE LEVEL SCRIPTS -->
-
-                    <script src="<?php echo base_url(); ?>assets/pages/scripts/profile.min.js" type="text/javascript"></script>
-
-                    <!-- <script src="<?php echo base_url(); ?>plugins/rangeslider/rangeslider.min.js" type="text/javascript"></script> -->
-               
-                     <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/pages/scripts/ui-blockui.min.js" type="text/javascript"></script>
-                    <!-- END PAGE LEVEL SCRIPTS -->
-
-                    <!-- BEGIN PAGE LEVEL PLUGINS -->
-                    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-knob/js/jquery.knob.js" type="text/javascript"></script>
-                    <!-- END PAGE LEVEL PLUGINS -->
-                    <!-- BEGIN THEME GLOBAL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
-                    <!-- END THEME GLOBAL SCRIPTS -->
-                    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-                    <script src="<?php echo base_url(); ?>assets/pages/scripts/components-knob-dials.js" type="text/javascript"></script>
-                    <!-- END PAGE LEVEL SCRIPTS -->
-
-                    
-                   
                     
 <script>
 
@@ -1140,33 +1112,66 @@ header>h1 {
                             $('div.persona').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
                             console.log(responseData);
-
-                            $.each(responseData, function(index,item) {
+                            alert(responseData);
+                            console.log(responseData[0]['loving']);
+                            if (!responseData[0]['loving'] && !responseData[0]['caring'] && !responseData[0]['confident'] && !responseData[0]['flirty'] && !responseData[0]['faithful'] && !responseData[0]['adventrous'] && !responseData[0]['patient'] &&  !responseData[0]['healthy'] && !responseData[0]['extrovert']) {
+                                    alert('no p')
+                                    $.each(responseData, function(index,item) {
                                    
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Loving</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.loving +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.loving+'%"><span class="sr-only"> '+item.loving+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.loving+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Loving</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.loving +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.loving+'%"><span class="sr-only"> '+item.loving+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.loving+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Caring</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.caring +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.caring+'%"><span class="sr-only"> '+item.caring+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.caring+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Caring</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.caring +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.caring+'%"><span class="sr-only"> '+item.caring+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.caring+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Confident</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.confident +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.confident+'%"><span class="sr-only"> '+item.confident+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.confident+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Confident</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.confident +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.confident+'%"><span class="sr-only"> '+item.confident+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.confident+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Flirty</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.flirty +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.flirty+'%"><span class="sr-only"> '+item.flirty+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.flirty+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Flirty</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.flirty +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.flirty+'%"><span class="sr-only"> '+item.flirty+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.flirty+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Faithful</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.faithful +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.faithful+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.faithful+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Faithful</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.faithful +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.faithful+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.faithful+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Adventrous</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.adventrous +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.adventrous+'%"><span class="sr-only"> '+item.adventrous+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.adventrous+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Adventrous</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.adventrous +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.adventrous+'%"><span class="sr-only"> '+item.adventrous+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.adventrous+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Patient</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.patient +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.patient+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.patient+'%</div></div>'); 
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Patient</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.patient +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.patient+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.patient+'%</div></div>'); 
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Health Lifestyle</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.health +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.healthy+'%"><span class="sr-only"> '+item.healthy+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.healthy+'%</div></div>');
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Health Lifestyle</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.health +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.healthy+'%"><span class="sr-only"> '+item.healthy+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.healthy+'%</div></div>');
 
-                                    $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Extrovert</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.extrovert +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.extrovert+'%"><span class="sr-only"> '+item.extrovert+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.extrovert+'%</div></div>');  
-         
-                            });
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Extrovert</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.extrovert +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.extrovert+'%"><span class="sr-only"> '+item.extrovert+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.extrovert+'%</div></div>');  
+                
+                                             $("#personality_title2").append('<a class="btn btn-circle btn-sx btn-outline red" id="personality_request"  data-othermemberID="<?php echo $other_memberID;?>" href="javascript:;">Request Personality</a>');
+                                    });
+                                        
+                            }else{
+                                    alert('yes P') 
+                                    $.each(responseData, function(index,item) {
+                                   
+                                            
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Loving</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.loving +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.loving+'%"><span class="sr-only"> '+item.loving+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.loving+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Caring</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.caring +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.caring+'%"><span class="sr-only"> '+item.caring+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.caring+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Confident</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.confident +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.confident+'%"><span class="sr-only"> '+item.confident+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.confident+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Flirty</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.flirty +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.flirty+'%"><span class="sr-only"> '+item.flirty+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.flirty+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Faithful</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.faithful +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.faithful+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.faithful+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Adventrous</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.adventrous +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.adventrous+'%"><span class="sr-only"> '+item.adventrous+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.adventrous+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Patient</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.patient +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.faithful+'%"><span class="sr-only"> '+item.patient+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.patient+'%</div></div>'); 
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Health Lifestyle</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.health +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.healthy+'%"><span class="sr-only"> '+item.healthy+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.healthy+'%</div></div>');
+
+                                            $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Extrovert</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.extrovert +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.extrovert+'%"><span class="sr-only"> '+item.extrovert+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.extrovert+'%</div></div>');  
+                                            
+                                           
+                                    });
+                            }
+
+                            
                         },                     
                         
                         error: function (responseData) {
                             
-                                    toastr.warning('No data found')
+                                    toastr.warning('Server is not responding, try again.')
                         }
                     });
                     
@@ -1175,11 +1180,365 @@ header>h1 {
         </script>
 
 
+<script>
+    // Do Fancy
+        $(document).ready(function(){
+            $(".toggableIcon").each(function(){
+            if($(this).attr("data-heart-value")=="true")
+            {
+                $(this).addClass("heart-full"); 
+            }else{
+                $(this).addClass("heart-outline"); 
+            }
+        });
+
+            $(document).delegate(".toggableIcon", "click",function(e){
+            var memberID = '<?php echo $memberID; ?>';
+            var other_memberID = $(this).attr('data-othermemberID');
+            var fancy_strings = $(this).attr('data-string');
+            var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+            alert(fancy_strings);
+            if($(this).attr("data-heart-value")=="true")
+            {
+                console.log(obj);
+                $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/fancy',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        alert('Unfancied')
+                    }
+                });
+                $(this)
+                    .attr("data-heart-value", "false")
+                    .removeClass("heart-outline")
+                    .addClass("heart-full"); 
+            }else{
+                console.log(obj);
+                $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/unfancy',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        alert('Fancied')
+                    }
+                });
+                $(this)
+                    .attr("data-heart-value", "true")
+                    .removeClass("heart-outline")
+                    .addClass("heart-full"); 
+            }
+            
+        });
+    })
+</script>
+
+
+
+<script>
+    // Do Date request
+        $(document).delegate("#photo_request", "click",function(e){
+        var memberID = '<?php echo $memberID; ?>';
+        var other_memberID = $(this).attr('data-othermemberID');
+        var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+        
+            console.log(obj);
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/photo_request',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        //alert('Photo requested')
+                        toastr.success('Your photo request was successfully sent')
+                    }
+            
+            
+                });
+        })
+</script>
+
+
+<script>
+    // Do date request
+        
+        $(document).delegate(".date_request", "click",function(e){
+        var memberID = '<?php echo $memberID; ?>';
+        var other_memberID = $(this).attr('data-othermemberID');
+        var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+        
+            console.log(obj);
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/date_request',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        //alert('Photo requested')
+                        toastr.success('Your date request was successfully sent')
+                    }
+            
+            
+                });
+        })
+</script>
+
+<script>
+    // Do drinks request
+        
+        $(document).delegate(".drinks_request", "click",function(e){
+        var memberID = '<?php echo $memberID; ?>';
+        var other_memberID = $(this).attr('data-othermemberID');
+        var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+        
+            console.log(obj);
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/drink_request',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        //alert('Photo requested')
+                        toastr.success('Your drinks request was successfully sent')
+                    }
+            
+            
+                });
+        })
+</script>
+
+<script>
+    // Do Personality request
+        
+            $(document).delegate("#personality_request", "click",function(e){
+            var memberID = '<?php echo $memberID; ?>';
+            var other_memberID = $(this).attr('data-othermemberID');
+            var obj = {"other_memberID":other_memberID, "memberID":memberID};
+
+            
+                console.log(obj);
+                $.ajax({
+                type: "POST",
+                url: 'http://localhost/neo4j-alarinna/web/personality_request',
+                data: obj,
+                cache: false,
+                    success: function(data){
+                        //alert('Photo requested')
+
+                        toastr.success('Your personality request was successfully sent');
+                        $("#personality_title2").replaceWith('<a class="btn btn-circle btn-sx btn-outline grey" disabled id="personality_request"  data-othermemberID="<?php echo $other_memberID;?>" href="javascript:;">Request Personality Sent</a>');
+                    }
+               
+            
+        });
+    })
+</script>
+
+<script>
+        // Get fancy
+        $(document).ready(function(){
+                     
+                    
+                     var memberID = '<?php echo $memberID; ?>';
+                     var pageUrl = "<?php echo base_url(); ?>page/fancy_btn"
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_fancy/'+ memberID,
+                        
+                        success: function (response) {
+
+                                
+                                //$('div.result').unblock(); 
+                                var responseData = $.parseJSON(response); //parse JSON
+                                alert(responseData);
+                                if (!responseData[0]) {
+                                    $(".fancy").append('<span class="fa-stack fa-2x font-red tooltips" data-fancy-value="false" data-placement="bottom" data-original-title="Already Fancied"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-heart fa-stack-1x fa-inverse"></i></span>');
+                                    
+                                }else{                         
+                                    $(".fancy").append('<span class="fa-stack fa-2x font-grey-salt tooltips" data-fancy-value="true"  data-placement="bottom" data-original-title="Fancy"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-heart fa-stack-1x fa-inverse"></i></span>');
+                                 
+                                }
+                            },
+                                
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+        });    
+           
+        </script>
+
+        <script>
+        // Get fancy
+            $(document).ready(function(){
+               
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_date/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                                //$('div.result').unblock(); 
+                                var responseData = $.parseJSON(response); //parse JSON
+                                if (!responseData[0]) {
+                                    
+                                    $(".date_request").append('<span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Request a Date"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                }else{                         
+                                    $(".date_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                    
+                                }
+                            },
+     
+
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                
+            });
+        </script>
+
+        <script>
+        // Get fancy
+            $(document).ready(function(){
+               
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_drinks/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                                //$('div.result').unblock(); 
+                                var responseData = $.parseJSON(response); //parse JSON
+                                if (!responseData[0]) {
+                                    alert(responseData[0]);
+                                    $(".drink_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Drinks Requested A Drink"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-glass fa-stack-1x fa-inverse"></i></span>');
+                                }else{                         
+                                    alert('jhbjb'+responseData[0]['memberID'])
+                                    $(".drinks_request").append('<span class="fa-stack fa-2x font-green tooltips"  data-placement="bottom" data-original-title="Request A Drink"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-glass fa-stack-1x fa-inverse"></i></span>');
+                                }
+                            },
+                                
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                
+            });
+        </script>
+
+
+        <script>
+        // Get fancy
+            $(document).ready(function(){
+               
+                     var memberID = '<?php echo $memberID; ?>';
+                     var other_memberID = '<?php echo $other_memberID; ?>';
+                     var obj = {"other_memberID":other_memberID, "memberID":memberID};
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'post',
+                        url: 'http://localhost/neo4j-alarinna/web/visitor',
+                        data: obj,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                                //$('div.result').unblock(); 
+                                var responseData = $.parseJSON(response); //parse JSON
+                                if (!responseData[0]) {
+                                    
+                                    $(".date_request").append('<span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Request a Date"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                }else{                         
+                                    $(".date_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                    
+                                }
+                            },
+     
+
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                
+            });
+        </script>
+
+
 
 
 <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.jquery.js"></script>   
-<script src="<?php echo base_url()?>plugins/slim-image-upload-and-ratio-cropping-plugin/slim/slim.kickstart.js"></script> 
 
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
@@ -1188,17 +1547,15 @@ header>h1 {
 <script src="<?php echo base_url()?>assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
-
-
-
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+<script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
+<!-- END THEME GLOBAL SCRIPTS -->
+                    
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="<?php echo base_url()?>assets/global/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo base_url()?>assets/pages/scripts/ui-toastr.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL SCRIPTS -->
-            
 
 
 
@@ -1211,7 +1568,8 @@ header>h1 {
 <script src="<?php echo base_url(); ?>assets/pages/scripts/portfolio-1.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 
-
+<!-- BEGIN THEME GLOBAL SCRIPTS -->
+        
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>

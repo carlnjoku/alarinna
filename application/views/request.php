@@ -35,14 +35,15 @@
                                                         <div class="col-md-12">
                                                             <div class="portlet light ">
                                                                 <div class="portlet-title tabbable-line">
-                                                                    
+                                                            
                                                                     <ul class="nav nav-tabs">
                                                                         <li class="active">
                                                                             <a href="#tab_1_1" data-toggle="tab">Sent Requests</a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="#tab_1_2" data-toggle="tab">Requests Received</a>
+                                                                            <a href="#tab_1_2" data-toggle="tab">Recieved Requests</a>
                                                                         </li>
+                                                                       
                                                                         
                                                                     </ul>
                                                                 </div>
@@ -53,333 +54,88 @@
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
                                                                                     <div class="row">
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1">
-                                                                                                    <img src="../assets/pages/img/avatars/team5.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Jennifer</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Ibadan, NG - 43</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                        <span class="request_date"></span>
+                                                                                        <div class="result_date">
+
                                                                                         </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                                                    <img src="../assets/pages/img/avatars/team6.jpg" />
-                                                                                                    <div class="mt-overlay mt-top">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Kate Beck</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Executive Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                        
+                                                                                    </div>
+
+                                                                                 
+
+                                                                                    <div class="row">
+                                                                                        <span class="request_drinks"></span>
+                                                                                        <div class="result_drinks">
+
                                                                                         </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                                                    <img src="../assets/pages/img/avatars/team7.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Hugh Jackman</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Human Resource</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                                                    <img src="../assets/pages/img/avatars/team8.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Finance Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                        <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                        
+                                                                                    </div>
+
+
+                                                                                  
+
+
+                                                                                    <div class="row">
+                                                                                        <span class="request_personality"></span>
+                                                                                        <div class="result_personality">
+
                                                                                         </div>
                                                                                     </div>
+                                                                                  
+                                                                                    <div class="row">
+                                                                                        <span class="request_photo"></span>
+                                                                                        <div class="result_photo">
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                  
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <!-- END PERSONAL INFO TAB -->
-                                                                        <!-- CHANGE AVATAR TAB -->
+
                                                                         <div class="tab-pane" id="tab_1_2">
-                                                                            
-                                                                                <div class="portlet-body">
+                                                                             <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
                                                                                     <div class="row">
-                                                                                       
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-down">
-                                                                                                    <img src="../assets/pages/img/avatars/team6.jpg" />
-                                                                                                    <div class="mt-overlay mt-top">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Kate Beck</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Executive Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                        <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-up">
-                                                                                                    <img src="../assets/pages/img/avatars/team7.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Hugh Jackman</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Human Resource</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                                                                            <div class="mt-card-item">
-                                                                                                <div class="mt-card-avatar mt-overlay-1 mt-scroll-left">
-                                                                                                    <img src="../assets/pages/img/avatars/team8.jpg" />
-                                                                                                    <div class="mt-overlay">
-                                                                                                        <ul class="mt-info">
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-magnifier"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a class="btn default btn-outline" href="javascript:;">
-                                                                                                                    <i class="icon-link"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="mt-card-content">
-                                                                                                    <h3 class="mt-card-name">Gwen Parker</h3>
-                                                                                                    <p class="mt-card-desc font-grey-mint">Finance Manager</p>
-                                                                                                    <div class="mt-card-social">
-                                                                                                          <ul>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-heart"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-bubble"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                <a href="javascript:;">
-                                                                                                                    <i class="icon-envelope"></i>
-                                                                                                                </a>
-                                                                                                            </li>
-                                                                                                        </ul>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                                        <span class="request_date_received"></span>
+                                                                                        <div class="result_date_received">
+
+                                                                                        </div>                
+                                                                                    </div>
+
+                                                                                 
+
+                                                                                    <div class="row">
+                                                                                        <span class="request_drinks_received"></span>
+                                                                                        <div class="result_drinks_received">
+
+                                                                                        </div>                                                                                        
+                                                                                    </div>
+
+                                                                           
+
+                                                                                    <div class="row">
+                                                                                        <span class="request_personality_received"></span>
+                                                                                        <div class="result_personality_received">
+
                                                                                         </div>
                                                                                     </div>
+
+
+                                                                                    <div class="row">
+                                                                                        <span class="request_photo_received"></span>
+                                                                                        <div class="result_photo_received">
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                  
                                                                                 </div>
                                                                             </div>
-
-
                                                                         </div>
-                                                                        <!-- END CHANGE AVATAR TAB -->
+
+                                                                       
                                                                         
                                                                         
                                                                         <!-- END PRIVACY SETTINGS TAB -->
@@ -973,3 +729,419 @@
                     
                     
                     <script src="<?php echo base_url(); ?>assets/pages/scripts/profile.min.js" type="text/javascript"></script>
+
+
+ <script>
+
+            $(document).ready(function(){
+
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_date_request/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_date').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_date').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_date").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center></center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_date').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests <small>Short description - Request a date</small></h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_date").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+
+                    // Get sent drinks requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_drinks_request/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_date').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_drinks').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_drinks").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center></center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_drinks').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+                    
+                    
+                    // Get sent personality requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_personality_request/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_personality').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_personality').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_personality").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center></center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_personality').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-bar-chart"></i> Personality Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_personality").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div></center>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+                    
+                    // Get sent photo requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_photo_request/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_photo').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_photo').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_photo").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center></center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_photo').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-camera"></i> Photo Requests </h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_photo").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+                    
+                  
+            });
+ </script>
+
+
+ <script>
+            // Get date request received
+            $(document).ready(function(){
+
+                     var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_date_request_received/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_date_received').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_date_received').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_date_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>Date</h1>Suggest matches</center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_date_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_date_received").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div></center>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+
+                    // Get received drinks requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_drinks_request_received/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_drinks_received').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_drinks_received').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_drinks_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>Drink</h1>Suggest matches</center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_drinks_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_drinks").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div></center>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+                    
+                    
+                    // Get received personality requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_personality_request_received/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_personality_received').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_personality_received').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_personality_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>Personality</h1>Suggest matches</center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_perosnality_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-bar-chat"></i> Personality Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_personality_received").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+
+                    
+                    // Get received photo requests
+                    var memberID = '<?php echo $memberID; ?>';
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost/neo4j-alarinna/web/get_photo_request_received/'+ memberID,
+                        
+                        
+                        beforeSend: function()
+                        {
+                          
+                            $('div.result_photo_received').block({ 
+                                css: { 
+                                    background: 'none',
+                                    border:'none'
+                                },
+                                overlayCSS: { backgroundColor: '#fffff' },
+                                message:'<img src="../assets/alarinna_loading.gif"/> <span style="color:#a8a8a8">',
+                                timeout: 15000
+                            });
+                
+                            //setTimeout($.unblockUI, 20000); 
+
+                        },
+                        success: function (response) {
+                            
+                            $('div.result_photo_received').unblock(); 
+                            var responseData = $.parseJSON(response); //parse JSON
+                            if (!responseData[0]) {
+                                        $(".result_photo_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>Photo </h1>Suggest matches</center></div>'); 
+                                        
+                            }else{
+                                var memberID = '<?php echo $memberID; ?>';
+                                $('.request_photo_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-camera"></i>Photo Requests</h3><hr>');
+                                $.each(responseData, function(index,item) {
+
+                                        $(".result_photo_received").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div>'); 
+                                });
+                            }
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Server not responding, please refresh page.')
+                        }
+                    });
+                    
+                  
+            });
+ </script>

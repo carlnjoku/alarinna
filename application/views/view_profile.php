@@ -110,6 +110,7 @@
                                         <h1><?php echo $page_title; ?> 
                                             
                                         </h1>
+                                        
                                     </div>
                                     <!-- END PAGE TITLE -->
                                     
@@ -122,10 +123,12 @@
                                     
                                     <!-- BEGIN PAGE CONTENT INNER -->
                                     <div class="page-content-inner">
+                                    
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <!-- BEGIN PROFILE SIDEBAR -->
                                                 <div class="profile-sidebar">
+                                                 
                                                     <!-- PORTLET MAIN -->
                                                     <div class="portlet light profile-sidebar-portlet ">
                                                         <!-- SIDEBAR USERPIC -->
