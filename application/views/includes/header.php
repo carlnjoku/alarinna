@@ -140,7 +140,7 @@ img.logo-shadow {
                                                 <li>
                                                     <a href="<?php echo base_url(); ?>page/visitors">
                                                         <i class="icon-eye"></i> Visitors
-                                                        <span class="badge badge-primary visitor"> </span>
+                                                        
                                                     </a>
                                                 </li>
                                                 

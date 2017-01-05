@@ -8,24 +8,31 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                                    <h2>About</h2>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam dolore. </p>
+                                    <a href="">About Alarinna</a><br>
+                                    <a href="">Help / FAQ</a><br>
+                                    <a href="">Contacts</a><br>
+                                    <a href="">Careers</a><br>
+                                    <a href="">Alarinna Events</a>
+
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs12 footer-block">
-                                    <h2>Subscribe Email</h2>
-                                    <div class="subscribe-form">
-                                        <form action="javascript:;">
-                                            <div class="input-group">
-                                                <input type="text" placeholder="mail@email.com" class="form-control">
-                                                <span class="input-group-btn">
-                                                    <button class="btn" type="submit">Submit</button>
-                                                </span>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    <a href=""> Dating Safety</a><br>
+                                    <a href="">Terms of Use</a><br>
+                                    <a href="">Privacy Policy</a><br>
+                                    <a href="">Fraud protection</a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                                    <h2>Follow Us On</h2>
+
+                               
+                                    <a href=""> Alarinna Blog</a><br>
+                                    <a href="">Success Stories</a><br>
+                                    <a href="">Mobile</a><br>
+                                    <a href="">Membership</a>
+
+                                </div>
+                                
+                                <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+                                    <h2>Follow Alarinna</h2>
                                     <ul class="social-icons">
                                         <li>
                                             <a href="javascript:;" data-original-title="rss" class="rss"></a>
@@ -49,13 +56,6 @@
                                             <a href="javascript:;" data-original-title="vimeo" class="vimeo"></a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                                    <h2>Contacts</h2>
-                                    <address class="margin-bottom-40"> Phone: 234 803 316 4340
-                                        <br> Email:
-                                        <a href="mailto:info@metronic.com">info@alarinna.com</a>
-                                    </address>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,20 @@
         <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
 
+<style>
+.centered {
+    text-align: center;
+    font-size: 0;
+}
+.centered > div {
+    float: none;
+    display: inline-block;
+    text-align: left;
+  
+}
+</style>
+
+
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
                         <!-- BEGIN CONTENT -->
@@ -770,7 +784,7 @@
                                 $('.request_date').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests <small>Short description - Request a date</small></h3><hr>');
                                 $.each(responseData, function(index,item) {
 
-                                        $(".result_date").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                        $(".result_date").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><div class="mt-action-buttons "><div class="btn-group btn-group-circle"><button type="button" class="btn btn-outline blue btn-sm">Accept</button><button type="button" class="btn btn-outline red btn-sm">Reject</button></div></div></div></div></div></div>'); 
                                 });
                             }
                            
@@ -817,10 +831,10 @@
                                         
                             }else{
                                 var memberID = '<?php echo $memberID; ?>';
-                                $('.request_drinks').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
+                                $('.request_drinks').append('<h2 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
                                 $.each(responseData, function(index,item) {
 
-                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><div class="mt-action-buttons "><div class="btn-group btn-group-circle"><button type="button" class="btn btn-outline blue btn-sm">Accept</button><button type="button" class="btn btn-outline red btn-sm">Reject</button></div></div></div></div></div></div>'); 
                                 });
                             }
                            
@@ -833,7 +847,6 @@
                         }
                     });
 
-                    
                     
                     // Get sent personality requests
                     var memberID = '<?php echo $memberID; ?>';

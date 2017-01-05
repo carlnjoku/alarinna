@@ -33,8 +33,6 @@
     
 }
 
-
-
 .comments-full:before{
     content:"\f086";
     color:#FF1493;
@@ -764,6 +762,10 @@ $(document).ready(function(){
 
             $(document).ready(function(){
                
+
+
+                
+
                      var memberID = '<?php echo $memberID; ?>';
                      $.ajax({
                         dataType: 'html',
@@ -799,10 +801,8 @@ $(document).ready(function(){
                                         
                                         var string = item.myfancies;
                                         var main = string.includes(memberID);
-                                        //alert(string)
-                                        
-                                        
-                                        $(".result_suggest").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
+                          
+                                        $(".result_suggest").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-myfancies='+item.myfancies+' data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
                                 
                                 });
                             }
@@ -894,7 +894,7 @@ $(document).ready(function(){
         $(document).ready(function(){
             $("#fancy").submit(function(e) {
             // Fancy
-            var memberID = '<?php echo $memberID; ?>';
+            var memberID = '<?php //echo $memberID; ?>';
             $.ajax({
                         dataType: 'html',
                         type: 'get',
@@ -985,24 +985,54 @@ $(document).delegate1("#fancy", "click",function(e){
 <script>
 
 $(document).ready(function(){
-    $(".toggableIcon").each(function(){
-    if($(this).attr("data-heart-value")=="true")
-    {
-        $(this).addClass("heart-full"); 
-    }else{
-        $(this).addClass("heart-outline"); 
-    }
-});
 
     $(document).delegate(".toggableIcon", "click",function(e){
     var memberID = '<?php echo $memberID; ?>';
     var other_memberID = $(this).attr('data-othermemberID');
-    var fancy_strings = $(this).attr('data-string');
+    var fancy_strings = $(this).attr('data-myfancies');
     var obj = {"other_memberID":other_memberID, "memberID":memberID};
+    var formated_fancy_string = ["01", 129, 129, 129,78,99,84];
+    
+   
+    
+    /*
+            var y = ["01", 129, 129, 129,78,99,84]
+            var removeItem = 84;
 
-    alert(fancy_strings);
+            alert('Array before removing the element = '+y);
+            y = jQuery.grep(y, function(value) {
+            return value != removeItem;
+            });
+            alert('Array after removing the element = '+y); 
+    */
+
+            var removeItem = memberID;
+            formated_fancy_string = jQuery.grep(formated_fancy_string, function(value) {
+            
+            return value != removeItem;
+            });
+           
+
+            var unfancy_value = formated_fancy_string;
+            var obj1 = {"other_memberID":other_memberID, "memberID":memberID, "unfancy_value":unfancy_value};
+
+            console.log(obj1)
+    
     if($(this).attr("data-heart-value")=="true")
     {
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/unfancy',
+        data: obj1,
+        cache: false,
+            success: function(data){
+                toastr.success('Unfancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "false").removeClass("heart-full").addClass("heart-outline"); 
+    }else{
+        alert(obj);
         console.log(obj);
         $.ajax({
         type: "POST",
@@ -1010,28 +1040,10 @@ $(document).ready(function(){
         data: obj,
         cache: false,
             success: function(data){
-                alert('Unfancied')
+                toastr.success('Fancy successful');
             }
         });
-        $(this)
-            .attr("data-heart-value", "false")
-            .removeClass("heart-outline")
-            .addClass("heart-full"); 
-    }else{
-        console.log(obj);
-        $.ajax({
-        type: "POST",
-        url: 'http://localhost/neo4j-alarinna/web/unfancy',
-        data: obj,
-        cache: false,
-            success: function(data){
-                alert('Fancied')
-            }
-        });
-        $(this)
-            .attr("data-heart-value", "true")
-            .removeClass("heart-outline")
-            .addClass("heart-full"); 
+        $(this).attr("data-heart-value", "true").removeClass("heart-outline").addClass("heart-full"); 
     }
     
 });

@@ -1,7 +1,98 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
+<style>
 
+.heart-full:before{
+    content:"\f004";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.heart-outline:hover:before{
+   color: #FF1493; 
+}
+
+.heart-outline:before{
+    content:"\f08a";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+
+
+.comments-full:before{
+    content:"\f086";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.comment-outline:before{
+    content:"\f0e6";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.fa-comments-o{
+    font-size: 23px;
+    color:#cccccc;
+}
+.fa-comments-o:hover:before{
+   color: #FF1493; 
+}
+
+</style>
+
+<style>
+.centered {
+    text-align: center;
+    font-size: 0;
+}
+.centered > div {
+    float: none;
+    display: inline-block;
+    text-align: left;
+  
+}
+
+
+/* Extra: Just to see columns...*/
+
+</style>
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
                         <!-- BEGIN CONTENT -->
@@ -52,7 +143,7 @@
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row ivisited">
+                                                                                    <div class="row centered ivisited">
                                                                                         
                                                                                     </div>
                                                                                 </div>
@@ -64,7 +155,7 @@
                                                                             
                                                                                 <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row visitedme">
+                                                                                    <div class="row centered visitedme">
                                                                                        
                                                                                         
                                                                                     </div>
@@ -708,7 +799,7 @@
                                         
                                         var string = item.myfancies;
                                         var main = string.includes(memberID);
-                                        //alert(string)
+                                        alert(string)
                                         
                                         
                                         $(".visitedme").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
@@ -761,7 +852,7 @@
                                         
                                         var string = item.myfancies;
                                         var main = string.includes(memberID);
-                                        //alert(string)
+                                        alert(main)
                                         
                                         
                                         $(".ivisited").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>'); 
