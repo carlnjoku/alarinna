@@ -127,7 +127,7 @@ a:hover, a:active, a:focus {
                 
                                                             <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Barry</strong> 
                                                                         
@@ -139,7 +139,7 @@ a:hover, a:active, a:focus {
                                                             </li>  
                                                             <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team2.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Judo</strong>
                                                                        
@@ -151,7 +151,7 @@ a:hover, a:active, a:focus {
                                                             </li>     
                                                             <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Ibro</strong>
                                                                      
@@ -163,7 +163,7 @@ a:hover, a:active, a:focus {
                                                             </li>        
                                                             <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team3.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Foxy</strong>
                                                                        
@@ -176,7 +176,7 @@ a:hover, a:active, a:focus {
 
                                                              <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team8.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Juicy</strong>
                                                                        
@@ -189,7 +189,7 @@ a:hover, a:active, a:focus {
 
                                                              <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team9.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Wendy</strong>
                                                                        
@@ -202,7 +202,7 @@ a:hover, a:active, a:focus {
 
                                                              <li>
                                                                 <a href="#" class="clearfix">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team11.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                                                                     <div class="friend-name">	
                                                                         <strong>&nbsp; Tontop</strong>
                                                                        

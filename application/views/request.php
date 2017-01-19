@@ -1,7 +1,79 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
+<style>
 
+.heart-full:before{
+    content:"\f004";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.heart-outline:hover:before{
+   color: #FF1493; 
+}
+
+.heart-outline:before{
+    content:"\f08a";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.comments-full:before{
+    content:"\f086";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.comment-outline:before{
+    content:"\f0e6";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.fa-comments-o{
+    font-size: 23px;
+    color:#cccccc;
+}
+.fa-comments-o:hover:before{
+   color: #FF1493; 
+}
+
+</style>
 <style>
 .centered {
     text-align: center;
@@ -64,12 +136,12 @@
                                                                 <div class="portlet-body">
                                                                     <div class="tab-content">
                                                                         <!-- PERSONAL INFO TAB -->
-                                                                        <div class="tab-pane active" id="tab_1_1">
+                                                                        <div class="tab-pane active" id="tab_1_1" style="min-height:200px">
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
                                                                                     <div class="row">
-                                                                                        <span class="request_date"></span>
-                                                                                        <div class="result_date">
+                                                                                        <span class="request_date centered"></span>
+                                                                                        <div class="result_date centered">
 
                                                                                         </div>
                                                                                         
@@ -78,8 +150,8 @@
                                                                                  
 
                                                                                     <div class="row">
-                                                                                        <span class="request_drinks"></span>
-                                                                                        <div class="result_drinks">
+                                                                                        <span class="request_drinks centered"></span>
+                                                                                        <div class="result_drinks centered">
 
                                                                                         </div>
                                                                                         
@@ -90,15 +162,15 @@
 
 
                                                                                     <div class="row">
-                                                                                        <span class="request_personality"></span>
-                                                                                        <div class="result_personality">
+                                                                                        <span class="request_personality centered"></span>
+                                                                                        <div class="result_personality centered">
 
                                                                                         </div>
                                                                                     </div>
                                                                                   
                                                                                     <div class="row">
-                                                                                        <span class="request_photo"></span>
-                                                                                        <div class="result_photo">
+                                                                                        <span class="request_photo centered"></span>
+                                                                                        <div class="result_photo centered">
 
                                                                                         </div>
                                                                                     </div>
@@ -112,17 +184,18 @@
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
                                                                                     <div class="row">
-                                                                                        <span class="request_date_received"></span>
-                                                                                        <div class="result_date_received">
+                                                                                        <span class="request_date_received centered"></span>
+                                                                                        <div class="result_date_received centered">
 
-                                                                                        </div>                
+                                                                                        </div>
+                                                                                        <hr>               
                                                                                     </div>
 
                                                                                  
 
                                                                                     <div class="row">
-                                                                                        <span class="request_drinks_received"></span>
-                                                                                        <div class="result_drinks_received">
+                                                                                        <span class="request_drinks_received centered"></span>
+                                                                                        <div class="result_drinks_received centered">
 
                                                                                         </div>                                                                                        
                                                                                     </div>
@@ -130,16 +203,16 @@
                                                                            
 
                                                                                     <div class="row">
-                                                                                        <span class="request_personality_received"></span>
-                                                                                        <div class="result_personality_received">
+                                                                                        <span class="request_personality_received centered"></span>
+                                                                                        <div class="result_personality_received centered">
 
                                                                                         </div>
                                                                                     </div>
 
 
                                                                                     <div class="row">
-                                                                                        <span class="request_photo_received"></span>
-                                                                                        <div class="result_photo_received">
+                                                                                        <span class="request_photo_received centered"></span>
+                                                                                        <div class="result_photo_received centered">
 
                                                                                         </div>
                                                                                     </div>
@@ -781,10 +854,12 @@
                                         
                             }else{
                                 var memberID = '<?php echo $memberID; ?>';
-                                $('.request_date').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests <small>Short description - Request a date</small></h3><hr>');
+                                $('.request_date').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests</h3>');
                                 $.each(responseData, function(index,item) {
+                                        var  string = item.myfancies;
+                                        var main = string.includes(memberID);
 
-                                        $(".result_date").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><div class="mt-action-buttons "><div class="btn-group btn-group-circle"><button type="button" class="btn btn-outline blue btn-sm">Accept</button><button type="button" class="btn btn-outline red btn-sm">Reject</button></div></div></div></div></div></div>'); 
+                                        $(".result_date").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
                                 });
                             }
                            
@@ -831,10 +906,12 @@
                                         
                             }else{
                                 var memberID = '<?php echo $memberID; ?>';
-                                $('.request_drinks').append('<h2 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
+                                $('.request_drinks').append('<h2 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3>');
                                 $.each(responseData, function(index,item) {
+                                        var  string = item.myfancies;
+                                        var main = string.includes(memberID);
 
-                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><div class="mt-action-buttons "><div class="btn-group btn-group-circle"><button type="button" class="btn btn-outline blue btn-sm">Accept</button><button type="button" class="btn btn-outline red btn-sm">Reject</button></div></div></div></div></div></div>'); 
+                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
                                 });
                             }
                            
@@ -883,8 +960,11 @@
                                 var memberID = '<?php echo $memberID; ?>';
                                 $('.request_personality').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-bar-chart"></i> Personality Requests</h3><hr>');
                                 $.each(responseData, function(index,item) {
+                                        
+                                        var  string = item.myfancies;
+                                        var main = string.includes(memberID);
 
-                                        $(".result_personality").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div></center>'); 
+                                        $(".result_personality").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button type="button" class="btn btn-outline btn-circle red btn-sm">Update Personality</button></div></div></div></div>'); 
                                 });
                             }
                            
@@ -934,7 +1014,10 @@
                                 $('.request_photo').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-camera"></i> Photo Requests </h3><hr>');
                                 $.each(responseData, function(index,item) {
 
-                                        $(".result_photo").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a class="chat" href="javascript:;"><i class="fa fa-commenting-o fa-lg"></i></a></li></ul></div></div></div></div>'); 
+                                        var  string = item.myfancies;
+                                        var main = string.includes(memberID);
+                                        
+                                        $(".result_photo").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button type="button" class="btn btn-outline btn-circle red btn-sm">Upload Photos</button></div></div></div></div>'); 
                                 });
                             }
                            
@@ -984,14 +1067,14 @@
                             $('div.result_date_received').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
                             if (!responseData[0]) {
-                                        $(".result_date_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><center><h1>Date</h1>Suggest matches</center></div>'); 
+                                        $(".result_date_received").append('<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12"><h1>Date</h1>Suggest matches</div>'); 
                                         
                             }else{
                                 var memberID = '<?php echo $memberID; ?>';
                                 $('.request_date_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Date Requests</h3><hr>');
                                 $.each(responseData, function(index,item) {
-
-                                        $(".result_date_received").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div></center>'); 
+                                        
+                                        $(".result_date_received").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><div class="btn-group btn-group-circle"><button type="button" class="btn btn-outline blue btn-sm">Accept</button><button type="button" class="btn btn-outline red btn-sm">Reject</button></div></div></div></div></div>'); 
                                 });
                             }
                            
@@ -1040,8 +1123,8 @@
                                 var memberID = '<?php echo $memberID; ?>';
                                 $('.request_drinks_received').append('<h3 style="padding-left:15px" class="font-blue"><i class="icon-cup"></i> Drink Requests</h3><hr>');
                                 $.each(responseData, function(index,item) {
-
-                                        $(".result_drinks").append('<center><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div></center>'); 
+                                        
+                                        $(".result_drinks").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><button class="btn btn-circle red btn-sx btn-outline"><i class="icon-action-undo"></i> Reply</button></div></div></div></div>'); 
                                 });
                             }
                            
@@ -1158,3 +1241,72 @@
                   
             });
  </script>
+
+
+ <script>
+
+$(document).ready(function(){
+
+    $(document).delegate(".toggableIcon", "click",function(e){
+    var memberID = '<?php echo $memberID; ?>';
+    var other_memberID = $(this).attr('data-othermemberID');
+    var fancy_strings = $(this).attr('data-myfancies');
+    var obj = {"other_memberID":other_memberID, "memberID":memberID};
+    var formated_fancy_string = ["01", 129, 129, 129,78,99,84];
+    
+   
+    
+    /*
+            var y = ["01", 129, 129, 129,78,99,84]
+            var removeItem = 84;
+
+            alert('Array before removing the element = '+y);
+            y = jQuery.grep(y, function(value) {
+            return value != removeItem;
+            });
+            alert('Array after removing the element = '+y); 
+    */
+
+            var removeItem = memberID;
+            formated_fancy_string = jQuery.grep(formated_fancy_string, function(value) {
+            
+            return value != removeItem;
+            });
+           
+
+            var unfancy_value = formated_fancy_string;
+            var obj1 = {"other_memberID":other_memberID, "memberID":memberID, "unfancy_value":unfancy_value};
+
+            console.log(obj1)
+    
+    if($(this).attr("data-heart-value")=="true")
+    {
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/unfancy',
+        data: obj1,
+        cache: false,
+            success: function(data){
+                toastr.success('Unfancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "false").removeClass("heart-full").addClass("heart-outline"); 
+    }else{
+        alert(obj);
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/fancy',
+        data: obj,
+        cache: false,
+            success: function(data){
+                toastr.success('Fancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "true").removeClass("heart-outline").addClass("heart-full"); 
+    }
+    
+});
+})
+</script>

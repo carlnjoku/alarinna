@@ -190,5 +190,15 @@ class Page extends CI_Controller {
 		$this->load->view('includes/template', $data); 
     }
 
+    public function pricing()
+    {
+        $memberID = $this->session->userdata('memberID');	
+        $data['main_content'] = 'pricing';
+        $data['memberID'] = $memberID;
+        $data['title'] = 'Alarinna | My Visitors';
+        $data['page_title'] = 'Pricing';
+		$this->load->view('includes/template', $data); 
+    }
+
     
 }

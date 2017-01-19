@@ -1,7 +1,91 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="<?php echo base_url(); ?>assets/pages/css/profile.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
+<style>
 
+.heart-full:before{
+    content:"\f004";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.heart-outline:hover:before{
+   color: #FF1493; 
+}
+
+.heart-outline:before{
+    content:"\f08a";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.comments-full:before{
+    content:"\f086";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.comment-outline:before{
+    content:"\f0e6";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.fa-comments-o{
+    font-size: 23px;
+    color:#cccccc;
+}
+.fa-comments-o:hover:before{
+   color: #FF1493; 
+}
+
+</style>
+<style>
+.centered {
+    text-align: center;
+    font-size: 0;
+}
+.centered > div {
+    float: none;
+    display: inline-block;
+    text-align: left;
+  
+}
+</style>
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
                         <!-- BEGIN CONTENT -->
@@ -38,10 +122,10 @@
                                                                     
                                                                     <ul class="nav nav-tabs">
                                                                         <li class="active">
-                                                                            <a href="#tab_1_1" data-toggle="tab">You Fancied</a>
+                                                                            <a href="#tab_1_1" data-toggle="tab">I Fancied</a>
                                                                         </li>
                                                                         <li>
-                                                                            <a href="#tab_1_2" data-toggle="tab">Fancied You</a>
+                                                                            <a href="#tab_1_2" data-toggle="tab">Fancied Me</a>
                                                                         </li>
                                                                         
                                                                     </ul>
@@ -52,7 +136,7 @@
                                                                         <div class="tab-pane active" id="tab_1_1">
                                                                              <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row result" style="min-height:200px">
+                                                                                    <div class="row result centered" style="min-height:200px">
                                                                                     
                                                                                     </div>
                                                                                 </div>
@@ -64,7 +148,7 @@
                                                                             
                                                                             <div class="portlet-body">
                                                                                 <div class="mt-element-card mt-card-round mt-element-overlay">
-                                                                                    <div class="row result_me" style="min-height:200px">
+                                                                                    <div class="row result_me centered" style="min-height:200px">
                                                                                     
                                                                                     </div>
                                                                                 </div>
@@ -713,8 +797,16 @@ $(document).ready(function(){
 
                             }else{
                                  $.each(responseData, function(index,item) {
-                                    $(".result").html('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.profile_photo + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="javascript:;"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.city +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="icon-heart"></i></a></li><li><a href="javascript:;"><i class="icon-bubble"></i></a></li><li><a href="javascript:;"><i class="icon-envelope"></i></a></li></ul></div></div></div></div>'); 
+                                    var string = item.myfancies;
+                                    var main = string.includes(memberID);
+                                    /*
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                                   */
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+
                                 });
+
+                               
                             }
 
                
@@ -768,8 +860,12 @@ $(document).ready(function(){
                 var responseData = $.parseJSON(response); //parse JSON
                 var memberID = '<?php echo $memberID; ?>'
                 $.each(responseData, function(index,item) {
-                        
-                    $(".result_me").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="<?php echo base_url(); ?>profile-images/'+item.profile_photo +' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-magnifier"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + '</h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="fa fa-heart-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                    var string = item.myfancies;
+                    var main = string.includes(memberID);
+                    /*$(".result_me").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="<?php echo base_url(); ?>profile-images/'+item.profile_photo +' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-magnifier"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + '</h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a href="javascript:;"><i class="fa fa-heart-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                    */
+                    $(".result_me").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                
                 });
 
         },                     
@@ -782,4 +878,72 @@ $(document).ready(function(){
            
 });
     
+</script>
+
+<script>
+
+$(document).ready(function(){
+
+    $(document).delegate(".toggableIcon", "click",function(e){
+    var memberID = '<?php echo $memberID; ?>';
+    var other_memberID = $(this).attr('data-othermemberID');
+    var fancy_strings = $(this).attr('data-myfancies');
+    var obj = {"other_memberID":other_memberID, "memberID":memberID};
+    var formated_fancy_string = ["01", 129, 129, 129,78,99,84];
+    
+   
+    
+    /*
+            var y = ["01", 129, 129, 129,78,99,84]
+            var removeItem = 84;
+
+            alert('Array before removing the element = '+y);
+            y = jQuery.grep(y, function(value) {
+            return value != removeItem;
+            });
+            alert('Array after removing the element = '+y); 
+    */
+
+            var removeItem = memberID;
+            formated_fancy_string = jQuery.grep(formated_fancy_string, function(value) {
+            
+            return value != removeItem;
+            });
+           
+
+            var unfancy_value = formated_fancy_string;
+            var obj1 = {"other_memberID":other_memberID, "memberID":memberID, "unfancy_value":unfancy_value};
+
+            console.log(obj1)
+    
+    if($(this).attr("data-heart-value")=="true")
+    {
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/unfancy',
+        data: obj1,
+        cache: false,
+            success: function(data){
+                toastr.success('Unfancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "false").removeClass("heart-full").addClass("heart-outline"); 
+    }else{
+        alert(obj);
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/fancy',
+        data: obj,
+        cache: false,
+            success: function(data){
+                toastr.success('Fancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "true").removeClass("heart-outline").addClass("heart-full"); 
+    }
+    
+});
+})
 </script>

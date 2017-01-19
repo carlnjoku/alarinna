@@ -34,9 +34,7 @@
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                                     <h2>Follow Alarinna</h2>
                                     <ul class="social-icons">
-                                        <li>
-                                            <a href="javascript:;" data-original-title="rss" class="rss"></a>
-                                        </li>
+                                        
                                         <li>
                                             <a href="javascript:;" data-original-title="facebook" class="facebook"></a>
                                         </li>
@@ -44,17 +42,9 @@
                                             <a href="javascript:;" data-original-title="twitter" class="twitter"></a>
                                         </li>
                                         <li>
-                                            <a href="javascript:;" data-original-title="googleplus" class="googleplus"></a>
-                                        </li>
-                                        <li>
                                             <a href="javascript:;" data-original-title="linkedin" class="linkedin"></a>
                                         </li>
-                                        <li>
-                                            <a href="javascript:;" data-original-title="youtube" class="youtube"></a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;" data-original-title="vimeo" class="vimeo"></a>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </div>

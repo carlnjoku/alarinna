@@ -20,6 +20,7 @@
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        
         <link href="<?php echo base_url(); ?>assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
@@ -132,6 +133,12 @@ img.logo-shadow {
                                                     </a>
                                                 </li>
                                                 <li>
+                                                    <a href="<?php echo base_url(); ?>page/fancies">
+                                                        <i class="icon-heart"></i> Fancies
+                                                        
+                                                    </a>
+                                                </li>
+                                                <li>
                                                     <a href="<?php echo base_url(); ?>page/requests">
                                                         <i class="icon-question"></i> Requests
                                                         <span class="badge badge-success"> 7 </span>
@@ -173,7 +180,7 @@ img.logo-shadow {
                             <div class="container">
                                 <!-- BEGIN HEADER SEARCH BOX -->
                                 
-                                <span style="position:relative; top:10px; top:10px; left:55%"><button class="btn btn-sx btn-circle  white btn-outline">UPGRADE</button></span>
+                                <span style="position:relative; top:10px; top:10px; left:55%"><a class="btn btn-sm btn-circle  white btn-outline" href="<?php echo base_url();?>page/pricing" >UPGRADE</a></span>
                                 <!-- END HEADER SEARCH BOX -->
                                 <!-- BEGIN MEGA MENU -->
                                 <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -205,21 +212,21 @@ img.logo-shadow {
                                             </ul>
                                         </li>
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a class="font-white" href="<?php echo base_url();?>page/matches"> Match
+                                            <a class="font-white" href="<?php echo base_url();?>page/matches"> Matches
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
 
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a class="font-white" href="<?php echo base_url();?>page/search"> Search
+                                            <a class="font-white" href="<?php echo base_url();?>page/search"> Go Fish
                                                 <span class="arrow"></span>
                                             </a>
                                             
                                         </li>
 
                                         <li class="menu-dropdown classic-menu-dropdown ">
-                                            <a class="font-white" href="<?php echo base_url();?>home/dashboard"> Event
+                                            <a class="font-white" href="<?php echo base_url();?>home/dashboard"> Events
                                                 <span class="arrow"></span>
                                             </a>
                                             

@@ -45,7 +45,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                                 <a href="<?php echo base_url();?>page/chat"><div class="dashboard-stat2" style="max-height:80px">
+                                                 <a href="javascript:;"><div class="dashboard-stat2" style="max-height:80px">
                                                     <div class="display">
                                                         <div class="number">
                                                             <h3 class="font-red">
@@ -202,7 +202,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="timeline-body-content">
-                                                                        <img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg"> <a>Soyoyo</a> just updated her profile
+                                                                        <img class="user-pic rounded" width="40" src="../profile-images/woman_avatar.jpg"> <a>Soyoyo</a> just updated her profile
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -210,7 +210,7 @@
                                                             <!-- TIMELINE ITEM -->
                                                             <div class="timeline-item">
                                                                 <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic" src="../assets/pages/media/users/teambg3.jpg"> </div>
+                                                                    <img class="timeline-badge-userpic" src="../profile-images/58643116b10ad_sigail currie.jpg"> </div>
                                                                 <div class="timeline-body">
                                                                     <div class="timeline-body-arrow"> </div>
                                                                     <div class="timeline-body-head">
@@ -274,9 +274,9 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="timeline-body-content">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar9.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar1.jpg">
-                                                                    <img class="user-pic rounded" src="../assets/pages/media/users/avatar7.jpg">
+                                                                    <img class="user-pic rounded" width="40" src="../profile-images/58775074e9517_African-American-Women-Hairstyles-Cute-Short-Hair.jpg">
+                                                                    <img class="user-pic rounded" width="40" src="../profile-images/5864b8466d286_best-curly-hairstyles-for-round-faces-2012.jpg">
+                                                                    <img class="user-pic rounded" width="40" src="../profile-images/587736fe9e29c_Excellent-Cute-Short-Hairstyles-for-Black-Women-with-Round-Faces-2014-682x1024.jpg">
                                                                         <span class="font-grey-cascade"> <a>Judo,</a> <a>Aketi,</a> <a>Sussy</a> and others just fancied you
                                                                             
                                                                         </span>
@@ -312,36 +312,7 @@
                                                                 </div>
                                                             </div>
                                                             <!-- END TIMELINE ITEM -->
-                                                            <!-- TIMELINE ITEM -->
-                                                            <div class="timeline-item">
-                                                                <div class="timeline-badge">
-                                                                    <img class="timeline-badge-userpic img-circle" src="../assets/pages/media/users/avatar80_2.jpg"> </div>
-                                                                <div class="timeline-body">
-                                                                    <div class="timeline-body-arrow"> </div>
-                                                                    <div class="timeline-body-head">
-                                                                        <div class="timeline-body-head-caption">
-                                                                            <a href="javascript:;" class="timeline-body-title font-blue-madison">Vanessa Bond</a>
-                                                                            <span class="timeline-body-time font-grey-cascade">Posted new post at 5:10 PM</span>
-                                                                        </div>
-                                                                        <div class="timeline-body-head-actions"> </div>
-                                                                    </div>
-                                                                    <div class="timeline-body-content">
-                                                                        <span class="font-grey-cascade">
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-right" src="../assets/pages/media/blog/4.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi. coriander bitterleaf epazote radicchio shallot
-                                                                                winter purslane collard. </p>
-                                                                            
-                                                                            <p>
-                                                                                <img class="timeline-body-img pull-left" src="../assets/pages/media/blog/6.jpg" alt=""> Caulie dandelion maize lentil collard greens radish arugula sweet pepper water spinach kombu courgette lettuce. Celery coriander bitterleaf epazote radicchio shallot winter
-                                                                                purslane collard greens spring onion squash lentil. Artichoke salad bamboo shoot black-eyed pea brussels sprout garlic kohlrabi radicchio shallot winter purslane collard greens
-                                                                                spring onion squash lentil. </p>
-                                                                           
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END TIMELINE ITEM -->
+                                                            
                                                             <!-- TIMELINE ITEM -->
                                                             <div class="timeline-item">
                                                                 <div class="timeline-badge">
@@ -1046,3 +1017,31 @@
                 
             });
         </script>
+
+
+<script>
+        $(document).ready(function(){
+               
+              
+                     $.ajax({
+                        dataType: 'html',
+                        type: 'get',
+                        url: 'http://localhost:8983/solr/neo4j/select?fl=score,%20nickname,%20memberID%20,state,%20myfancies&http://localhost:8983/solr/neo4j/select?fl=*,score&indent=on&indent=on&q=desire_eyes:Blue%20AND%20desire_ethnicity:African&q=desire_religion:%20Christian%20%20AND%20desire_eyes:%20Blue&wt=json&wt=json',
+                        //url: 'http://localhost/neo4j-alarinna/web/get_userss',
+                    
+                        success: function (response) {
+                           
+                            
+                        },                     
+                        
+                        error: function (responseData) {
+                            
+                            toastr.warning('Personality update failed')
+                        }
+                    });
+                    
+                
+            });
+        </script>
+
+        

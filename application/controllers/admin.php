@@ -19,6 +19,54 @@ class Admin extends CI_Controller {
                 
     }
 
+    function create_user_xml()
+    {
+        // Get hair
+        $handle_members = curl_init();
+        curl_setopt_array(
+        $handle_members,
+            array(
+                CURLOPT_URL => "http://localhost/neo4j-alarinna/web/get_userss",
+                CURLOPT_POST => false,
+                CURLOPT_RETURNTRANSFER => true
+            )
+        );
+    
+        $response_members = curl_exec($handle_members);
+        $result_members = json_decode($response_members, true);
+
+        //print_r($response_members);
+
+        
+       
+        
+        //print $xml->asXML();
+        
+        //read the JSON file
+        //$jsonFile = file_get_contents('members.json');
+
+        //decode the data
+        //$jsonFile_decoded = json_decode($jsonFile);
+
+        //create a new xml object
+        
+        $options = array(
+                "encoding" => "UTF-8",
+                "output_type" => "xml", 
+                "version" => "simple",
+                "escaping" => array("non-ascii, on-print, markup")
+                );
+        $xmlres = xmlrpc_encode_request('root', $result_members, $options);
+        //print($xmlres);
+        
+        //set header content type
+        Header('Content-type: text/xml');
+
+        //output the xml file
+        print($xmlres->asXML());
+        //$xml->asXML("members.xml");
+        
+    }
 
     function hair()
     {

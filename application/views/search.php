@@ -171,8 +171,77 @@ hr.ruler {
 
 <style>
 
-</style>
+.heart-full:before{
+    content:"\f004";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
 
+.heart-outline:hover:before{
+   color: #FF1493; 
+}
+
+.heart-outline:before{
+    content:"\f08a";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.comments-full:before{
+    content:"\f086";
+    color:#FF1493;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+}
+
+.comment-outline:before{
+    content:"\f0e6";
+    color:grey;
+    cursor:pointer;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    
+    font-size: 23px;
+    
+    
+}
+
+.fa-comments-o{
+    font-size: 23px;
+    color:#cccccc;
+}
+.fa-comments-o:hover:before{
+   color: #FF1493; 
+}
+
+</style>
 <?php foreach($result_member as $key=>$row){
 
 $age = $row['age'];
@@ -248,7 +317,7 @@ $country =$row['country'];
                                                         <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
                                                             
                                                             <option value="<?php echo $interest_gender;?>">Woman</option>
-                                                            <option value="female">Women</option>
+                                                           
                                                             <option value="male">Men</option>
                                                            
                                                         </select>
@@ -279,48 +348,18 @@ $country =$row['country'];
                                                             ?>
                                                         </select>
 
-                                                        <input type="text" value="<?php echo $city; ?>" name="city" id="city" />
+                                                        
                                                         
                                                         <label class="sr" for="exampleInputEmail2" style="font-size:14px; font-weight:bold">&nbsp;&nbsp; Located in:</label> 
+                                                        <input type="text" style="color:#000" value="<?php echo $city; ?>" name="city" id="city" /> 
+                                                           
                                                             <div class="form-group" id="menu">
                                                                 
-                                                                    <ul class="menu" style="position:relative; top:-8px"><!-- List starts here -->
+                                                                   
+                                                                      
+                                                        <!-- List ends here -->
                                                                 
-                                                            <li class="has-dropdown city"><a href="#"></a><!-- 3 columns starts here -->
-                                                                <div class="dropdown dropdown-3columns align_right"><!-- Container 3 columns starts here -->
-                                                                    <div class="col-3">
-                                                                        <h2>Blocks of links and text block</h2>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                         <select name="meal" id="meal" onChange="changecat(this.value);">
-                                                                            <option value="" disabled selected>Select</option>
-                                                                            <option value="A">A</option>
-                                                                            <option value="B">B</option>
-                                                                            <option value="C">C</option>
-                                                                        </select>
-                                                                        <select name="category" id="category">
-                                                                            <option value="" disabled selected>Select</option>
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <p class="italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <ul class="grisbox">
-                                                                            <li><a href="#">Link 1</a></li>
-                                                                            <li><a href="#">Link 2</a></li>
-                                                                            <li><a href="#">Link 3</a></li>
-                                                                            <li><a href="#">Link 4</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div><!-- 3 columns ends here -->
-                                                            </li><!-- Container 3 columns ends here -->
-                                                            
-                                                            
-                                                            </li><!-- Container 1 columnn ends here -->
-                                                        </ul><!-- List ends here -->
-                                                                
-                                                                
+                                                           
                                                             </div>
                                                         
                                                         <!--
@@ -559,8 +598,8 @@ $country =$row['country'];
                                                                 </div>
                                                             </div>
                                                        <span style="color:#CFF3FD; width:400px" >                                      
-                     sdjnasnoioas iqwuiqw oioijdoiqjow dqwdn  q asjhuasbc iuasuichbasc
-                      asuicgasc ash    th aiia inhadiahud iiuadasha iiudhna  asiuhs  </span>  
+                     <!--sdjnasnoioas iqwuiqw oioijdoiqjow dqwdn  q asjhuasbc iuasuichbasc
+                      asuicgasc ash    th aiia inhadiahud iiuadasha iiudhna  asiuhs --> </span>  
                                                             
                                                         </div>
                                                      </div>
@@ -606,7 +645,7 @@ $country =$row['country'];
                                                             <i class=" icon-layers font-green"></i>
                                                             <span class="caption-subject font-green bold uppercase">Search Result</span>
                                                         </div>
-                                                        if result is less than 50 members show "TOO MANY FILTER"" warning  <a href="">click to move to search box</a>
+                                                        <!--if result is less than 50 members show "TOO MANY FILTER"" warning  <a href="">click to move to search box</a>-->
                                                     </div>
                                                     <div class="portlet-body">
                                                         <div class="mt-element-card mt-element-overlay">
@@ -1277,7 +1316,7 @@ $country =$row['country'];
                         
                         beforeSend: function()
                         {
-                            alert(data1);
+                           // alert(data1);
                             
                             $('div.result').block({ 
                                 css: { 
@@ -1307,8 +1346,10 @@ $country =$row['country'];
                                     var main = string.includes(item.memberID);
                                     
                                    // alert(main)
-                                    
+                                    $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline click-view" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><i class=" ' + (main == true ? 'heart-full' : 'heart-outline') +' toggableIcon" data-myfancies='+item.myfancies+' data-othermemberID="'+item.memberID+'"></i></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li></ul></div></div></div></div>'); 
+                                    /*
                                     $(".result").append('<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="mt-card-item"><div class="mt-card-avatar mt-overlay-1 mt-scroll-up"><img src="../profile-images/' + item.avatar + ' " /><div class="mt-overlay"><ul class="mt-info"><li><a class="btn default btn-outline" href="<?php echo base_url();?>profile/p_view/'+ item.memberID + '"><i class="icon-eye"></i></a></li></ul></div></div><div class="mt-card-content"><h3 class="mt-card-name">' + item.nickname + ' </h3><p class="mt-card-desc font-grey-mint">'+ item.age +',  '+ item.city +', '+ item.country +' </p><div class="mt-card-social"><ul><li><a id="fancy" data-memberId = '+item.memberID+ 'href="javascript:;">' + (main == true ? '<i class="fa fa-heart fa-lg font-red"></i>' : '<i class="fa fa-heart-o font-red"></i>') +' </a></li><li><a class="commenting-o" href="javascript:;"><i class="fa fa-commenting-o fa-lg font-grey-salt"></i></a></li><li><a href="javascript:;"><i class="fa fa-smile-o fa-lg font-grey-salt tooltips" data-placement="bottom" data-original-title="Fancy"></i></a></li></ul></div></div></div></div>').appendTo('.result'); 
+                                    */
                                 });
                             }
                             
@@ -1329,6 +1370,74 @@ $country =$row['country'];
             });
 
         </script>
+
+        <script>
+
+$(document).ready(function(){
+
+    $(document).delegate(".toggableIcon", "click",function(e){
+    var memberID = '<?php echo $memberID; ?>';
+    var other_memberID = $(this).attr('data-othermemberID');
+    var fancy_strings = $(this).attr('data-myfancies');
+    var obj = {"other_memberID":other_memberID, "memberID":memberID};
+    var formated_fancy_string = ["01", 129, 129, 129,78,99,84];
+    
+   
+    
+    /*
+            var y = ["01", 129, 129, 129,78,99,84]
+            var removeItem = 84;
+
+            alert('Array before removing the element = '+y);
+            y = jQuery.grep(y, function(value) {
+            return value != removeItem;
+            });
+            alert('Array after removing the element = '+y); 
+    */
+
+            var removeItem = memberID;
+            formated_fancy_string = jQuery.grep(formated_fancy_string, function(value) {
+            
+            return value != removeItem;
+            });
+           
+
+            var unfancy_value = formated_fancy_string;
+            var obj1 = {"other_memberID":other_memberID, "memberID":memberID, "unfancy_value":unfancy_value};
+
+            console.log(obj1)
+    
+    if($(this).attr("data-heart-value")=="true")
+    {
+        console.log(obj);
+        //$.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/unfancy',
+        data: obj1,
+        cache: false,
+            success: function(data){
+                toastr.success('Unfancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "false").removeClass("heart-full").addClass("heart-outline"); 
+    }else{
+        //alert(obj);
+        console.log(obj);
+        $.ajax({
+        type: "POST",
+        url: 'http://localhost/neo4j-alarinna/web/fancy',
+        data: obj,
+        cache: false,
+            success: function(data){
+                toastr.success('Fancy successful');
+            }
+        });
+        $(this).attr("data-heart-value", "true").removeClass("heart-outline").addClass("heart-full"); 
+    }
+    
+});
+})
+</script>
 
         <script>
     // Get preloaded data from database

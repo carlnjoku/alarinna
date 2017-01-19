@@ -668,7 +668,7 @@ $desire_lookingfor = $row['desire_looking_for'];
 
                                                                         <div class="note note-info">
                                                                             <h3>Photo Upload Tip</h3>
-                                                                            <p>A picture they say is worth a thousand words. Studies have shown that people take about 1/10th of a second to form an impression of someone in a photograph. If they have a bad impression of you from the start, they will not click on your profile. </p>
+                                                                            <p>You can upload as many as twelve pictures.</p>
                                                                             
                                                                         </div>
 
@@ -1213,13 +1213,13 @@ $(document).ready(function() {
         var frmData1 = $('#form_edit_aboutme').serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
                                         
                     var data1 = JSON.stringify(frmData1);
-
+                    
                      $.ajax({
                         dataType: 'html',
                         type: 'post',
                         url: 'http://localhost/neo4j-alarinna/web/edit_aboutme',
                         data: data1,
-                        
+                       
                         beforeSend: function()
                         {
                             alert(data1);

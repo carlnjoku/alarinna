@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <a href="#tab4" data-toggle="tab" class="step">
                                     <span class="number"> 4 </span>
                                     <span class="desc">
-                                        <i class="fa fa-check"></i> Confirm and data </span>
+                                        <i class="fa fa-check"></i> Confirm data </span>
                                 </a>
                             </li>
                         </ul>
@@ -131,9 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                                                 <!-- my first cropper -->
                                                             <input type="file" id="myCropper"/>
-
-
-                                                            </div>
+                                                        </div>
                                                 </div>
                                             </div>
                                             
@@ -424,7 +422,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 
                             </div>
 
-                          <div class="tab-pane" id="tab4">
+                          <div class="tab-pane" id="tab4" style="min-height:250px">
+<!---
 	<div class="row">
 		<div class="col-md-12">
 			<div class="col-md-6">
@@ -721,7 +720,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	</div>
 	
+-->
 
+<div style="color:#FFFFFF; width:500px"><center>Please confirm that you have entered correct information by clicking on the back button otherwise click Submit to complete signup</center></div>
 	
      
 </div>

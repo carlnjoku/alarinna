@@ -107,9 +107,11 @@
                                                     </div>
                                                     <div class="portlet-body">
                                                         <div class="mt-element-card mt-element-overlay">
-                                                            <div class="row result" style="min-height:200px">
+                                                            <!--
+                                                                <div class="row result" style="min-height:200px">
                                                                                      
                                                             </div>
+                                                            -->
                                                             <div class="row result_suggest" style="min-height:200px">
                                                                                      
                                                             </div>

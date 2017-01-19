@@ -38,11 +38,11 @@
             var array_length = image_array.length;
             
             if(array_length > 1){
-				 alert('cool')
+				 //alert('cool')
                  image_array = <?php echo $photos;?> 
                 $('#slider1').content_slider({		// bind plugin to div id="slider1"
                     map : image_array,				// pointer to the image map
-                    max_shown_items: 5,				// number of visible circles
+                    max_shown_items: 3,				// number of visible circles
                     hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
                     active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
                     wrapper_text_max_height: 450,	// height of widget, displayed in pixels
@@ -435,7 +435,6 @@ header>h1 {
 
 
 
-
 <?php 
   
     foreach($result_member as $key=>$row){
@@ -452,8 +451,6 @@ header>h1 {
     $city =$row['city'];
     $country =$row['country'];
     $profile_meter =$row['profile_meter'];
-
-
 }
 
 
@@ -496,6 +493,8 @@ header>h1 {
                         
                         </header>
                             <!-- BEGIN CONTENT BODY -->
+
+                            
                             
                             <!-- BEGIN PAGE CONTENT BODY -->
                             <div class="page-content">
@@ -516,8 +515,7 @@ header>h1 {
                                                          <div class="row">
                                                                 <div class="col-md-11 col-sm-11 col-xs-11">
                                                                     <br>
-                                                                    <a class = "fancy" href "javascript:;" data-other-memberID="<?php echo $other_memberID; ?>">
-                                                                        
+                                                                    <a class = "fancy" href "javascript:;" data-other-memberID="<?php echo $other_memberID; ?>">    
                                                                     </a>
                                                                     <a style="text-decoration:none" data-toggle="modal" href="#ajax">  
                                                                         <span class="fa-stack fa-2x font-purple-medium tooltips"  data-placement="bottom" data-original-title="Chat">
@@ -525,18 +523,21 @@ header>h1 {
                                                                             <i class="fa fa-comments fa-stack-1x fa-inverse"></i>
                                                                         </span>
                                                                     </a>
-                                                                    <a class="date_request" style="text-decoration:none" data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;">  
-                                                                        
+                                                                    <a class="date_request" style="text-decoration:none" data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;"> 
                                                                     </a>
                                                                     <a class="drinks_request" style="text-decoration:none"  data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;">  
                                                                     
-                                                                    </a>                                                   
+                                                                    </a> 
+
+                                                                    <a class="drinks_request3" style="text-decoration:none"  data-othermemberID="<?php echo $other_memberID; ?>" href="javascript:;">  
+                                                                    
+                                                                    </a>     
+                                                                                                            
 
                                                                 </div>
-                                                                
+                                                                <h5 class="dosomething"></h5>
                                                         </div>
 
-                                                        
                                                         <hr>
 
                                                         <span><i class="fa fa-bug"></i> Report</span>
@@ -555,11 +556,11 @@ header>h1 {
                                                          <div class="row">
                                                                 <div class="col-md-11 col-sm-11 col-xs-11">
                                                                 <h4>You may also like</h4>
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team2.jpg">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team4.jpg">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team3.jpg">
-                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
-                                                                    
+                                                        
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
+                                                                    <img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                                                                 </div>
                                                                 
                                                         </div>
@@ -790,7 +791,7 @@ header>h1 {
                 
                 <li>
                 	<a href="#" class="clearfix">
-                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
+                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Barry</strong> 
                             <i class="fa fa-circle font-green-jungle"></i>
@@ -802,7 +803,7 @@ header>h1 {
                 </li>  
                 <li>
                 	<a href="#" class="clearfix">
-                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team2.jpg">
+                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Judo</strong>
                             <i class="fa fa-circle font-grey-silver"></i>
@@ -814,7 +815,7 @@ header>h1 {
                 </li>     
                 <li>
                 	<a href="#" class="clearfix">
-                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Ibro</strong>
                             <i class="fa fa-circle font-grey"></i>
@@ -826,7 +827,7 @@ header>h1 {
                 </li>        
                 <li>
                 	<a href="#" class="clearfix">
-                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team3.jpg">
+                		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                 		<div class="friend-name">	
                 			<strong>&nbsp; Foxy</strong>
                             <i class="fa fa-circle font-green-jungle"></i>
@@ -848,7 +849,7 @@ header>h1 {
                 <ul class="chat">
                     <li class="left clearfix">
                     	<span class="chat-img pull-left">
-                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                     	</span>
                     	<div class="chat-body clearfix">
                     		<div class="header">
@@ -862,7 +863,7 @@ header>h1 {
                     </li>
                     <li class="right clearfix">
                     	<span class="chat-img pull-right">
-                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
+                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                     	</span>
                     	<div class="chat-body clearfix">
                     		<div class="header">
@@ -876,7 +877,7 @@ header>h1 {
                     </li>
                     <li class="left clearfix">
                         <span class="chat-img pull-left">
-                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                     	</span>
                     	<div class="chat-body clearfix">
                     		<div class="header">
@@ -890,7 +891,7 @@ header>h1 {
                     </li>
                     <li class="right clearfix">
                         <span class="chat-img pull-right">
-                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team1.jpg">
+                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/man_avatar.jpg">
                     	</span>
                     	<div class="chat-body clearfix">
                     		<div class="header">
@@ -904,7 +905,7 @@ header>h1 {
                     </li>                    
                     <li class="left clearfix">
                         <span class="chat-img pull-left">
-                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>assets/pages/img/avatars/team5.jpg">
+                    		<img class="item-pic rounded" width="55" src="<?php echo base_url(); ?>profile-images/woman_avatar.jpg">
                     	</span>
                     	<div class="chat-body clearfix">
                     		<div class="header">
@@ -1112,10 +1113,10 @@ header>h1 {
                             $('div.persona').unblock(); 
                             var responseData = $.parseJSON(response); //parse JSON
                             console.log(responseData);
-                            alert(responseData);
+                            //alert(responseData);
                             console.log(responseData[0]['loving']);
                             if (!responseData[0]['loving'] && !responseData[0]['caring'] && !responseData[0]['confident'] && !responseData[0]['flirty'] && !responseData[0]['faithful'] && !responseData[0]['adventrous'] && !responseData[0]['patient'] &&  !responseData[0]['healthy'] && !responseData[0]['extrovert']) {
-                                    alert('no p')
+                                    //alert('no p')
                                     $.each(responseData, function(index,item) {
                                    
                                             $("#loving").append('<div class="col-md-12"><div class="col-md-2" style="margin-bottom:10px">Loving</div><div class="col-md-7"> <div class="progress"><div class="progress-bar progress-bar-blue" role="progressbar" aria-valuenow="'+item.loving +'" aria-valuemin="0" aria-valuemax="100" style="width: '+item.loving+'%"><span class="sr-only"> '+item.loving+'% Complete (success) </span></div></div> </div><div class="col-md-2">'+item.loving+'%</div></div>'); 
@@ -1140,7 +1141,7 @@ header>h1 {
                                     });
                                         
                             }else{
-                                    alert('yes P') 
+                                    //alert('yes P') 
                                     $.each(responseData, function(index,item) {
                                    
                                             
@@ -1305,7 +1306,8 @@ header>h1 {
                 cache: false,
                     success: function(data){
                         //alert('Photo requested')
-                        toastr.success('Your drinks request was successfully sent')
+                        
+                        toastr.success('Your drinks request was successfully sent');
                     }
             
             
@@ -1332,7 +1334,7 @@ header>h1 {
                         //alert('Photo requested')
 
                         toastr.success('Your personality request was successfully sent');
-                        $("#personality_title2").replaceWith('<a class="btn btn-circle btn-sx btn-outline grey" disabled id="personality_request"  data-othermemberID="<?php echo $other_memberID;?>" href="javascript:;">Request Personality Sent</a>');
+                        //$("#personality_title2").replaceWith('<a class="btn btn-circle btn-sx btn-outline grey" disabled id="personality_request"  data-othermemberID="<?php echo $other_memberID;?>" href="javascript:;">Request Personality Sent</a>');
                     }
                
             
@@ -1357,7 +1359,7 @@ header>h1 {
                                 
                                 //$('div.result').unblock(); 
                                 var responseData = $.parseJSON(response); //parse JSON
-                                alert(responseData);
+                                //alert(responseData);
                                 if (!responseData[0]) {
                                     $(".fancy").append('<span class="fa-stack fa-2x font-red tooltips" data-fancy-value="false" data-placement="bottom" data-original-title="Already Fancied"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-heart fa-stack-1x fa-inverse"></i></span>');
                                     
@@ -1413,7 +1415,7 @@ header>h1 {
                                     
                                     $(".date_request").append('<span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Request a Date"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
                                 }else{                         
-                                    $(".date_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                    $(".date_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o  fa-stack-1x fa-inverse"></i></span>');
                                     
                                 }
                             },
@@ -1461,10 +1463,10 @@ header>h1 {
                                 //$('div.result').unblock(); 
                                 var responseData = $.parseJSON(response); //parse JSON
                                 if (!responseData[0]) {
-                                    alert(responseData[0]);
+                                   // alert(responseData[0]);
                                     $(".drink_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Drinks Requested A Drink"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-glass fa-stack-1x fa-inverse"></i></span>');
                                 }else{                         
-                                    alert('jhbjb'+responseData[0]['memberID'])
+                                   // alert('jhbjb'+responseData[0]['memberID'])
                                     $(".drinks_request").append('<span class="fa-stack fa-2x font-green tooltips"  data-placement="bottom" data-original-title="Request A Drink"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-glass fa-stack-1x fa-inverse"></i></span>');
                                 }
                             },
@@ -1517,9 +1519,9 @@ header>h1 {
                                 var responseData = $.parseJSON(response); //parse JSON
                                 if (!responseData[0]) {
                                     
-                                    $(".date_request").append('<span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Request a Date"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                    $(".date_request1").append('<span class="fa-stack fa-2x font-blue tooltips"  data-placement="bottom" data-original-title="Request a Date"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
                                 }else{                         
-                                    $(".date_request").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
+                                    $(".date_request1").append('<span class="fa-stack fa-2x font-grey-salt tooltips"  data-placement="bottom" data-original-title="Date Requested"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x fa-inverse"></i></span>');
                                     
                                 }
                             },
@@ -1535,6 +1537,24 @@ header>h1 {
             });
         </script>
 
+        
+
+<!--
+<script src="<?php echo base_url();?>plugins/vaguejs/Vague.js"></script>
+<script>
+		var vague = $("#slider1").Vague({intensity:4});
+		vague.blur();
+		$('.btn:not(.animate)').on('click',$.proxy(vague.toggleblur,vague));
+		$('.btn input').on('keyup blur',function(e){
+			vague.animate(+$(e.currentTarget).val(),{
+				duration:800
+			}).done(function(){
+				if (window.console)
+					console.log('Animation Complete!');
+			});
+		});
+	</script>
+-->
 
 
 

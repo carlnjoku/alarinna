@@ -506,7 +506,7 @@ var Login = function() {
                     required: true,
                     email: true
                 },
-                address: {
+                /*address: {
                     required: true
                 },
                 city: {
@@ -515,7 +515,7 @@ var Login = function() {
                 country: {
                     required: true
                 },
-
+                */
                 username: {
                     required: true
                 },
@@ -601,7 +601,7 @@ var Login = function() {
                 var status = data.status;
                 var message = data.msg;
 
-                alert(status);
+                //alert(status);
 
                
                 if(status == 1) {
